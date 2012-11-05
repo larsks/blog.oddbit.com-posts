@@ -1,13 +1,12 @@
 Title: Apache virtual host statistics
 Date: 2010-2-19
-Tags: visualization,logging,software,release,apache,sofware
+Tags: visualization logging software release apache sofware
 
-# 
-
-As part of a project I'm working on I wanted to get a rough idea of the activity of the Apache virtual hosts on the system. I wasn't able to find exactly what I wanted, so I refreshed my memory of curses to bring you *vhoststats*.
+As part of a project I'm working on I wanted to get a rough idea of the activity of the Apache virtual hosts on the system. I wasn't able to find exactly what I wanted, so I refreshed my memory of curses to bring you _vhoststats_.
 
 This tools reads an Apache log file (with support for arbitrary formats) and generates a dynamic bar chart showing the activity (in number of requests and bytes transferred) of hosts on the system. The output might look something like this (but with colors):
-
+    
+    
     [2010/02/19 20:21:32] Hosts: 7 [Displayed: 7] Requests: 104
     
     host1.companyA.com   [R:1         ]  #
@@ -30,5 +29,6 @@ It's not [pong][1], but I've found it useful.
 
 You can download the code from the [project page][2] on GitHub.
 
- [1]: http://code.google.com/p/logstalgia/
- [2]: http://github.com/larsks/vhoststats/
+   [1]: http://code.google.com/p/logstalgia/
+   [2]: http://github.com/larsks/vhoststats/
+
