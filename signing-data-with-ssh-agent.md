@@ -3,7 +3,7 @@ Date: 2011-5-9
 Tags: openssh,rsa,cryptography,ssl,ssh,openssl,ssh-agent
 
 This is follow-up to my previous post, [Converting OpenSSH public
-keys](/posts/converting-openssh-public-keys).
+keys](/post/converting-openssh-public-keys).
 
 OpenSSH allows one to use an *agent* that acts as a proxy to your
 private key. When using an agent -- particularly with agent forwarding

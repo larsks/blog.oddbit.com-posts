@@ -3,7 +3,7 @@ Date: 2011-5-8
 Tags: openssh,rsa,cryptography,openssl,fixed
 
 > I've posted a
-> [followup](/posts/signing-data-with-ssh-agent)
+> [followup](/post/signing-data-with-ssh-agent)
 > to this article that discusses ssh-agent.
 
 For reasons best left to another post, I wanted to convert an SSH public
