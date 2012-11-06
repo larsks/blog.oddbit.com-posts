@@ -1,5 +1,6 @@
 Title: Posting to Scriptagr.am using the API
 Tags: scriptogr.am,api
+Date: 2012-11-05
 
 Scriptogr.am has a [very simple api][api] that allows one to `POST` and
 `DELETE` articles.  `POST`ing an article will place it in the

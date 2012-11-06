@@ -1,6 +1,7 @@
 Title: About Me
 Slug: about
 Type: page
+Date: 2012-11-05
 
 - Twitter: <https://twitter.com/larsks>
 - GitHub: <https://github.com/larsks/>

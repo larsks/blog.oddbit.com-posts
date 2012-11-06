@@ -1,5 +1,6 @@
 Title: Generating random passwords in PowerShell
 Tags: powershell,windows,passwords
+Date: 2012-11-04
 
 I was looking for PowerShell solutions for generating a random password (in
 order to set the Administrator password on a Windows instance provisioned in
