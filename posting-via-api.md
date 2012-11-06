@@ -1,4 +1,4 @@
-Title: Posting to Scriptagr.am using the API
+Title: Posting to Scriptogr.am using the API
 Tags: scriptogr.am,api
 Date: 2012-11-05
 
