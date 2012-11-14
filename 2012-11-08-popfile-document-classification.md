@@ -51,10 +51,20 @@ to make (I'm building a minimal mail header) and then pass it to the
         # Pass file to POPFile service.
         bucket = api.handle_message(session, fd.name, '/dev/null')
 
+The `handle_message()` call takes three parameters:
+
+- The session key,
+- A path to the input file,
+- A path to the output file (POPFile returns the message with header
+  modifications)
+
+In this example, I'm passing `/dev/null` as the third parameter
+because I don't care about the data returned from POPFile.
+
 Initially, POPFile will not perform any categorization of documents.
 After manually categorizing just a few documents, two things happen:
 
-- POPFile will start using any *magnets* you have defined, which are
+- POPFile will start using any [magnets][] you have defined, which are
   keyword rules that automatically assign documents to a given
   category.
 - For documents that do not match any magnet rules, POPFile will
@@ -76,4 +86,5 @@ For more information:
 [bayesian filter]: https://en.wikipedia.org/wiki/Bayesian_spam_filtering
 [popfile]: http://getpopfile.org/
 [xml-rpc api]: http://getpopfile.org/docs/popfilemodules:xmlrpc#popfile_xml-rpc_api
+[magnets]: http://getpopfile.org/docs/glossary:amagnet
 
