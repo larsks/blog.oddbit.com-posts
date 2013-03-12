@@ -3,7 +3,7 @@ Date: 2013-03-12
 Tags: raspberrypi,arduino,i2c,hardware
 
 I've set up my [Raspberry Pi][] to communicate with my [Arduino][] via
-[I2C][].  The Raspberry Pi is a 3.3v device while the Arduino is a 5v
+[I2C][].  The Raspberry Pi is a 3.3v device and the Arduino is a 5v
 device.  While in general this means that you need to use a level
 converter when connecting the two devices, **you don't need to use a
 level converter when connecting the Arduino to the Raspberry Pi via
