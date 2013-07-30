@@ -17,12 +17,12 @@ credentials cache.
     
     A `keytab` is a file containing pairs of Kerberos principals and encrypted keys.
     
-    Joining Active Directory using Samba's net ads join will create the
+    Joining Active Directory using Samba's `net ads join` will create the
     necessary keytab. It is also possible to create the keytab on your Windows
     domain controller and install it on your Linux systems. Instructions for
     doing this are beyond the scope of this document.
 
--   Host objects in Active Directory must have a userPrincipalName attribute.
+-   Host objects in Active Directory must have a `userPrincipalName` attribute.
     
     For example:
     
@@ -30,7 +30,7 @@ credentials cache.
         dn: CN=DOTTINESS,CN=Computers,dc=example,dc=com
         userPrincipalName: host/dottiness.example.com@EXAMPLE.COM
         
-    Active Directory *does not* automatically create a userPrincipalName when a new host object is provisioned. You will either need to provide this value manually or develop an automated process that will populate this field when provisioning new host objects.
+    Active Directory *does not* automatically create a `userPrincipalName` when a new host object is provisioned. You will either need to provide this value manually or develop an automated process that will populate this field when provisioning new host objects.
 
 Kerberos credentials have a maximum usable lifetime. The cached credentials
 used for root queries by `nss_ldap` must be refreshed periodically in order to
@@ -136,9 +136,11 @@ operations will timeout. Similarly, local system accounts that do not have
 valid Kerberos credentials will experience similar behavior (and will thus only
 be able to see local users and groups).
 
+<!--
 An alternate solution to this problem would run a local LDAP proxy that (a)
 uses the system keytab to authenticate to AD, and (b) allows anonymous LDAP
 queries from localhost. I will discuss this configuration in a future post.
+-->
 
  [1]: http://www.padl.com/OSS/nss_ldap.html  
 
