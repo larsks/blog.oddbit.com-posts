@@ -1,4 +1,4 @@
-Title: Automatic DNS entries for libvirt domains
+Title: Automatic hostname entries for libvirt domains
 Date: 2013-10-04
 Tags: libvirt,virtualization
 
@@ -49,7 +49,7 @@ use that file as an additional hosts file.  I then installed the
 `incron` package and dropped the following in
 `/etc/incron.d/auto-virt-hosts`:
 
-    /var/lib/libvirt/dnsmasq/default.leases IN_MODIFY /usr/local/bin/virt-hosts -u
+    /var/lib/libvirt/dnsmasq/default.leases IN_MODIFY /usr/local/bin/virt-hosts -ur
 
 This has `incron` listen for changes to the `default.leases` file, and
 whenever it receives the `IN_MODIFY` event it runs `virt-hosts` with
@@ -74,4 +74,3 @@ script called `update-virt-hosts` and run that via `incron` instead:
 
 [virt-hosts]: https://raw.github.com/larsks/virt-utils/master/virt-hosts
 [virt-utils]: https://raw.github.com/larsks/virt-utils/
-[nm-using-dnsmasq]: 
