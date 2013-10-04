@@ -111,7 +111,7 @@ Authenticate to Kerberos:
 With valid credentials:
 
     $ getent passwd lars
-    lars:*:500:500:lars:\emc00.example.comstaffllarswindows:
+    lars:*:500:500:lars:\\emc00.example.com\staff\l\lars\windows:
     
 ## As root
 
@@ -127,7 +127,7 @@ Update credentials cache from system keytab:
 With valid credentials:
 
     # getent passwd lars
-    lars:*:500:500:lars:\emc00.example.comstaffllarswindows:
+    lars:*:500:500:lars:\\emc00.example.com\staff\l\lars\windows:
     
 This configuration makes the operation of `nss_ldap` dependent on valid Kerberos
 credentials. If a user remains logged in after her Kerberos credentials have
