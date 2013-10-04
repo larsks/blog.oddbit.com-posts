@@ -1,6 +1,7 @@
 Title: Automatic hostname entries for libvirt domains
 Date: 2013-10-04
 Tags: libvirt,virtualization
+Slug: automatic-dns-entries-for-libvirt-domains
 
 Have you ever wished that you could use `libvirt` domain names as
 hostnames?  So that you could do something like this:
@@ -36,6 +37,32 @@ interfaces on the same network would look like this:
 Of course, this is only half the solution: having generated a hosts
 file we need to put it somewhere where your system can find it.
 
+Using /etc/hosts
+----------------
+
+If you want to update your `/etc/hosts` file, you can place the
+following into a script called `update-virt-hosts` (somewhere in
+root's `PATH`) and run that via [incron][]:
+
+    #!/bin/sh
+
+    sed -i '/^# BEGIN VIRT HOSTS/,/^# END VIRT HOSTS/ d' /etc/hosts
+    cat <<EOF >>/etc/hosts
+    # BEGIN VIRT HOSTS
+    $(virt-hosts)
+    # END VIRT HOSTS
+    EOF
+
+Make sure you have `incron` installed, and add the following to
+`/etc/incron.d/virt-hosts`:
+
+    /var/lib/libvirt/dnsmasq/default.leases IN_MODIFY update-virt-hosts
+
+This will cause `incron` to run your `update-virt-hosts` script
+whenever it sees an `IN_MODIFY` event on the `default.leases` file.
+
+[incron]: http://inotify.aiken.cz/?section=incron&page=about&lang=en
+
 Using NetworkManager + dnsmasq
 ------------------------------
 
@@ -47,30 +74,18 @@ the file `/etc/NetworkManager/dnsmasq.d/virthosts` containing:
 This will cause the `dnsmasq` process started by `NetworkManager` to
 use that file as an additional hosts file.  I then installed the
 `incron` package and dropped the following in
-`/etc/incron.d/auto-virt-hosts`:
+`/etc/incron.d/virt-hosts`:
 
     /var/lib/libvirt/dnsmasq/default.leases IN_MODIFY /usr/local/bin/virt-hosts -ur
 
 This has `incron` listen for changes to the `default.leases` file, and
 whenever it receives the `IN_MODIFY` event it runs `virt-hosts` with
-the `-u` (aka `--update`) flag.  This causes `virt-hosts` to send
-output to `/var/lib/libvirt/dnsmasq/default.addnhosts` instead of
-`stdout`.
+the `-u` (aka `--update`) and `-r` (aka `--reload-dnsmasq) flags.
+Thef former causes `virt-hosts` to send output to
+`/var/lib/libvirt/dnsmasq/default.addnhosts` instead of `stdout`, and
+the latter does a `killall -HUP dnsmasq` after installing the new
+hosts file.
 
-Using /etc/hosts
-----------------
-
-If you're not using `dnsmasq`, you could put the following into a
-script called `update-virt-hosts` and run that via `incron` instead:
-
-    #!/bin/sh
-
-    sed -i '/^# BEGIN VIRT HOSTS/,/^# END VIRT HOSTS/ d' /etc/hosts
-    cat <<EOF >>/etc/hosts
-    # BEGIN VIRT HOSTS
-    $(virt-hosts)
-    # END VIRT HOSTS
-    EOF
 
 [virt-hosts]: https://raw.github.com/larsks/virt-utils/master/virt-hosts
 [virt-utils]: https://raw.github.com/larsks/virt-utils/
