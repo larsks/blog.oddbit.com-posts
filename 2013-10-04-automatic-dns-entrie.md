@@ -39,6 +39,22 @@ interfaces on the same network would look like this:
 Of course, this is only half the solution: having generated a hosts
 file we need to put it somewhere where your system can find it.
 
+An aside: incron
+----------------
+
+Both of the following solutions rely on [incron][], a tool that uses
+the Linux [inotify][] subsystem to trigger scripts in reaction to
+events on file and directories.  In this case, we'll be using `incron`
+to monitor the dnsmasq `default.leases` file and firing off a script
+when it changes.
+
+You could accomplish the same thing using the `inotifywait` program
+from the [inotify-tools][] package and a small wrapper script, or you
+could hook up something to the libvirt events framework.
+
+[inotify]: http://en.wikipedia.org/wiki/Inotify
+[inotify-tools]: https://github.com/rvoicilas/inotify-tools/wiki
+
 Using /etc/hosts
 ----------------
 
