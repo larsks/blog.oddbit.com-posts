@@ -12,7 +12,9 @@ hostnames?  So that you could do something like this:
 Since this is something that would certainly make my life convenient,
 I put together a small script called [virt-hosts][] that makes this
 possible.  You can find [virt-hosts][] in my [virt-utils][] GitHub
-repository.
+repository:
+
+- <https://raw.github.com/larsks/virt-utils/master/virt-hosts>
 
 Run by itself, with no options, `virt-hosts` will scan through your
 running domains for interfaces on the libvirt `default` network, look
