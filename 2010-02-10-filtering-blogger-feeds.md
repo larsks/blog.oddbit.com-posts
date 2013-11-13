@@ -10,8 +10,6 @@ tags:
   - filter
 ---
 
-# 
-
 After encountering a number of problems trying to filter Blogger feeds by tag (using services like [Feedrinse][1] and Yahoo [Pipes][2]), I've finally put together a solution that works:
 
 *   Shadow the feed with [Feedburner][3].
