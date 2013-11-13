@@ -2,7 +2,10 @@
 layout: post
 title: Kerberos authenticated queries to Active Directory
 date: 2010-06-29
-tags: ldap,active_directory,kerberos
+tags:
+  - ldap
+  - active_directory
+  - kerberos
 ---
 
 There are many guides out there to help you configure your Linux system as an LDAP and Kerberos client to an Active Directory server. Most of these guides solve the problem of authentication by embedding a username and password into a configuration file somewhere on your system. While this works, it presents some problems:
@@ -145,5 +148,5 @@ uses the system keytab to authenticate to AD, and (b) allows anonymous LDAP
 queries from localhost. I will discuss this configuration in a future post.
 -->
 
- [1]: http://www.padl.com/OSS/nss_ldap.html  
+[1]: http://www.padl.com/OSS/nss_ldap.html  
 

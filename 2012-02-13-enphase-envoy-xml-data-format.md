@@ -2,7 +2,6 @@
 layout: post
 title: Enphase Envoy XML Data Format
 date: 2012-2-13
-tags: 
 ---
 
 We recently installed a (photovoltaic) solar array on our house.  The system uses [Enphase][1] microinverters, and includes a monitoring device called the "[Envoy][2]".  The Envoy collects data from the microinverters and sends it back to Enphase.  Enphase performs monitoring services for the array and also provides access to the data collected by the Envoy product.  
@@ -231,7 +230,7 @@ And the response body -- after inflating it -- looks something like this:
 My goal is to set up a simple proxy that in addition to passing the information along to Enphase will also collect it locally. I'll update the blog if I make progress on that front.  
 
 
-   [1]: http://enphase.com/
-   [2]: http://enphase.com/products/envoy/
-   [3]: https://reports.enphaseenergy.com/emu_reports/performance_report?webcomm_version=3.0
+[1]: http://enphase.com/
+[2]: http://enphase.com/products/envoy/
+[3]: https://reports.enphaseenergy.com/emu_reports/performance_report?webcomm_version=3.0
 

@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Generating random passwords in PowerShell
-tags: powershell,windows,passwords
 date: 2012-11-04
+tags:
+  - powershell
+  - windows
+  - passwords
 ---
 
 I was looking for PowerShell solutions for generating a random password (in

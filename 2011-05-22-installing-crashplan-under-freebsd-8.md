@@ -2,7 +2,12 @@
 layout: post
 title: Installing CrashPlan under FreeBSD 8
 date: 2011-5-22
-tags: java,freebsd,crashplan,backup,storage
+tags:
+  - backup
+  - storage
+  - java
+  - freebsd
+  - crashplan
 ---
 
 This articles describes how I got [CrashPlan][1] running on my FreeBSD 8(-STABLE) system. [These instructions][2] by Kim Scarborough were my starting point, but as these were for FreeBSD 7 there were some additional steps necessary to get things working.
@@ -111,11 +116,11 @@ This should verify that CrashPlan is running.
 
 Follow the instructions provided by CrashPlan for [connecting to a headless CrashPlan desktop][7].
 
-   [1]: http://crashplan.com/
-   [2]: http://kim.scarborough.chicago.il.us/do/nerd/tips/crashplan
-   [3]: http://www.freebsd.org/doc/handbook/linuxemu-lbc-install.html
-   [4]: http://www.crashplan.com/consumer/download.html?os=Linux
-   [5]: http://wiki.freebsd.org/linux-kernel
-   [6]: http://wiki.freebsd.org/
-   [7]: http://stgsupport.crashplan.com/doku.php/how_to/configure_a_headless_client
+[1]: http://crashplan.com/
+[2]: http://kim.scarborough.chicago.il.us/do/nerd/tips/crashplan
+[3]: http://www.freebsd.org/doc/handbook/linuxemu-lbc-install.html
+[4]: http://www.crashplan.com/consumer/download.html?os=Linux
+[5]: http://wiki.freebsd.org/linux-kernel
+[6]: http://wiki.freebsd.org/
+[7]: http://stgsupport.crashplan.com/doku.php/how_to/configure_a_headless_client
 

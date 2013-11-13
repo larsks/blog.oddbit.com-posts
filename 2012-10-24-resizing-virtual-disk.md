@@ -2,7 +2,10 @@
 layout: post
 title: Growing a filesystem on a virtual disk
 date: 2012-10-24
-tags: virtualization,kvm,storage
+tags:
+  - virtualization
+  - kvm
+  - storage
 ---
 
 Occasionally we will deploy a virtual instance into our KVM

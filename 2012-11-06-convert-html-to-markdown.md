@@ -2,7 +2,9 @@
 layout: post
 title: Converting HTML to Markdown
 date: 2012-11-06
-tags: markdown,meta
+tags:
+  - markdown
+  - meta
 ---
 
 In order to import posts from [Blogger][] into [Scriptogr.am][] I needed to convert all the HTML formatting into Markdown.  Thankfully there are a number of tools out there that can help with this task.

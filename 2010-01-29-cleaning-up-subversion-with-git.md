@@ -2,7 +2,13 @@
 layout: post
 title: Cleaning up Subversion with Git
 date: 2010-1-29
-tags: versioncontrol,git,subversion,oldpost,fbpost,svn
+tags:
+  - oldpost
+  - fbpost
+  - svn
+  - versioncontrol
+  - git
+  - subversion
 ---
 
 # Overview
@@ -231,6 +237,6 @@ The output will look something like:
     ------------------------------------------------------------------------
     
 
-   [1]: http://subversion.tigris.org/
-   [2]: http://git-scm.com/
+[1]: http://subversion.tigris.org/
+[2]: http://git-scm.com/
 

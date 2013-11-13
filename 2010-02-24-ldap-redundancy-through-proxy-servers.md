@@ -2,7 +2,14 @@
 layout: post
 title: LDAP redundancy through proxy servers
 date: 2010-2-24
-tags: ha,howto,ssl,balance,ldap,stunnel,proxy
+tags:
+  - balance
+  - ldap
+  - stunnel
+  - proxy
+  - ha
+  - howto
+  - ssl
 ---
 
 # Problem 1: Failover
@@ -59,7 +66,7 @@ We would run stunnel like this:
     stunnel /path/to/stunnel.conf
     
 
-Again, I would run this under the control of a service supervisor. To keep stunnel in the foreground we would add the following to the global section of the configuration file (i.e., before the [ldap] section marker):
+Again, I would run this under the control of a service supervisor. To keep stunnel in the foreground we would add the following to the global section of the configuration file (i.e., before the `[ldap]` section marker):
     
     
     foreground = yes
@@ -79,11 +86,11 @@ Our traffic is encrypted on the wire, regardless of whether the application has 
 
 We are free to examine unencrypted traffic with a packet sniffer running on the local host.
 
-   [1]: http://www.inlab.de/balance.html
-   [2]: http://www.inlab.de/
-   [3]: http://fedoraproject.org/
-   [4]: http://www.centos.org/
-   [5]: http://smarden.org/runit/
-   [6]: http://www.wireshark.org/
-   [7]: http://www.stunnel.org/
+[1]: http://www.inlab.de/balance.html
+[2]: http://www.inlab.de/
+[3]: http://fedoraproject.org/
+[4]: http://www.centos.org/
+[5]: http://smarden.org/runit/
+[6]: http://www.wireshark.org/
+[7]: http://www.stunnel.org/
 

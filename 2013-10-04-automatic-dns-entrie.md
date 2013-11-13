@@ -2,8 +2,10 @@
 layout: post
 title: Automatic hostname entries for libvirt domains
 date: 2013-10-04
-tags: libvirt,virtualization
 Slug: automatic-dns-entries-for-libvirt-domains
+tags:
+  - libvirt
+  - virtualization
 ---
 
 Have you ever wished that you could use `libvirt` domain names as
@@ -17,7 +19,7 @@ I put together a small script called [virt-hosts][] that makes this
 possible.  You can find [virt-hosts][] in my [virt-utils][] GitHub
 repository:
 
-- <https://raw.github.com/larsks/virt-utils/master/virt-hosts>
+- https://raw.github.com/larsks/virt-utils/master/virt-hosts
 
 Run by itself, with no options, `virt-hosts` will scan through your
 running domains for interfaces on the libvirt `default` network, look
@@ -101,12 +103,12 @@ use that file as an additional hosts file.  I then installed the
 
 This has `incron` listen for changes to the `default.leases` file, and
 whenever it receives the `IN_MODIFY` event it runs `virt-hosts` with
-the `-u` (aka `--update`) and `-r` (aka `--reload-dnsmasq) flags.
+the `-u` (aka `--update`) and `-r` (aka `--reload-dnsmasq`) flags.
 Thef former causes `virt-hosts` to send output to
 `/var/lib/libvirt/dnsmasq/default.addnhosts` instead of `stdout`, and
 the latter does a `killall -HUP dnsmasq` after installing the new
 hosts file.
 
-
 [virt-hosts]: https://raw.github.com/larsks/virt-utils/master/virt-hosts
 [virt-utils]: https://raw.github.com/larsks/virt-utils/
+

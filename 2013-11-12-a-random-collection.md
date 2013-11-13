@@ -2,7 +2,8 @@
 layout: post
 title: A random collection of OpenStack Tools
 date: 2013-11-12
-tags: openstack
+tags:
+  - openstack
 ---
 
 I've been working with [OpenStack][] a lot recently, and I've ended up with a small collection of utilities that make my life easier.  On the odd chance that they'll make your life easier, too, I thought I'd hilight them here:
@@ -77,10 +78,9 @@ And start them back up again the same way:
 
 Without any additional arguments `openstack-service stop` will stop all OpenStack services on the current host.
 
-  [sqlalchemy]: http://www.sqlalchemy.org/
-  [openstack]: http://openstack.org/
-  [crux]: http://github.com/larsks/crux
-  [sqlcli]: http://github.com/larsks/sqlcli
-  [osctl]: http://github.com/larsks/osctl
-  
+[sqlalchemy]: http://www.sqlalchemy.org/
+[openstack]: http://openstack.org/
+[crux]: http://github.com/larsks/crux
+[sqlcli]: http://github.com/larsks/sqlcli
+[osctl]: http://github.com/larsks/osctl
 

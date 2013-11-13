@@ -2,7 +2,14 @@
 layout: post
 title: Signing data with ssh-agent
 date: 2011-5-9
-tags: openssh,rsa,cryptography,ssl,ssh,openssl,ssh-agent
+tags:
+  - ssl
+  - ssh
+  - openssl
+  - ssh-agent
+  - openssh
+  - rsa
+  - cryptography
 ---
 
 This is follow-up to my previous post, [Converting OpenSSH public keys][1].
@@ -169,9 +176,9 @@ And now we can verify the signature:
         -pubin -inkey testkey.pubssl -pkeyopt digest:sha1
     
 
-   [1]: http://blog.oddbit.com/2011/05/converting-openssh-public-keys.html
-   [2]: http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/PROTOCOL.agent?rev=HEAD;content-type=text%2Fplain
-   [3]: http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/authfd.h?rev=HEAD;content-type=text%2Fplain
-   [4]: http://www.lag.net/paramiko/
-   [5]: http://sandbox.rulemaker.net/ngps/m2/
+[1]: http://blog.oddbit.com/2011/05/converting-openssh-public-keys.html
+[2]: http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/PROTOCOL.agent?rev=HEAD;content-type=text%2Fplain
+[3]: http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/authfd.h?rev=HEAD;content-type=text%2Fplain
+[4]: http://www.lag.net/paramiko/
+[5]: http://sandbox.rulemaker.net/ngps/m2/
 

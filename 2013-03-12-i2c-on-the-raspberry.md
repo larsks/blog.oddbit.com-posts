@@ -2,7 +2,11 @@
 layout: post
 title: I2C on the Raspberry Pi
 date: 2013-03-12
-tags: raspberrypi,arduino,i2c,hardware
+tags:
+  - hardware
+  - raspberrypi
+  - arduino
+  - i2c
 ---
 
 I've set up my [Raspberry Pi][] to communicate with my [Arduino][] via

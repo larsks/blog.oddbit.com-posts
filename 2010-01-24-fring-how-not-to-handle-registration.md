@@ -1,8 +1,15 @@
 ---
 layout: post
-title: Fring: How not to handle registration
+title: "Fring: How not to handle registration"
 date: 2010-1-24
-tags: skype,voip,sucks,fring,review,fbpost,android
+tags:
+  - fring
+  - review
+  - fbpost
+  - android
+  - skype
+  - voip
+  - sucks
 ---
 
 I thought I'd give Fring a try after seeing some favorable reviews on other sites. If you haven't previously heard of Fring, the following blurb from their website might be helpful:  
@@ -30,3 +37,4 @@ What, that's it? How about a few hints? Or better yet, how about you tell me wha
 Fring is the current winner of the "shortest lifetime on my phone" award, and because it was so bad it doesn't even get a QR code. Bad app. Not for you.  
   
 **Edit**: Removed punctuation from my password. Now Fring tells me, "Password too long." Ha! 
+

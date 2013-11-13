@@ -2,7 +2,9 @@
 layout: post
 title: Parsing XML with Awk
 date: 2012-09-10
-tags: awk,xml
+tags:
+  - awk
+  - xml
 ---
 
 Recently, changes from the [xmlgawk][] project have been integrated into

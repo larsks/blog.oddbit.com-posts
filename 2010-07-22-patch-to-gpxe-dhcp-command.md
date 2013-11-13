@@ -2,7 +2,10 @@
 layout: post
 title: Patch to gPXE dhcp command
 date: 2010-7-22
-tags: gpxe,linux,dhcp
+tags:
+  - gpxe
+  - linux
+  - dhcp
 ---
 
 **Update**: This patch has been [accepted][1] into gPXE.
@@ -46,7 +49,7 @@ The "-c" flag allows it to continue:
 
 I think this manages to preserve the syntax of the existing "dhcp" command while making the magic of autoboot available to gpxe scripts.
 
-   [1]: http://git.etherboot.org/?p=gpxe.git;a=commit;h=fa91c2c3269554df855107a24afec9a1149fee8f
-   [2]: http://gist.github.com/486907
-   [3]: http://etherboot.org/wiki/index.php
+[1]: http://git.etherboot.org/?p=gpxe.git;a=commit;h=fa91c2c3269554df855107a24afec9a1149fee8f
+[2]: http://gist.github.com/486907
+[3]: http://etherboot.org/wiki/index.php
 

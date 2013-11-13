@@ -2,7 +2,12 @@
 layout: post
 title: Filtering Blogger feeds
 date: 2010-2-10
-tags: atom,blogger,filter,pipes,rss
+tags:
+  - pipes
+  - rss
+  - atom
+  - blogger
+  - filter
 ---
 
 # 
@@ -17,7 +22,7 @@ This let me create a feed that excluded all my posts containing the *fbpost* tag
 
 While fiddling with this I came across [this article][4] that discusses a number of tools (some no longer available) for processing RSS feeds.
 
- [1]: http://feedrinse.com/
- [2]: http://pipes.yahoo.com/
- [3]: http://feedburner.com/
- [4]: http://www.tothepc.com/archives/10-tools-to-combine-mix-blend-multiple-rss-feeds/
+[1]: http://feedrinse.com/
+[2]: http://pipes.yahoo.com/
+[3]: http://feedburner.com/
+[4]: http://www.tothepc.com/archives/10-tools-to-combine-mix-blend-multiple-rss-feeds/

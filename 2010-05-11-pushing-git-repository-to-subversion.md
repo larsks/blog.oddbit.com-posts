@@ -2,7 +2,10 @@
 layout: post
 title: Pushing a Git repository to Subversion
 date: 2010-5-11
-tags: git,subversion,vcs
+tags:
+  - git
+  - subversion
+  - vcs
 ---
 
 I recently set up a git repository server (using [gitosis][1] and [gitweb][2]). Among the required features of the system was the ability to publish the git repository to a read-only Subversion repository. This sounds simple in principle but in practice proved to be a bit tricky.
@@ -62,6 +65,6 @@ At this point we have changed the history of the _svnsync_ branch and we have le
 
 This gives us what we want: we can publish our git repository to a Subversion repository while maintaining the shared change history among our existing git clones.
 
-   [1]: http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way
-   [2]: https://git.wiki.kernel.org/index.php/Gitweb
+[1]: http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way
+[2]: https://git.wiki.kernel.org/index.php/Gitweb
 

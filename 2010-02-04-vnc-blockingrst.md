@@ -2,7 +2,14 @@
 layout: post
 title: Blocking VNC with iptables
 date: 2010-2-4
-tags: rfb,netfilter,vnc,linux,classification,iptables,fbpost
+tags:
+  - linux
+  - classification
+  - iptables
+  - fbpost
+  - rfb
+  - netfilter
+  - vnc
 ---
 
 VNC clients use the [RFB protocol][1] to provide virtual display capabilities. The RFB protocol, as implemented by most clients, provides very poor authentication options. While passwords are not actually sent "in the clear", it is possible to brute force them based on information available on the wire. The RFB 3.x protocol limits passwords to a maximum of eight characters, so the potential key space is relatively small.
@@ -99,7 +106,7 @@ We modified this rule to use the iptables string module to make the match more s
 
 We thought about using the string module exclusively, but unlike the u32 module it is not possible to anchor the string match to the beginning of the TCP payload (since the ip and tcp headers may both be variable length).
 
-   [1]: http://www.realvnc.com/docs/rfbproto.pdf
-   [2]: http://l7-filter.sourceforge.net/
-   [3]: http://www.stearns.org/doc/iptables-u32.v0.1.7.html
+[1]: http://www.realvnc.com/docs/rfbproto.pdf
+[2]: http://l7-filter.sourceforge.net/
+[3]: http://www.stearns.org/doc/iptables-u32.v0.1.7.html
 

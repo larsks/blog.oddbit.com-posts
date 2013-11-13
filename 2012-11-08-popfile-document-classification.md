@@ -2,7 +2,9 @@
 layout: post
 title: Document classification with POPFile
 date: 2012-11-08
-tags: bayes,analytics
+tags:
+  - bayes
+  - analytics
 ---
 
 I recently embarked upon a quest to categorize a year's worth of

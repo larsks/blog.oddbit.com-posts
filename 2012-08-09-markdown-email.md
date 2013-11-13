@@ -38,9 +38,9 @@ And then `procmail` filters outbound messages before sending them via `msmtp`:
 
 It's not especially robust but it seems to work so far.
 
- [1]: http://daringfireball.net/projects/markdown/
- [2]: http://github.com/
- [3]: http://stackexchange.com/sites
- [4]: https://github.com/larsks/mutt-utils/blob/master/markdownmail.py
- [5]: http://www.procmail.org/
+[1]: http://daringfireball.net/projects/markdown/
+[2]: http://github.com/
+[3]: http://stackexchange.com/sites
+[4]: https://github.com/larsks/mutt-utils/blob/master/markdownmail.py
+[5]: http://www.procmail.org/
 

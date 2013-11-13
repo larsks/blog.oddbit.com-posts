@@ -2,7 +2,8 @@
 layout: post
 title: Generating a memberOf attribute for posixGroups
 date: 2013-07-22
-tags: ldap
+tags:
+  - ldap
 ---
 
 This showed up on [#openstack][] earlier today:

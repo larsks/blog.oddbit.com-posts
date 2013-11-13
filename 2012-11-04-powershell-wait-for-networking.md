@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Waiting for networking using PowerShell
-tags: powershell,networking,windows
 date: 2012-11-04
+tags:
+  - powershell
+  - networking
+  - windows
 ---
 
 I've recently been exploring the world of Windows scripting, and I ran
@@ -40,4 +43,6 @@ interfaces that have a default gateway (the `DefaultIPGateway`
 attribute).  It will poll the state of things once/second up to `$tries`
 times, and if nothing is available it will ultimately throw an
 exception.
+
+[gist-4011808]: https://gist.github.com/4011808
 

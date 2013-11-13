@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Posting to Scriptogr.am using the API
-tags: scriptogr.am,api
 date: 2012-11-05
+tags:
+  - scriptogr.am
+  - api
 ---
 
 Scriptogr.am has a [very simple api][api] that allows one to `POST` and

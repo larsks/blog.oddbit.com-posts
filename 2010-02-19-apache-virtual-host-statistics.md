@@ -2,7 +2,13 @@
 layout: post
 title: Apache virtual host statistics
 date: 2010-2-19
-tags: visualization,logging,software,release,apache,sofware
+tags:
+  - release
+  - apache
+  - sofware
+  - visualization
+  - logging
+  - software
 ---
 
 As part of a project I'm working on I wanted to get a rough idea of the activity of the Apache virtual hosts on the system. I wasn't able to find exactly what I wanted, so I refreshed my memory of curses to bring you _vhoststats_.
@@ -32,6 +38,6 @@ It's not [pong][1], but I've found it useful.
 
 You can download the code from the [project page][2] on GitHub.
 
-   [1]: http://code.google.com/p/logstalgia/
-   [2]: http://github.com/larsks/vhoststats/
+[1]: http://code.google.com/p/logstalgia/
+[2]: http://github.com/larsks/vhoststats/
 

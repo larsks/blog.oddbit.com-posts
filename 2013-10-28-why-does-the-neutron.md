@@ -2,7 +2,10 @@
 layout: post
 title: Why does the Neutron documentation recommend three interfaces?
 date: 2013-10-28
-tags: openstack,neutron,networking
+tags:
+  - openstack
+  - neutron
+  - networking
 ---
 
 The [documentation for configuring Neutron][neutron-docs] recommends
@@ -60,4 +63,7 @@ are not actually providing public access, you can elect to not have an
 will set up outbound NAT rules so that "external" traffic from your
 instances will masquerade using the primary ip address of your network
 controller.
+
+[neutron-docs]: http://docs.openstack.org/havana/install-guide/install/yum/content/neutron-install.dedicated-network-node.html
+
 

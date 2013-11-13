@@ -2,7 +2,6 @@
 layout: post
 title: Capturing Envoy Data
 date: 2012-2-22
-tags: 
 ---
 
 Pursuant to my [last post][1], I've written a simple man-in-the-middle proxy to intercept communication between the Envoy and the Enphase servers. The code is available [here][2].  
@@ -176,12 +175,12 @@ If you find some bugs, please let me know by creating a new issue [here][8]. Not
   
 
 
-   [1]: http://blog.oddbit.com/2012/02/enphase-envoy-xml-data-format.html
-   [2]: https://github.com/larsks/envoy-tools
-   [3]: http://4.bp.blogspot.com/-pe4CDIiBmm4/T0TwAojvWwI/AAAAAAAABcw/KrgJigWlHys/s400/envoy.png
-   [4]: http://4.bp.blogspot.com/-pe4CDIiBmm4/T0TwAojvWwI/AAAAAAAABcw/KrgJigWlHys/s1600/envoy.png
-   [5]: http://192.168.1.100/admin/lib/network_display?locale=en
-   [6]: http://www.stunnel.org/
-   [7]: http://bottlepy.org/
-   [8]: https://github.com/larsks/envoy-tools/issues
+[1]: http://blog.oddbit.com/2012/02/enphase-envoy-xml-data-format.html
+[2]: https://github.com/larsks/envoy-tools
+[3]: http://4.bp.blogspot.com/-pe4CDIiBmm4/T0TwAojvWwI/AAAAAAAABcw/KrgJigWlHys/s400/envoy.png
+[4]: http://4.bp.blogspot.com/-pe4CDIiBmm4/T0TwAojvWwI/AAAAAAAABcw/KrgJigWlHys/s1600/envoy.png
+[5]: http://192.168.1.100/admin/lib/network_display?locale=en
+[6]: http://www.stunnel.org/
+[7]: http://bottlepy.org/
+[8]: https://github.com/larsks/envoy-tools/issues
 
