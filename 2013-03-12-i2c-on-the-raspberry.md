@@ -1,6 +1,9 @@
-Title: I2C on the Raspberry Pi
-Date: 2013-03-12
-Tags: raspberrypi,arduino,i2c,hardware
+---
+layout: post
+title: I2C on the Raspberry Pi
+date: 2013-03-12
+tags: raspberrypi,arduino,i2c,hardware
+---
 
 I've set up my [Raspberry Pi][] to communicate with my [Arduino][] via
 [I2C][].  The Raspberry Pi is a 3.3v device and the Arduino is a 5v

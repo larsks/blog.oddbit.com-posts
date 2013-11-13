@@ -1,5 +1,8 @@
-Title: Cleaning up LXC cgroups
-Date: 2013-01-28
+---
+layout: post
+title: Cleaning up LXC cgroups
+date: 2013-01-28
+---
 
 I spent some time today looking at systemd (44) under Fedora (17).
 When stopping an LXC container using `lxc-stop`, I would always

@@ -1,6 +1,9 @@
-Title: A quote about XMLRPC
-Date: 2013-02-25
-Tags: puppet
+---
+layout: post
+title: A quote about XMLRPC
+date: 2013-02-25
+tags: puppet
+---
 
 I've been reading up on Puppet 3 lately, and came across the
 following:

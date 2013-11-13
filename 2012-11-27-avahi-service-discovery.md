@@ -1,5 +1,8 @@
-Title: Service discovery in the cloud using Avahi
-Date: 2012-11-27
+---
+layout: post
+title: Service discovery in the cloud using Avahi
+date: 2012-11-27
+---
 
 I'm been writing [a provisioning tool][drifter] for OpenStack
 recently, and I've put together a demo configuration that installs a

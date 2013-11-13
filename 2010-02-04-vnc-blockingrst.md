@@ -1,6 +1,9 @@
-Title: Blocking VNC with iptables
-Date: 2010-2-4
-Tags: rfb,netfilter,vnc,linux,classification,iptables,fbpost
+---
+layout: post
+title: Blocking VNC with iptables
+date: 2010-2-4
+tags: rfb,netfilter,vnc,linux,classification,iptables,fbpost
+---
 
 VNC clients use the [RFB protocol][1] to provide virtual display capabilities. The RFB protocol, as implemented by most clients, provides very poor authentication options. While passwords are not actually sent "in the clear", it is possible to brute force them based on information available on the wire. The RFB 3.x protocol limits passwords to a maximum of eight characters, so the potential key space is relatively small.
 

@@ -1,6 +1,9 @@
-Title: Private /tmp directories in Fedora
-Tags: fedora,systemd
-Date: 2012-11-05
+---
+layout: post
+title: Private /tmp directories in Fedora
+tags: fedora,systemd
+date: 2012-11-05
+---
 
 I ran into an odd problem the other day: I was testing out some
 configuration changes for a web application by dropping files into

@@ -1,6 +1,9 @@
-Title: Linux UPnP Gateway
-Date: 2010-1-29
-Tags: peertopeer,linux,upnp,fbpost,networking
+---
+layout: post
+title: Linux UPnP Gateway
+date: 2010-1-29
+tags: peertopeer,linux,upnp,fbpost,networking
+---
 
 Like many other folks out there, I have several computers in my house connected to the outside world via a Linux box acting as a NAT gateway. I often want to use application such as BitTorrent and Freenet, which require that a number of ports be forwarded from my external connection to the particular computer on which I happen to be working. It turns out there's a protocol for this, called [UPnP][1]. From Wikipedia:
 

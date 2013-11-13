@@ -1,6 +1,9 @@
-Title: Waiting for networking using PowerShell
-Tags: powershell,networking,windows
-Date: 2012-11-04
+---
+layout: post
+title: Waiting for networking using PowerShell
+tags: powershell,networking,windows
+date: 2012-11-04
+---
 
 I've recently been exploring the world of Windows scripting, and I ran
 into a small problem: I was running a script at system startup, and

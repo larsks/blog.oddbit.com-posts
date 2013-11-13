@@ -1,5 +1,8 @@
-Title: Using Oracle JDK under CentOS
-Date: 2012-11-26
+---
+layout: post
+title: Using Oracle JDK under CentOS
+date: 2012-11-26
+---
 
 I needed to replace the native OpenJDK based Java VM with the Oracle
 Java distribution on one of our CentOS servers.  In order to do it

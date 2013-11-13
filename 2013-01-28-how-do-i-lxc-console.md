@@ -1,5 +1,8 @@
-Title: How do I LXC console?
-Date: 2013-01-28
+---
+layout: post
+title: How do I LXC console?
+date: 2013-01-28
+---
 
 It took me an unreasonably long time to boot an LXC container with
 working console access.  For the record:

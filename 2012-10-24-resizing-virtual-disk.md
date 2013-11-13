@@ -1,6 +1,9 @@
-Title: Growing a filesystem on a virtual disk
-Date: 2012-10-24
-Tags: virtualization,kvm,storage
+---
+layout: post
+title: Growing a filesystem on a virtual disk
+date: 2012-10-24
+tags: virtualization,kvm,storage
+---
 
 Occasionally we will deploy a virtual instance into our KVM
 infrastructure and realize after the fact that we need more local disk

@@ -1,6 +1,9 @@
-Title: Python ctypes module
-Date: 2010-8-10
-Tags: python
+---
+layout: post
+title: Python ctypes module
+date: 2010-8-10
+tags: python
+---
 
 I just learned about the Python `ctypes` module, which is a Python module for interfacing with C code. Among other things, `ctypes` lets you call arbitrary functions in shared libraries. This is, from my perspective, some very cool magic. I thought I would provide a short example here, since it took me a little time to get everything working smoothly.
 

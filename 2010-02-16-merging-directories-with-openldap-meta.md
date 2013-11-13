@@ -1,6 +1,9 @@
-Title: Merging directories with OpenLDAP's Meta backend
-Date: 2010-2-16
-Tags: openldap,active_directory,ldap,meta,proxy
+---
+layout: post
+title: Merging directories with OpenLDAP's Meta backend
+date: 2010-2-16
+tags: openldap,active_directory,ldap,meta,proxy
+---
 
 This document provides an example of using OpenLDAP's meta backend to provide a unified view of two distinct LDAP directory trees. I was frustrated by the lack of simple examples available when I went looking for information on this topic, so this is my attempt to make life easier for the next person looking to do the same thing.
 

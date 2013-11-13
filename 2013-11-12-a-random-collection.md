@@ -1,6 +1,9 @@
-Title: A random collection of OpenStack Tools
-Date: 2013-11-12
-Tags: openstack
+---
+layout: post
+title: A random collection of OpenStack Tools
+date: 2013-11-12
+tags: openstack
+---
 
 I've been working with [OpenStack][] a lot recently, and I've ended up with a small collection of utilities that make my life easier.  On the odd chance that they'll make your life easier, too, I thought I'd hilight them here:
 

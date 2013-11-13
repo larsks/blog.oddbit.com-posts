@@ -1,5 +1,8 @@
-Title: Systemd and the case of the missing network
-Date: 2013-01-28
+---
+layout: post
+title: Systemd and the case of the missing network
+date: 2013-01-28
+---
 
 I was intrigued by [this post][sockact] on socket activated containers with `systemd`.  The basic premise is:
 

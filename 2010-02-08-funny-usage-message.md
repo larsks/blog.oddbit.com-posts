@@ -1,6 +1,9 @@
-Title: Funny usage message
-Date: 2010-2-8
-Tags: development,android
+---
+layout: post
+title: Funny usage message
+date: 2010-2-8
+tags: development,android
+---
 
 I was poking around in a command shell on my Droid to see what was available. While it's a pretty restricted environment, there's a number of commands available in /system/bin, including dexopt.
 

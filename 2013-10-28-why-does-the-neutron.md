@@ -1,6 +1,9 @@
-Title: Why does the Neutron documentation recommend three interfaces?
-Date: 2013-10-28
-Tags: openstack,neutron,networking
+---
+layout: post
+title: Why does the Neutron documentation recommend three interfaces?
+date: 2013-10-28
+tags: openstack,neutron,networking
+---
 
 The [documentation for configuring Neutron][neutron-docs] recommends
 that a network controller has three physical interfaces:

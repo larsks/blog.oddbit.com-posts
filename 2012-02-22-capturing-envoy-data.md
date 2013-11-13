@@ -1,6 +1,9 @@
-Title: Capturing Envoy Data
-Date: 2012-2-22
-Tags: 
+---
+layout: post
+title: Capturing Envoy Data
+date: 2012-2-22
+tags: 
+---
 
 Pursuant to my [last post][1], I've written a simple man-in-the-middle proxy to intercept communication between the Envoy and the Enphase servers. The code is available [here][2].  
   

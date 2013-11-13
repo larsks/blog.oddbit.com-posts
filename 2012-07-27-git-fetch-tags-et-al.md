@@ -1,6 +1,9 @@
-Title: Git fetch, tags, remotes, and more
-Date: 2012-07-27
-Tags: git
+---
+layout: post
+title: Git fetch, tags, remotes, and more
+date: 2012-07-27
+tags: git
+---
 
 I’ve been playing around with Git, Puppet, and GPG verification of our
 Puppet configuration repository, and these are some random facts about

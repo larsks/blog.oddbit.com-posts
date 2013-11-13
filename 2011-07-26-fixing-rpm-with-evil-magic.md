@@ -1,6 +1,9 @@
-Title: Fixing RPM with evil magic
-Date: 2011-07-26
-Tags: rpm
+---
+layout: post
+title: Fixing RPM with evil magic
+date: 2011-07-26
+tags: rpm
+---
 
 # Fixing rpmsign with evil magic
 

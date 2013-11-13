@@ -1,6 +1,9 @@
-Title: Interrupts on the PiFace
-Date: 2013-08-05
-Tags: raspberrypi,python,piface
+---
+layout: post
+title: Interrupts on the PiFace
+date: 2013-08-05
+tags: raspberrypi,python,piface
+---
 
 I recently acquired both a [Raspberry Pi][] and a [PiFace][] IO board.
 I had a rough time finding examples of how to read the input ports via

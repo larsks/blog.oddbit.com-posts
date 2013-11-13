@@ -1,6 +1,9 @@
-Title: Patch to gPXE dhcp command
-Date: 2010-7-22
-Tags: gpxe,linux,dhcp
+---
+layout: post
+title: Patch to gPXE dhcp command
+date: 2010-7-22
+tags: gpxe,linux,dhcp
+---
 
 **Update**: This patch has been [accepted][1] into gPXE.
 

@@ -1,6 +1,9 @@
-Title: Controlling a servo with your Arduino
-Date: 2013-03-07
-Tags: arduino,hardware
+---
+layout: post
+title: Controlling a servo with your Arduino
+date: 2013-03-07
+tags: arduino,hardware
+---
 
 I've recently started playing with an [Arduino][] kit I purchased a year
 ago (and only just now got around to unboxing).  I purchased the kit

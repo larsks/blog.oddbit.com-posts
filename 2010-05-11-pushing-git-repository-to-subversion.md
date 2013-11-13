@@ -1,6 +1,9 @@
-Title: Pushing a Git repository to Subversion
-Date: 2010-5-11
-Tags: git,subversion,vcs
+---
+layout: post
+title: Pushing a Git repository to Subversion
+date: 2010-5-11
+tags: git,subversion,vcs
+---
 
 I recently set up a git repository server (using [gitosis][1] and [gitweb][2]). Among the required features of the system was the ability to publish the git repository to a read-only Subversion repository. This sounds simple in principle but in practice proved to be a bit tricky.
 

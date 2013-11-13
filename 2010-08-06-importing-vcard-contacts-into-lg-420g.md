@@ -1,6 +1,9 @@
-Title: Importing vCard contacts into an LG 420G
-Date: 2010-8-6
-Tags: sync,contacts,import,phone,vcard
+---
+layout: post
+title: Importing vCard contacts into an LG 420G
+date: 2010-8-6
+tags: sync,contacts,import,phone,vcard
+---
 
 Alix recently acquired an LG 420G from [TracFone][1]. She was interested in getting all of her contacts onto the phone, which at first seemed like a simple task -- transfer a vCard (.vcf) file to the phone via Bluetooth, and the phone would import all the contacts. This turned out to be a great idea in theory, but in practice there was a fatal flaw -- while the phone did indeed import the contacts, it only imported names and the occasional note or email address. There were no phone numbers.
 

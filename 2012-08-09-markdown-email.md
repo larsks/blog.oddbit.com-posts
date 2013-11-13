@@ -1,5 +1,8 @@
-Title: Markdown in your Email
-Date: 2012-08-09
+---
+layout: post
+title: Markdown in your Email
+date: 2012-08-09
+---
 
 I really like [Markdown][1], a minimal markup language designed to be readable as plain text that can be rendered into structurally valid HTML. Markdown is already used on sites such as [GitHub][2] and all the [StackExchange][3] sites.
 

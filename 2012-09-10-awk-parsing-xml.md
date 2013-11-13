@@ -1,6 +1,9 @@
-Title: Parsing XML with Awk
-Date: 2012-09-10
-Tags: awk,xml
+---
+layout: post
+title: Parsing XML with Awk
+date: 2012-09-10
+tags: awk,xml
+---
 
 Recently, changes from the [xmlgawk][] project have been integrated into
 [GNU awk][], and xmlgawk has been renamed to [gawkextlib][]. With both a

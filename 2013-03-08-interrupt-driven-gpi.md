@@ -1,6 +1,9 @@
-Title: Interrupt driven GPIO with Python
-Date: 2013-03-08
-Tags: raspberrypi,hardware
+---
+layout: post
+title: Interrupt driven GPIO with Python
+date: 2013-03-08
+tags: raspberrypi,hardware
+---
 
 There are several Python libraries out there for interacting with the
 [GPIO][] pins on a Raspberry Pi:

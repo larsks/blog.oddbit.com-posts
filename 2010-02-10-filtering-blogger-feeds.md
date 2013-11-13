@@ -1,6 +1,9 @@
-Title: Filtering Blogger feeds
-Date: 2010-2-10
-Tags: atom,blogger,filter,pipes,rss
+---
+layout: post
+title: Filtering Blogger feeds
+date: 2010-2-10
+tags: atom,blogger,filter,pipes,rss
+---
 
 # 
 

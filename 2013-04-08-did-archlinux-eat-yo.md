@@ -1,6 +1,9 @@
-Title: Did Arch Linux eat your KVM?
-Date: 2013-04-08
-Tags: archlinux,virtualization,kvm
+---
+layout: post
+title: Did Arch Linux eat your KVM?
+date: 2013-04-08
+tags: archlinux,virtualization,kvm
+---
 
 A recent update to [Arch Linux][] replaced the `qemu-kvm` package with
 an updated version of `qemu`.  A side effect of this change is that

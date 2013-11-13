@@ -1,6 +1,9 @@
-Title: Apache virtual host statistics
-Date: 2010-2-19
-Tags: visualization,logging,software,release,apache,sofware
+---
+layout: post
+title: Apache virtual host statistics
+date: 2010-2-19
+tags: visualization,logging,software,release,apache,sofware
+---
 
 As part of a project I'm working on I wanted to get a rough idea of the activity of the Apache virtual hosts on the system. I wasn't able to find exactly what I wanted, so I refreshed my memory of curses to bring you _vhoststats_.
 

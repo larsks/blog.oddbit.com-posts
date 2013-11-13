@@ -1,6 +1,9 @@
-Title: Document classification with POPFile
-Date: 2012-11-08
-Tags: bayes,analytics
+---
+layout: post
+title: Document classification with POPFile
+date: 2012-11-08
+tags: bayes,analytics
+---
 
 I recently embarked upon a quest to categorize a year's worth of
 trouble tickets (around 15000 documents total).  We wanted to see what

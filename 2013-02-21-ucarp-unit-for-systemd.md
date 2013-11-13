@@ -1,5 +1,8 @@
-Title: A systemd unit for ucarp
-Date: 2013-02-21
+---
+layout: post
+title: A systemd unit for ucarp
+date: 2013-02-21
+---
 
 In Fedora 17 there are still a number of services that either have not
 been ported over to `systemd` or that do not take full advantage of

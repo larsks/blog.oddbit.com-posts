@@ -1,7 +1,10 @@
-Title: Automatic configuration of Windows instances in OpenStack, part 1
+---
+layout: post
+title: Automatic configuration of Windows instances in OpenStack, part 1
 Slug: openstack-windows-1
-Tags: openstack,windows
-Date: 2012-11-04
+tags: openstack,windows
+date: 2012-11-04
+---
 
 This is the first of two articles in which I discuss my work in
 getting some Windows instances up and running in our [OpenStack][]

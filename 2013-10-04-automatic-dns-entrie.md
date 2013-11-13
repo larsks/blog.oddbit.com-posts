@@ -1,7 +1,10 @@
-Title: Automatic hostname entries for libvirt domains
-Date: 2013-10-04
-Tags: libvirt,virtualization
+---
+layout: post
+title: Automatic hostname entries for libvirt domains
+date: 2013-10-04
+tags: libvirt,virtualization
 Slug: automatic-dns-entries-for-libvirt-domains
+---
 
 Have you ever wished that you could use `libvirt` domain names as
 hostnames?  So that you could do something like this:

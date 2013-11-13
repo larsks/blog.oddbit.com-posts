@@ -1,6 +1,9 @@
-Title: Split concatenated certificates with awk
-Date: 2013-07-16
-Tags: awk
+---
+layout: post
+title: Split concatenated certificates with awk
+date: 2013-07-16
+tags: awk
+---
 
 [This][] is a short script that takes a list of concatenated
 certificates as input (such as a collection of CA certificates) and
