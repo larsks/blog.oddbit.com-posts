@@ -52,11 +52,9 @@ functionality in Neutron or Nova.
   `EXTERNAL_INTERFACE` will generally require much broader access.
 
 If you are deploying a proof-of-concept (POC) deployment to which you
-are not actually providing public access, there are some configuration
-changes you can make that will require fewer interfaces.
-
-1. You can elect to not have an `EXTERNAL_INTERFACE`. Rather than
-   adding this device to `br-ex`, you will set up outbound NAT rules
-   so that "external" traffic from your instances will masquerade
-   using the primary ip address of your network controller.
+are not actually providing public access, you can elect to not have an
+`EXTERNAL_INTERFACE`. Rather than adding this device to `br-ex`, you
+will set up outbound NAT rules so that "external" traffic from your
+instances will masquerade using the primary ip address of your network
+controller.
 
