@@ -30,8 +30,8 @@ reading pleasure:
     ExecStart=/usr/sbin/ucarp -i $BIND_INTERFACE -p $PASSWORD -v %I -a $VIP_ADDRESS -s $SOURCE_ADDRESS $OPTIONS -u $UPSCRIPT -d $DOWNSCRIPT
     KillMode=control-group
 
-[Install]
-WantedBy=multiuser.target
+    [Install]
+    WantedBy=multiuser.target
 
 [ucarp]: http://www.pureftpd.org/project/ucarp
 [template]: http://0pointer.de/blog/projects/instances.html
