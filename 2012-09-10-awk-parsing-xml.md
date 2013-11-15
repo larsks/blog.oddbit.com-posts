@@ -36,7 +36,26 @@ You could then write code similar to [the
 following](https://gist.github.com/4012705) to extract the relevant
 information:
 
-<script src="https://gist.github.com/4012705.js"></script>
+    @load "xml"
+
+    XMLSTARTELEM == "disk"  {
+            in_disk=1
+            disk_file=""
+            disk_target=""
+    }
+
+    in_disk == 1 && XMLSTARTELEM == "source" {
+            disk_file=XMLATTR["file"]
+    }
+
+    in_disk == 1 && XMLSTARTELEM == "target" {
+            disk_target=XMLATTR["dev"]
+    }
+
+    XMLENDELEM == "disk"    {
+            in_disk=0
+            print disk_target, disk_file
+    }
 
 Given the sample input above, the script will produce the following
 output:

@@ -75,7 +75,7 @@ session would be:
 
 ## Putting it all together
 
-The following shell scripts looks through all inactive LXC domains and
+The following shell script looks through all inactive LXC domains and
 figures out:
 
 - If it should try to start them, using the `<oddbit:autostart>` element,
@@ -84,7 +84,25 @@ figures out:
 - Where to mount it, by looking for the libvirt `<filesystem>` element
   with a target of `/`.
 
-<script src="https://gist.github.com/4356138.js"></script>
+    #!/bin/sh
+
+    tmpfile=$(mktemp)
+    trap 'rm -f $tmpfile' EXIT
+
+    virsh -c lxc:/// list --name --inactive | while read domain; do
+      [ "$domain" ] || continue
+
+      virsh dumpxml $domain > $tmpfile
+
+      autostart=$(xmllint --xpath '//domain/metadata/*[namespace-uri()="http://oddbit.com/ns/libvirt/1" and local-name()="autostart"]/text()' $tmpfile)
+
+      [ "$autostart" = True ] || continue
+
+      device=$(xmllint --xpath '//domain/metadata/*[namespace-uri()="http://oddbit.com/ns/libvirt/1" and local-name()="device"]/text()' $tmpfile)
+      mount=$(xmllint --xpath 'string(//filesystem/target[@dir = "/"]/../source/@dir)' $tmpfile)
+
+      echo "$domain $autostart $device $mount"
+    done
 
 I'm not actually planning on using this in practice.  I'll
 probably go the naming scheme route.  But this was fun to figure out.
