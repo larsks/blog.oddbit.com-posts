@@ -172,8 +172,12 @@ following content:
 
 With this in place, a URL such as <http://blog.oddbit.com/post/a-random-collection-of-openstack-tools> goes to the right place.
 
+**Update**: It turns out that it has been almost exactly a year since
+I [moved from Blogger to Scriptogram][lastmigrate].
+
 [scriptogram]: http://scriptogr.am/
 [github pages]: http://pages.github.com/
 [jekyll]: http://jekyllrb.com/
 [yaml]: http://en.wikipedia.org/wiki/YAML
+[lastmigrate]: http://blog.oddbit.com/2012/11/06/moving-from-blogger/
 
