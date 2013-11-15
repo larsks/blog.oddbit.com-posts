@@ -183,7 +183,7 @@ So close! But this is in x.509 format, and even though the OpenSSL library suppo
 
 Additionally, I am trying for a solution that does not require the private key to be available, which means that in any case I will still have to parse the OpenSSH public key format.
 
-[1]: http://blog.oddbit.com/2011/05/signing-data-with-ssh-agent.html
+[1]: http://blog.oddbit.com/2011/05/09/signing-data-with-ssh-agent/
 [2]: http://tools.ietf.org/html/rfc4253#section-6.6
 [3]: http://en.wikipedia.org/wiki/Base64#Privacy-enhanced_mail
 [4]: http://en.wikipedia.org/wiki/Base64
