@@ -106,7 +106,7 @@ From this request you will end up with three files in /var/spool/envoy:
 
 If you find some bugs, please let me know by creating a new issue [here][8]. Note that this is only for bugs in the code; if you need basic networking tutorials and so forth the Google has lots of help for you.
 
-[1]: http://blog.oddbit.com/2012/02/enphase-envoy-xml-data-format.html
+[1]: http://blog.oddbit.com/2012/02/13/enphase-envoy-xml-data-format/
 [2]: https://github.com/larsks/envoy-tools
 [3]: http://4.bp.blogspot.com/-pe4CDIiBmm4/T0TwAojvWwI/AAAAAAAABcw/KrgJigWlHys/s400/envoy.png
 [4]: http://4.bp.blogspot.com/-pe4CDIiBmm4/T0TwAojvWwI/AAAAAAAABcw/KrgJigWlHys/s1600/envoy.png
