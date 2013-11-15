@@ -80,11 +80,11 @@ This document provides a number of recipes designed for use with u32 module, inc
 
 This means:
 
-  - Match tcp packets only (-p tcp)
-  - Match only during the first 1024 bytes of the connection (-m connbytes --connbytes 0:1024 --connbytes-dir both --connbytes-mode bytes)
-  - Match only ESTABLISHED connections (-m state --state ESTABLISHED)
-  - Match bytes "0x52464240" ("RFB ") at the beginning of the TCP payload (-m u32 --u32 "0>>22&0x3C@ 12>>26&0x3C@ 0=0x52464220")
-  - Upon a match, force-close the connection with a RST packet. (-j REJECT --reject-with tcp-reset)
+- Match tcp packets only (-p tcp)
+- Match only during the first 1024 bytes of the connection (-m connbytes --connbytes 0:1024 --connbytes-dir both --connbytes-mode bytes)
+- Match only ESTABLISHED connections (-m state --state ESTABLISHED)
+- Match bytes "0x52464240" ("RFB ") at the beginning of the TCP payload (-m u32 --u32 "0>>22&0x3C@ 12>>26&0x3C@ 0=0x52464220")
+- Upon a match, force-close the connection with a RST packet. (-j REJECT --reject-with tcp-reset)
 
 With this rule in place, all unenrypted VNC connections will be forcefully disconnected by the server.
 
