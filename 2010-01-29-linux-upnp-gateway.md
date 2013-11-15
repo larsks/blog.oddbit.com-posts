@@ -25,89 +25,75 @@ The [Linux UPnP Internet Gateway Device][2] project implements a Linux UPnP serv
 
 Using the gateway service is really simple:
 
-  1. Start up upnpd:
+1. Start upnpd:
 
         # /etc/init.d/upnpd
-    
-  2. Start your application. You will see messages like the following in syslog (if you are logging DEBUG level messages):
-    
-    
-         Aug  6 20:10:12 arcadia upnpd[19816]: Failure in
-           GateDeviceDeletePortMapping: DeletePortMap: Proto:UDP Port:57875
-         Aug  6 20:10:12 arcadia upnpd[19816]: AddPortMap: DevUDN:
-           uuid:75802409-bccb-40e7-8e6c-fa095ecce13e ServiceID: urn:upnp-org:serviceId:WANIPConn1
-           RemoteHost: (null) Prot: UDP ExtPort: 57875 Int: 192.168.1.118.57875
-         Aug  6 20:10:12 arcadia upnpd[19816]: Failure in
-           GateDeviceDeletePortMapping: DeletePortMap: Proto:UDP Port:11657
-         Aug  6 20:10:12 arcadia upnpd[19816]: AddPortMap: DevUDN:
-           uuid:75802409-bccb-40e7-8e6c-fa095ecce13e ServiceID: urn:upnp-org:serviceId:WANIPConn1
-           RemoteHost: (null) Prot: UDP ExtPort: 11657 Int: 192.168.1.118.11657
-        
-
+  
+1. Start your application. You will see messages like the following in syslog (if you are logging DEBUG level messages):
+  
+        Aug  6 20:10:12 arcadia upnpd[19816]: Failure in
+          GateDeviceDeletePortMapping: DeletePortMap: Proto:UDP Port:57875
+        Aug  6 20:10:12 arcadia upnpd[19816]: AddPortMap: DevUDN:
+          uuid:75802409-bccb-40e7-8e6c-fa095ecce13e ServiceID: urn:upnp-org:serviceId:WANIPConn1
+         RemoteHost: (null) Prot: UDP ExtPort: 57875 Int: 192.168.1.118.57875
+        Aug  6 20:10:12 arcadia upnpd[19816]: Failure in
+          GateDeviceDeletePortMapping: DeletePortMap: Proto:UDP Port:11657
+        Aug  6 20:10:12 arcadia upnpd[19816]: AddPortMap: DevUDN:
+          uuid:75802409-bccb-40e7-8e6c-fa095ecce13e ServiceID: urn:upnp-org:serviceId:WANIPConn1
+          RemoteHost: (null) Prot: UDP ExtPort: 11657 Int: 192.168.1.118.11657
+      
     For each forwarding requested by the client, upnpd first attempts to remove the mapping and then creates a new rule. Exactly how upnp implements these rules on your system is controlled by `/etc/upnpd.conf` -- if you want to use something other than _iptables_, or use custom chains, this is where you would make your changes.
 
-  3. Look at your firewall rules. Upnpd modifies the _FORWARD_ chain in the _filter_ table and the _PREROUTING_ chain in the _nat_ table. You can change this behavior by editing `/etc/upnpd.conf`.
+1. Look at your firewall rules. Upnpd modifies the _FORWARD_ chain in the _filter_ table and the _PREROUTING_ chain in the _nat_ table. You can change this behavior by editing `/etc/upnpd.conf`.
 
     To see forwarding rules:
-    
-    
+  
         # iptables -nL FORWARD
-    
 
-    The rules might look something like this:
-        
-        
+     The rules might look something like this:
+      
         Chain FORWARD (policy DROP)
         target     prot opt source               destination
         ACCEPT     udp  --  0.0.0.0/0            192.168.1.118       udp dpt:57875
         ACCEPT     udp  --  0.0.0.0/0            192.168.1.118       udp dpt:11657
-        
 
-    To see prerouting rules:
-        
-        
+     To see prerouting rules:
+
         # iptables -t nat -vnL PREROUTING
-        
 
-    The rules might look something like this:
-        
-        
+     The rules might look something like this:
+  
         Chain PREROUTING (policy ACCEPT)
         target     prot opt source               destination
         DNAT       udp  --  0.0.0.0/0            0.0.0.0/0           udp dpt:11657 to:192.168.1.118:11657
         DNAT       udp  --  0.0.0.0/0            0.0.0.0/0           udp dpt:57875 to:192.168.1.118:57875
-        
 
-  4. Upnpd will delete the mappings when they expire. The expiration time may be set by the client, or, if the client specifies no expiration, than by the "duration" configuration item in /etc/upnpd.conf.
+1. Upnpd will delete the mappings when they expire. The expiration time may be set by the client, or, if the client specifies no expiration, than by the "duration" configuration item in /etc/upnpd.conf.
 
 # Configuration file
 
 The upnpd configuration file (`/etc/upnpd.conf`) allows you to change various aspects of upnpd's behavior. Of particular interest:
 
-  - insert_forward_rules
+- `insert_forward_rules`  
+  Default: `yes`
 
-    Default: yes
+    Whether or not upnpd needs to create entries in the `FORWARD` chain of the `filter` table. If your `FORWARD` chain has a policy of `DROP` you need set to yes.
 
-    Whether or not upnpd needs to create entries in the _FORWARD_ chain of the _filter_ table. If your _FORWARD_ chain has a policy of _DROP_ you need set to yes.
+- `forward_chain_name`  
+  Default: `FORWARD`
 
-  - forward_chain_name
-
-    Default: FORWARD
-
-    Normally, upnpd creates entries in the _FORWARD_ chain. If you have a more advanced firewall setup this may not be the appropriate place to make changes. If you enter a custom name here, you will need to create the corresponding chain:
-    
+    Normally, upnpd creates entries in the `FORWARD` chain. If you have a more advanced firewall setup this may not be the appropriate place to make changes. If you enter a custom name here, you will need to create the corresponding chain:
+  
         iptables -N my-forward-chain
 
     You will also need to call this chain from the _FORWARD_ chain:
-    
-    
+
         iptables -A FORWARD -j my-forward-chain
 
-  - prerouting_chain_name
+- `prerouting_chain_name`  
+  Default: `PREROUTING`
 
-    Default: PREROUTING
-
-    Like _forward_chain_name_, but for entries in the _nat_ table.
+    Like `forward`chain`name`, but for entries in the `nat` table.
 
 # Security considerations
 
