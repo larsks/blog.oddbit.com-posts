@@ -11,7 +11,26 @@ certificates as input (such as a collection of CA certificates) and
 produces a collection of numbered files, each containing a single
 certificate.
 
-<script src="https://gist.github.com/larsks/6008833.js"></script>
+    #!/bin/awk -f
+     
+    # This script expects a list of concatenated certificates on input and
+    # produces a collection of individual numbered files each containing
+    # a single certificate.
+     
+    BEGIN {incert=0}
+     
+    /-----BEGIN( TRUSTED)? CERTIFICATE-----/ {
+    certno++
+    certfile=sprintf("cert-%d.crt", certno)
+    incert=1
+    }
+     
+    /-----END( TRUSTED)? CERTIFICATE-----/ {
+    print >> certfile
+    incert=0
+    }
+     
+    incert==1 { print >> certfile }
 
 [this]: https://gist.github.com/larsks/6008833
 
