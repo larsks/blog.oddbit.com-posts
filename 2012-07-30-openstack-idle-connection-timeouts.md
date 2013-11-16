@@ -231,17 +231,17 @@ If it's not obvious, `heartbeat` was mispelled `hearbeat` in the above block of
 code. Putting this change into production has completely resolved the idle
 connection timeout problem.
 
- [1]: http://docs.openstack.org/trunk/openstack-compute/starter/content/Compute_Worker_nova-compute_-d1e232.html
- [2]: http://www.amqp.org/
- [3]: http://www.cisco.com/en/US/docs/security/asdm/6_2/user/guide/protect.html#wp1291963
- [4]: http://en.wikipedia.org/wiki/Transmission_Control_Protocol#Connection_establishment
- [5]: https://docs.google.com/drawings/pub?id=1hQ9kV_IUeWS40_WNuB7H4kpYOVu0tD-zUhl2iIhSNZs&w=480&h=360
- [6]: http://www.policyrouting.org/PolicyRoutingBook/ONLINE/TOC.html
- [7]: http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/
- [8]: http://www.jayconrod.com/cgi/view_post.py?23
- [9]: http://libkeepalive.sourceforge.net
- [10]: http://openssh.org/
- [11]: http://dan.hersam.com/2007/03/05/how-to-avoid-ssh-timeouts/
- [12]: http://docs.openstack.org/essex/openstack-compute/admin/content/configuration-qpid.html
- [13]: https://lists.launchpad.net/openstack/msg15191.html
+[1]: http://docs.openstack.org/trunk/openstack-compute/starter/content/Compute_Worker_nova-compute_-d1e232.html
+[2]: http://www.amqp.org/
+[3]: http://www.cisco.com/en/US/docs/security/asdm/6_2/user/guide/protect.html#wp1291963
+[4]: http://en.wikipedia.org/wiki/Transmission_Control_Protocol#Connection_establishment
+[5]: /assets/asymmetric-routing.png
+[6]: http://www.policyrouting.org/PolicyRoutingBook/ONLINE/TOC.html
+[7]: http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/
+[8]: http://www.jayconrod.com/cgi/view_post.py?23
+[9]: http://libkeepalive.sourceforge.net
+[10]: http://openssh.org/
+[11]: http://dan.hersam.com/2007/03/05/how-to-avoid-ssh-timeouts/
+[12]: http://docs.openstack.org/essex/openstack-compute/admin/content/configuration-qpid.html
+[13]: https://lists.launchpad.net/openstack/msg15191.html
 

@@ -16,7 +16,7 @@ In addition to extracting the XML data, the proxy also logs the complete content
   
 Out of the box, your Envoy configures itself automatically using DHCP. Possibly, you've configured it statically. In either case, it will typically be configured to connect via your default gateway -- generally, your home router, cable modem, etc. In order to intercept the communication between the Envoy and Enphase, we insert another server between the Envoy and your network gateway. In the foollowing diagram, the dotted line represents the original communication path, while the solid lines represent the new communication path:  
 
-[![][3]][4]
+![][3]
 
 The intermediate system -- which we'll call the interceptor -- will use a few tricks to redirect traffic destined for Enphase to the local proxy (which will log the data locally and then forward it on to Enphase).  
 
@@ -108,8 +108,7 @@ If you find some bugs, please let me know by creating a new issue [here][8]. Not
 
 [1]: http://blog.oddbit.com/2012/02/13/enphase-envoy-xml-data-format/
 [2]: https://github.com/larsks/envoy-tools
-[3]: http://4.bp.blogspot.com/-pe4CDIiBmm4/T0TwAojvWwI/AAAAAAAABcw/KrgJigWlHys/s400/envoy.png
-[4]: http://4.bp.blogspot.com/-pe4CDIiBmm4/T0TwAojvWwI/AAAAAAAABcw/KrgJigWlHys/s1600/envoy.png
+[3]: /assets/envoy-capture.png
 [5]: http://192.168.1.100/admin/lib/network_display?locale=en
 [6]: http://www.stunnel.org/
 [7]: http://bottlepy.org/

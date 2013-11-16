@@ -47,6 +47,6 @@ the documentation for the [Wire library][wire].
 [pins]: https://projects.drogon.net/raspberry-pi/wiringpi/special-pin-functions/
 [wire]: http://arduino.cc/en/Reference/Wire
 
-[arduino uno pins]: http://dl.dropbox.com/u/1405733/blog/arduino-i2c-pins.jpg
-[raspberry pi pins]: http://dl.dropbox.com/u/1405733/blog/raspberry-pi-i2c-pins.jpg
+[arduino uno pins]: /assets/arduino-i2c-pins.jpg
+[raspberry pi pins]: /assets/raspberry-pi-i2c-pins.jpg
 
