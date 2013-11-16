@@ -21,7 +21,7 @@ Like many other folks out there, I have several computers in my house connected 
 
 The practical use of UPnP, from my perspective, is that it allows a device or application _inside_ the network to request specific ports to be forwarded on the gateway. This means that what used to be a manual process -- adding the necessary forwarding rules to my iptables configuration -- is now performed automatically, and only when necessary.
 
-The [Linux UPnP Internet Gateway Device][2] project implements a Linux UPnP service. You can download the source from the project web page, or you can download an RPM from [here][3] and install it on any recent vintage RedHat-ish system.
+The [Linux UPnP Internet Gateway Device][2] project implements a Linux UPnP service. You can download the source from the project web page.
 
 Using the gateway service is really simple:
 

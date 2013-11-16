@@ -35,5 +35,5 @@ the converter.
 [scriptogr.am]: http://scriptogr.am/
 [simple script]: https://gist.github.com/4022537
 [pandoc]: http://johnmacfarlane.net/pandoc/
-[export from blogger]: http://www.dataliberation.org/google/blogger
+[export from blogger]: http://www.dataliberation.org/takeout-products/blogger
 
