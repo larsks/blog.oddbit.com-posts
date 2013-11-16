@@ -42,7 +42,7 @@ establish a session key:
     api = popfile.POPFile.API
     session = api.get_session_key('admin', '')
 
-And then for reach document, perform whatever transformations you wish
+And then for each document, perform whatever transformations you wish
 to make (I'm building a minimal mail header) and then pass it to the
 `handle_message()` method:
 
