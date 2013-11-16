@@ -257,8 +257,8 @@ The following rule...
 
 ...simply maps outbound traffic on VLAN ID 1 to tunnel ID 2.
 
-Network host: integration bridge
-================================
+Network host: integration bridge (J,K,M)
+========================================
 
 The integration bridge on the network controller serves to connect
 instances to network services, such as routers and DHCP servers.
@@ -288,8 +288,8 @@ instances to network services, such as routers and DHCP servers.
 It connects to the tunnel bridge, `br-tun`, via a patch interface,
 `patch-tun`.
 
-Network host: DHCP server (O,P)
-===============================
+Network host: DHCP server (M)
+=============================
 
 Each network for which DHCP is enabled has a DHCP server running on
 the network controller.  The DHCP server is an instance of [dnsmasq][]
@@ -313,18 +313,13 @@ exec` command.  For example, to see the interface configuration inside
 the DHCP server namespace (`lo` removed for brevity):
 
     # ip netns exec qdhcp-88b1609c-68e0-49ca-a658-f1edff54a264 ip addr
-    71: ns-f14c598d-98: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    71: tapf14c598d-98: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
         link/ether fa:16:3e:10:2f:03 brd ff:ff:ff:ff:ff:ff
         inet 10.1.0.3/24 brd 10.1.0.255 scope global ns-f14c598d-98
         inet6 fe80::f816:3eff:fe10:2f03/64 scope link 
            valid_lft forever preferred_lft forever
 
-Note the MAC address on interface `ns-f14c598d-98`; this matches the MAC address in the flow rule we saw on the tunnel bridge.  This interface connects to the
-integration bridge via a tap device:
-
-        Port "tapf14c598d-98"
-            tag: 1
-            Interface "tapf14c598d-98"
+Note the MAC address on interface `tapf14c598d-98`; this matches the MAC address in the flow rule we saw on the tunnel bridge.
 
 You can find the `dnsmasq` process associated with this namespace by
 search the output of `ps` for the id (the number after `qdhcp-` in the
@@ -336,7 +331,7 @@ namespace name):
 
 [dnsmasq]: http://www.thekelleys.org.uk/dnsmasq/doc.html
 
-Network host: Router (M,N)
+Network host: Router (K,L)
 ==========================
 
 A Neutron router is a network namespace with a set of routing tables
@@ -366,11 +361,7 @@ associated with the router (`lo` removed for brevity):
 The first interface, `qg-d48b49e0-aa`, connects the router to the
 gateway set by the `router-gateway-set` command.  The second
 interface, `qr-c2d7dd02-56`, is what connects the router to the
-integration bridge:
-
-        Port "tapc2d7dd02-56"
-            tag: 1
-            Interface "tapc2d7dd02-56"
+integration bridge.
 
 Looking at the routing tables inside the router, we see that there is
 a default gateway pointing to the `.1` address of our external
@@ -428,16 +419,15 @@ private network to `172.24.4.227`:
 This permits instances to have outbound connectivity even without a
 public ip address.
 
-Network host: External traffic (K,L)
-====================================
+Network host: External traffic (L)
+==================================
 
 "External" traffic flows through `br-ex` via the `qg-d48b49e0-aa`
-interface in the router name space, which connects to `br-ex` as
-`tapd48b49e0-aa`:
+interface in the router name space.
 
     Bridge br-ex
-        Port "tapd48b49e0-aa"
-            Interface "tapd48b49e0-aa"
+        Port "qg-d48b49e0-aa"
+            Interface "qg-d48b49e0-aa"
         Port br-ex
             Interface br-ex
                 type: internal
