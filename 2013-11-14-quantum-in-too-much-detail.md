@@ -334,7 +334,7 @@ namespace name):
 Network host: Router (K,L)
 ==========================
 
-A Neutron router is a network namespace with a set of routing tables
+A router is a network namespace with a set of routing tables
 and iptables rules that performs the routing between subnets.  Recall
 that we saw two network namespaces in our configuration:
 
