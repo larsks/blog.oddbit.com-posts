@@ -3,9 +3,7 @@ layout: post
 title: NFS and the 16-group limit
 date: 2010-2-2
 tags:
-  - fbpost
   - groups
-  - gid
   - nfs
 ---
 

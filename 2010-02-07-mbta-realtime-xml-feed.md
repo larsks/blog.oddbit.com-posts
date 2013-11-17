@@ -5,7 +5,6 @@ date: 2010-2-7
 tags:
   - xml
   - gps
-  - fbpost
   - transportation
   - bus
   - location

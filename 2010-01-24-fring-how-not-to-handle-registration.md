@@ -5,7 +5,6 @@ date: 2010-1-24
 tags:
   - fring
   - review
-  - fbpost
   - android
   - skype
   - voip

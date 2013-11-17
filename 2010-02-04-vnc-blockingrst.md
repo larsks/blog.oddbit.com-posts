@@ -6,7 +6,6 @@ tags:
   - linux
   - classification
   - iptables
-  - fbpost
   - rfb
   - netfilter
   - vnc
