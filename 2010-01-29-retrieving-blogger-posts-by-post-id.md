@@ -4,7 +4,6 @@ title: Retrieving Blogger posts by post id
 date: 2010-1-29
 tags:
   - python
-  - fbpost
   - blogger
   - api
   - gdata

@@ -3,7 +3,6 @@ layout: post
 title: Linux UPnP Gateway
 date: 2010-1-29
 tags:
-  - fbpost
   - networking
   - peertopeer
   - linux

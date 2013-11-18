@@ -5,7 +5,6 @@ date: 2010-2-19
 tags:
   - release
   - apache
-  - sofware
   - visualization
   - logging
   - software
