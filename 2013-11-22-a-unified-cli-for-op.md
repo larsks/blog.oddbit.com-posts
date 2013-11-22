@@ -6,9 +6,12 @@ tags:
   - openstack
 ---
 
-The [python-openstackclient][1] project is a new command line
-tool to replace the existing command line clients (including commands
-such as `nova`, `keystone`, `cinder`, etc).
+The [python-openstackclient][1] project, by [Dean Troyer][] and
+others, is a new command line tool to replace the existing command
+line clients (including commands such as `nova`, `keystone`, `cinder`,
+etc).
+
+[dean troyer]: https://github.com/dtroyer
 
 This tool solves two problems I've encountered in the past:
 
