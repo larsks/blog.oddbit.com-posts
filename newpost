@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# usage: newpost "This is a title"
+
+MAX_TITLE_LEN=20
+
+[ "$1" ] || exit 1
+
+title="$1"
+date=$(date +%Y-%m-%d)
+filename=$(tr -dc '[a-zA-Z ]' <<< $title)
+filename=${filename// /-}
+filename=${filename,,}
+filename=${filename:0:$MAX_TITLE_LEN}
+filename="${date}-${filename}.md"
+
+if [[ ! -f $filename ]]; then
+cat > $filename <<EOF
+---
+title: $title
+date: $date
+layout: post
+---
+
+
+EOF
+fi
+
+git add $filename
+
+exec ${VISUAL:-${EDITOR:-vi}} $filename
+
