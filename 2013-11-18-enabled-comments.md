@@ -2,7 +2,7 @@
 title: Enabled blog comments
 layout: page
 tags:
-  - admin
+  - blog
 ---
 I've enabled blog comments using [Disqus][].  This is something of an
 experiment, since (a) I'm not really happy with how Disqus is handling

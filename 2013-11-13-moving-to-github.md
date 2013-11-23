@@ -3,7 +3,7 @@ title: Moving to GitHub
 date: 2013-11-13
 layout: post
 tags:
-  - admin
+  - blog
 ---
 
 This blog has been hosted on [scriptogram][] for the past year or so.

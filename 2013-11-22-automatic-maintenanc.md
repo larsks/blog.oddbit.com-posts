@@ -4,7 +4,6 @@ date: 2013-11-22
 layout: post
 tags:
   - blog
-  - admin
   - git
 ---
 
