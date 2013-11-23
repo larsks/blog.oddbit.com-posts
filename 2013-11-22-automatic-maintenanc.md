@@ -104,3 +104,9 @@ At this point, we've regenerated all the tag feeds and committed any
 new or modified tag feeds to the repository, which will get published
 to GitHub as part of the current `push` operation.
 
+All of the code used to implement this is available in the [GitHub
+repository for this blog][repo].
+
+[repo]: http://github.com/larsks/blog.oddbit.com/
+
+
