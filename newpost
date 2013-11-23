@@ -20,6 +20,8 @@ cat > $filename <<EOF
 title: $title
 date: $date
 layout: post
+tags:
+
 ---
 
 
