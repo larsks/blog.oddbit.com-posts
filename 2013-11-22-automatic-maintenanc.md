@@ -116,6 +116,7 @@ I'm using a modified version of [gh-pages-blog][] in which I have
 modified `_layouts/rss.xml` to optionally filter posts by tag using
 the following template code:
 
+{% raw %}
       .
       .
       .
@@ -135,6 +136,7 @@ the following template code:
       .
       .
       .
+{% endraw %}
 
 For each post on the site (`site.posts`), this checks for any overlap
 between the tags in the post and the tags selected in the tag feed.
