@@ -104,9 +104,47 @@ At this point, we've regenerated all the tag feeds and committed any
 new or modified tag feeds to the repository, which will get published
 to GitHub as part of the current `push` operation.
 
+The actual feed templates look like this:
+
+    ---
+    layout: rss
+    exclude: true
+    tags:
+      - {{tag}}
+    ---
+
+I'm using a modified version of [gh-pages-blog][] in which I have
+modified `_layouts/rss.xml` to optionally filter posts by tag using
+the following template code:
+
+      .
+      .
+      .
+			{% for p in site.posts %}
+        {% if page contains 'tags' %}
+          {% assign selected = false %}
+          {% for t in p.tags %}
+            {% if page.tags contains t %}
+              {% assign selected = true %}
+            {% endif %}
+          {% endfor %}
+
+          {% if selected == false %}
+          {% continue %}
+          {% endif %}
+        {% endif %}
+      .
+      .
+      .
+
+For each post on the site (`site.posts`), this checks for any overlap
+between the tags in the post and the tags selected in the tag feed.
+While the automatic feeds use only a single tag, this also makes it
+possible to create feeds that follow multiple tags.
+
 All of the code used to implement this is available in the [GitHub
 repository for this blog][repo].
 
 [repo]: http://github.com/larsks/blog.oddbit.com/
-
+[gh-pages-blog]: https://github.com/thedereck/gh-pages-blog/
 
