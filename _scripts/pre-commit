@@ -9,9 +9,11 @@ git checkout-index --stdin --temp | (
 	retcode=0
 
 	while read tmp actual; do
-		if ! maruku -o /dev/null -b $tmp > /dev/null 2>&1; then
-			echo "ERROR: $actual: markdown errors"
-			retcode=1
+		if [ "${actual##*.}" = md ]; then
+			if ! maruku -o /dev/null -b $tmp > /dev/null 2>&1; then
+				echo "ERROR: $actual: markdown errors"
+				retcode=1
+			fi
 		fi
 
 		rm -f $tmp
