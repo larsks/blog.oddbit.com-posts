@@ -26,7 +26,7 @@ layout: post
 EOF
 fi
 
-git add $filename
+git add -N $filename
 
 exec ${VISUAL:-${EDITOR:-vi}} $filename
 
