@@ -25,6 +25,8 @@ are *unpushed* changes in `_posts`: in either situation, we could
 generate a tag feed for tags that weren't actually used in any
 published posts.
 
+[git submodule]: http://git-scm.com/book/en/Git-Tools-Submodules
+
 The following checks for any uncomitted changes in `_posts`:
 
     if ! git diff-files --quiet _posts; then
