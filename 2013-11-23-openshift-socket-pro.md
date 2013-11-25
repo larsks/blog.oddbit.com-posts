@@ -1,5 +1,5 @@
 ---
-title: OpenShift socket problems: it's not always about websocket
+title: Sockets on OpenShift
 date: 2013-11-23
 layout: post
 tags:
@@ -7,14 +7,30 @@ tags:
 ---
 
 This is a followup to my [previous post][] regarding long-poll
-servers and Python.  Once I had everything working on my laptop I
-uploaded it to [OpenShift][]...only to find that while it still worked
-correctly, the number of open connections was climbing actively.  What
-was going on?
+servers and Python.  In that article, we implemented IO polling to
+watch for client disconnects at the same time we were waiting for
+messages on a message bus:
 
-I finally found [this post][pass-websockets] by Marak Jelen discussing
-issues with [websockets][] in OpenShift, which says, among other
-things:
+    poll = zmq.Poller()
+    poll.register(subsock, zmq.POLLIN)
+    poll.register(rfile, zmq.POLLIN)
+
+    events = dict(poll.poll())
+
+    .
+    .
+    .
+
+If you were to try this at home, you would find that everything worked
+as described...but if you were to deploy the same code to OpenShift,
+you would find that the problem we were trying to solve (the server
+holding file descriptors open after a client disconnected) would still
+exist.
+
+So, what's going on here?  I spent a chunk of time trying to figure
+this out myself.  I finally found [this post][paas-websockets] by
+Marak Jelen discussing issues with [websockets][] in OpenShift, which
+says, among other things:
 
 > For OpenShift as a PaaS provider, WebSockets were a big challenge.
 > The routing layer that sits between the user's browser and your
@@ -34,71 +50,82 @@ Not unexpectedly, it seems that the same things that can cause
 difficulties with WebSockets connections can also interfere with the
 operation of a long-poll server.  The root of the problem is that your
 service running on OpenShift never receives notifications of client
-disconnects...you can see this by opening up a connection to your
-service:
+disconnects.  You can see this by opening up a connection to your
+service.  Assuming that you've deployed the [pubsub example][], you
+can run something like this:
 
-  $ socat - tcp:myapplication-myname.rhcloud.com:80
-  GET / HTTP/1.1
-  Host: myapplication-myname.rhcloud.com
+  $ curl http://myapplication-myname.rhcloud.com/sub
 
-Leave the connection open and [log in to your OpenShift instance][login].  Run `netstat` to see the existing connection:
+Leave the connection open and [log in to your OpenShift
+instance][login].  Run `netstat` to see the existing connection:
 
-    $ netstat -tln | grep $OPENSHIFT_PYTHON_PORT | grep ESTABLISHED
+    $ netstat -tan |
+      grep $OPENSHIFT_PYTHON_IP |
+      grep $OPENSHIFT_PYTHON_PORT |
+      grep ESTABLISHED
     tcp        0      0 127.6.26.1:15368            127.6.26.1:8080             ESTABLISHED 
     tcp        0      0 127.6.26.1:8080             127.6.26.1:15368            ESTABLISHED 
 
 Now close your client, and re-run the `netstat` command on your
-OpenShift instances.  You will find that the client connection  from
+OpenShift instance.  You will find that the client connection  from
 the front-end proxies to your server is still active.  Because the
 server never receives any notification that the client has closed the
 connection, no amount of `select` or `poll` or anything else will
 solve this problem.
 
-Now, try the same experiment using port 8000.
+Now, try the same experiment using port 8000.  That is, run:
 
-After opening the poll connection:
+  $ curl http://myapplication-myname.rhcloud.com:8000/sub
 
-    tcp        0      0 127.6.26.1:8080             127.6.26.1:15685            ESTABLISHED 
-    tcp        0      0 127.6.26.1:15685            127.6.26.1:8080             ESTABLISHED 
+Verify that when you close your client, the connection is long evident
+in your server.  This means that we need to modify our JavaScript code
+to poll using port 8000, which is why in [pubsub.js][] you will find
+the following:
 
-After closing the client, this connection is no longer evident.  This
-means we can handle client disconnections properly with something a
-simple `select` or `poll` operation, like this:
+    if (using_openshift) {
+            poll_url = location.protocol + "//" + location.hostname + ":8000/sub";
+    } else {
+            poll_url = "/sub";
+    }
 
-def worker(q, rfile):
+## But wait, there's more!
 
-    s = ctx.socket(zmq.SUB)
-    s.setsockopt(zmq.SUBSCRIBE, '')
-    s.connect(pub_socket_uri)
+If you were to deploy the above code with no other changes, you would
+find a mysterious problem: even though your JavaScript console would
+show that your code was successfully polling the server, your client
+would never update.  This is because by introducing an alternate port
+number to the poll operation you are now running afoul of your
+brower's [same origin policy][], a security policy that restricts
+JavaScript in your browser from interacting with sites other than the
+one from which the script was loaded.
 
-    poll = zmq.Poller()
-    poll.register(s, zmq.POLLIN)
-    poll.register(rfile, zmq.POLLERR|zmq.POLLIN)
+The [CORS][] standard introduces a mechanism to work around this
+restriction.  An HTTP response can contain additional access control
+headers that instruct your browser to permit access to the resource from
+a select set of other origins.  The header is called
+`Access-Control-Alliow-Origin`, and you will find it in the [pubsub
+example][] in [pubsub.py][]:
 
-    while True:
-        events = dict(poll.poll())
+        if using_openshift:
+            bottle.response.headers['Access-Control-Allow-Origin'] = '*'
 
-        # If the client disconnects there will be a read event on the
-        # socket.
-        if rfile.fileno() in events:
-            break
+With this header in place, your JavaScript can poll your
+OpenShift-hosted application on port 8000 and everything will work as
+expected...
 
-        # If there was a message on the message bus, process it.
-        If s in events:
-            msg = s.recv_json()
-            handle_msg(msg)
-            break
+...barring bugs in my code, which, if discovered, should be reported
+[here][issues].
 
-    s.close()
-    q.put(StopIteration)
-
-BUT OMG IT STILL DOESN'T WORK WHY?
-
-Because javascript cross-domain security policies.
-
-[previous post]: {% post_url 2013-11-23-long-polling-with-ja %}
+[pubsub example]: https://github.com/larsks/pubsub_example/
+[pubsub.js]: https://github.com/larsks/pubsub_example/blob/master/static/pubsub.js
+[pubsub.py]: https://github.com/larsks/pubsub_example/blob/master/pubsub.py
 [openshift]: http://www.openshift.com/
 [paas-websockets]: https://www.openshift.com/blogs/paas-websockets
 [websockets]: http://en.wikipedia.org/wiki/WebSocket
 [login]: https://www.openshift.com/developers/remote-access
+[same origin policy]: http://en.wikipedia.org/wiki/Same-origin_policy
+[cors]: http://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+[issues]: https://github.com/larsks/pubsub_example/issues
+[node.js]: http://nodejs.org/
+[previous post]: {% post_url 2013-11-23-long-polling-with-ja %}
 
