@@ -21,6 +21,8 @@ two?", so I wanted to provide an extended answer that might help
 people understand what the interfaces are for and what trade-offs are
 involved in using fewer interfaces.
 
+<!-- more -->
+
 The `MGMT_INTERFACE` is used for communication between nodes.  This
 can include traffic from services to the messaging server (`qpid`,
 `rabbitmq`, etc), traffic between nova and neutron, connections to the

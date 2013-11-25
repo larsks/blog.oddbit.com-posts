@@ -14,6 +14,8 @@ everything, so it seemed easiest to make tag generation part of a
 part of the `git push` operation, so it's the perfect place to insert
 generated content that must be kept in sync with posts on the blog.
 
+<!-- more -->
+
 ## Keeping things in sync
 
 The `_posts` directory of my blog is a [git submodule][], which means

@@ -21,6 +21,8 @@ A benefit of the publish-via-Dropbox mechanism is, of course, that I
 already had all the data and didn't need to go through any sort of
 export process.
 
+<!-- more -->
+
 ## Fixing metadata
 
 Like [scriptogram][], [GitHub Pages][] is also a Markdown-based

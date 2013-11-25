@@ -19,6 +19,8 @@ It turns out that this is a not uncommon question, so I spent some
 time today working out a solution using the [dynlist][] overlay for
 [OpenLDAP][].
 
+<!-- more -->
+
 The LDIF data presented in this article can be found [on github][].
 
 [on github]: https://github.com/larsks/blog-openldap-dynlist

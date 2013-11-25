@@ -26,6 +26,8 @@ things out on your own.  You can also try it out online at
 [github]: http://github.com/
 [pubsub_example]: http://github.com/larsks/pusub_example/
 
+<!-- more -->
+
 ## What is long polling?
 
 Long polling is a technique used in web applications to enable a
