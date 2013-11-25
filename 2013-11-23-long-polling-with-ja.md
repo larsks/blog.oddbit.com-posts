@@ -283,18 +283,18 @@ If you re-run the `curl --trace-ascii ...` test from earlier, you'll
 see that this webapp will now service multiple requests
 simultaneously.
 
-## Writing the server
+## Writing the server: receiving messages
 
 The server needs to perform two basic operations:
 
 - Receive a message from one client, and
 - Broadcast that message to all connected clients.
 
-Receiving a message is easy, but how do we handle the broadcast aspect
-of things?  In this application, I opted to use [0MQ][], a
-communication library that has been described as "[sockets on
-steroids][]".  In this case, two features of 0MQ are particularly
-attractive:
+Receiving a message is easy (we're just grabbing some data from a
+`POST` request), but how do we handle the broadcast aspect of things?
+In this application, I opted to use [0MQ][], a communication library
+that has been described as "[sockets on steroids][]".  In this case,
+two features of 0MQ are particularly attractive:
 
 - support for publish/subscribe communication patterns, and
 - an easy to use [in-process message transport][inproc]
@@ -321,6 +321,42 @@ With this in place, the code for receiving messages is trivial:
             'nick': bottle.request.params.get('nick'),
             })
         return {'status': 'sent'}
+
+We grab the `message` and `nick` parameters from a `POST` request and
+publish a JSON message onto the message bus.
+
+## Writing the server: sending messages
+
+Having received a message from a client, our task is to send that out
+to all connected clients.  
+
+    @app.route('/sub')
+    def sub():
+        bottle.response.content_type = 'application/json'
+        rfile = bottle.request.environ['wsgi.input'].rfile
+        return worker(rfile)
+
+    def worker(rfile):
+        subsock = ctx.socket(zmq.SUB)
+        subsock.setsockopt(zmq.SUBSCRIBE, '')
+        subsock.connect('inproc://pub')
+
+        poll = zmq.Poller()
+        poll.register(subsock, zmq.POLLIN)
+        poll.register(rfile, zmq.POLLIN)
+
+        while True:
+            events = dict(poll.poll())
+
+            if rfile.fileno() in events:
+                break
+
+            if subsock in events:
+                msg = subsock.recv_json()
+                yield(json.dumps(msg))
+                break
+
+        subsock.close()
 
 [monkey.patch_all]: http://www.gevent.org/gevent.monkey.html
 [bottle]: http://bottlepy.org/docs/
