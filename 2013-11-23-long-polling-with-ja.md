@@ -7,12 +7,14 @@ tags:
   - javascript
   - gevent
   - bottle
+  - zeromq
+  - jquery
 ---
 
 In this post I'm going to step through an example web chat system
-implemented in Python (with Bottle and gevent) that uses long polling
-to implement a simple publish/subscribe mechanism for efficiently
-updating connected clients in real time.
+implemented in Python (with [Bottle][] and [gevent][]) that uses long
+polling to implement a simple publish/subscribe mechanism for
+efficiently updating connected clients.
 
 My [pubsub_example][] repository on [GitHub][] has a complete
 project that implements the ideas discussed in this article.  This
@@ -253,9 +255,6 @@ library that includes a WSGI server.  Using Bottle's `gevent` support
 is easy; the above code, using the `gevent` server, would look 
 [like this][]:
 
-    import os
-    import sys
-    import argparse
     import time
 
     from gevent import monkey; monkey.patch_all()
@@ -303,7 +302,19 @@ two features of 0MQ are particularly attractive:
 [sockets on steroids]: https://speakerdeck.com/methodmissing/zeromq-sockets-on-steroids
 [inproc]: http://api.zeromq.org/2-1:zmq-inproc
 
-We'll start by creating a global 0MQ `PUB` socket (called `pubsuck`)
+> Note that while you would normally import the Python 0MQ module like
+> this:
+> 
+>     import zmq
+> 
+> When working with [gevent][] you must do this instead:
+> 
+>     from zmq import green as zmq
+> 
+> This imports the "green" version of 0MQ, which uses non-blocking
+> operations compatible with `gevent`.
+
+We'll start by creating a global 0MQ `PUB` socket (called `pubsock`)
 that will be used as one end of our in-process message bus:
 
     ctx = zmq.Context()
@@ -327,39 +338,96 @@ publish a JSON message onto the message bus.
 
 ## Writing the server: sending messages
 
-Having received a message from a client, our task is to send that out
-to all connected clients.  
+Having received a message from a client, our task is to send that
+message out to all connected clients.  Each client connected to our
+server will be polling the `/sub` endpoint for messages.  A simple
+implementation of `/sub` might look like this:
 
     @app.route('/sub')
     def sub():
-        bottle.response.content_type = 'application/json'
-        rfile = bottle.request.environ['wsgi.input'].rfile
-        return worker(rfile)
-
-    def worker(rfile):
         subsock = ctx.socket(zmq.SUB)
         subsock.setsockopt(zmq.SUBSCRIBE, '')
         subsock.connect('inproc://pub')
+        msg = subsock.recv_json()
+        return msg
 
-        poll = zmq.Poller()
-        poll.register(subsock, zmq.POLLIN)
-        poll.register(rfile, zmq.POLLIN)
+This sets up a 0MQ `SUB` socket and connects it to the message bus
+that we established when we created `pubsocket`, earlier.  Because
+we're using 0MQ's publish-and-subscribe support, any message sent on
+`pubsocket` will automatically be propagated to any connected
+subscribers.
 
-        while True:
-            events = dict(poll.poll())
+When each client requests `/sub`, Bottle runs this function, which blocks
+waiting for messages on the message bus.  When a message arrives, the
+function returns it to the client and exits.  Note there's a little
+bit of magic here: when a request handler returns a dictionary to
+Bottle, Bottle automatically serializes that as JSON before sending
+the response to the client.
 
-            if rfile.fileno() in events:
-                break
+## Fixing things up
 
-            if subsock in events:
-                msg = subsock.recv_json()
-                yield(json.dumps(msg))
-                break
+While the above code seems to work, there is a potential problem with
+the implementation: If a client that has been waiting on `/sub`
+disconnects, the `sub` function will continue to remain blocked on the
+call to `subsock.recv_json`.  This means that the server will hold
+open the file descriptor associated with the connection.  Once a
+message is received, the server will attempt to send a response,
+notice that the client has disconnected, and close the file
+descriptor.  Given a large enough population of clients, the number of
+open file descriptors could run into system resource limits.  In order
+to prevent this situation, we need to react to client
+disconnects...which means that now, instead of just blocking waiting
+for messages, we *also* need to wait for some notification that a
+client has disconnected.
 
-        subsock.close()
+In a traditional socket program, you might do this with something like
+the `poll()` or `select()`  function.  Since we're using 0MQ...we'll
+do exactly the same thing, which is one of the reasons 0MQ is fun to
+work with.  We first need to figure out how to detect client
+disconnects. The [WSGI specification][] doesn't provide a standard way
+to expose the client socket to our application.  However, inspection
+of the WSGI environment (in `bottle.request.environ` reveals that the
+`wsgi.input` member contains an `rfile` attribute, which is exactly
+what we need.  With that in hand, we set up a polling object to listen
+for activity on either the message bus or on the client socket:
 
+    rfile = bottle.request.environ['wsgi.input'].rfile
+
+    poll = zmq.Poller()
+    poll.register(subsock, zmq.POLLIN)
+    poll.register(rfile, zmq.POLLIN)
+
+And now we can block waiting for either event:
+
+    events = dict(poll.poll())
+
+    # This means the client has disconnected.
+    if rfile.fileno() in events:
+        return
+
+    # If we get this far it's because there's a message
+    # available.
+    msg = subsock.recv_json()
+    return msg
+
+## Finishing up
+
+Those are pretty much all the parts necessary to implement a simple
+publish/subscribe web application in Python.  You can see all the
+parts put together into a functioning project in the
+[pubsub_example][] repository, and you can try out the running code at
+<http://pubsub.example.oddbit.com>.  The code in the repository is
+slightly more complete than the snippets presented in this article.
+
+If you encounter any problems with the code (or this article), or if
+I've gotten something terribly wrong, please open a new issue
+[here][issues].
+
+[wsgi specification]: http://www.python.org/dev/peps/pep-0333/
 [monkey.patch_all]: http://www.gevent.org/gevent.monkey.html
 [bottle]: http://bottlepy.org/docs/
 [async]: http://bottlepy.org/docs/dev/async.html
 [gevent]: http://www.gevent.org/
 [jquery]: http://jquery.com/
+[issues]: https://github.com/larsks/pubsub_example/issues
+
