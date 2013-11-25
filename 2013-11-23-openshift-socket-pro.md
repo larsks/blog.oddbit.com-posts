@@ -6,10 +6,15 @@ tags:
 
 ---
 
-This is a followup to my [previous post][] regarding long-poll
-servers and Python.  In that article, we implemented IO polling to
-watch for client disconnects at the same time we were waiting for
-messages on a message bus:
+In this article, a followup to my [previous post][] regarding
+long-poll servers and Python, we investigate the code changes that
+were necessary to make the code work when deployed on OpenShift.
+
+<!-- more -->
+
+In the previous post, we implemented IO polling to watch for client
+disconnects at the same time we were waiting for messages on a message
+bus:
 
     poll = zmq.Poller()
     poll.register(subsock, zmq.POLLIN)
