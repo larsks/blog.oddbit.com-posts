@@ -60,7 +60,7 @@ disconnects.  You can see this by opening up a connection to your
 service.  Assuming that you've deployed the [pubsub example][], you
 can run something like this:
 
-  $ curl http://myapplication-myname.rhcloud.com/sub
+    $ curl http://myapplication-myname.rhcloud.com/sub
 
 Leave the connection open and [log in to your OpenShift
 instance][login].  Run `netstat` to see the existing connection:
@@ -81,7 +81,7 @@ solve this problem.
 
 Now, try the same experiment using port 8000.  That is, run:
 
-  $ curl http://myapplication-myname.rhcloud.com:8000/sub
+    $ curl http://myapplication-myname.rhcloud.com:8000/sub
 
 Verify that when you close your client, the connection is long evident
 in your server.  This means that we need to modify our JavaScript code
