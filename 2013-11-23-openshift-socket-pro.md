@@ -3,7 +3,8 @@ title: Sockets on OpenShift
 date: 2013-11-23
 layout: post
 tags:
-
+  - openshift
+  - javascript
 ---
 
 In this article, a followup to my [previous post][] regarding
