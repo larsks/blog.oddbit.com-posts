@@ -8,11 +8,13 @@ MAX_TITLE_LEN=30
 
 title="$1"
 date=$(date +%Y-%m-%d)
-filename=$(tr -dc '[a-zA-Z ]' <<< $title)
-filename=${filename// /-}
-filename=${filename,,}
-filename=${filename:0:$MAX_TITLE_LEN}
-filename="${date}-${filename}.md"
+stub=$(tr -dc '[a-zA-Z ]' <<< $title)
+stub=${stub// /-}
+stub=${stub,,}
+stub=${stub:0:$MAX_TITLE_LEN}
+filename="${date}-${stub}.md"
+
+git co -b draft/$stub posts
 
 if [[ ! -f $filename ]]; then
 cat > $filename <<EOF
