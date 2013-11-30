@@ -13,8 +13,10 @@ stub=${stub// /-}
 stub=${stub,,}
 stub=${stub:0:$MAX_TITLE_LEN}
 filename="${date}-${stub}.md"
+branch=draft/$stub
 
-git co -b draft/$stub posts
+git co -b $branch posts
+git push -u origin $branch
 
 if [[ ! -f $filename ]]; then
 cat > $filename <<EOF
@@ -25,7 +27,6 @@ layout: post
 tags:
 
 ---
-
 
 EOF
 fi
