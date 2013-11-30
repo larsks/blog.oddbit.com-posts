@@ -171,7 +171,8 @@ we created ealier (by calling `ffi.dlopen(None)`):
 
 And finally, we can all `signalfd()`:
 
-    >>> fd = crt.signalfd(-1, mask, 0)
+    >>> crt.sigprocmask(0, mask, ffi.NULL)
+    0
     >>> fd = crt.signalfd(-1, mask, 0)
     >>> from select import poll
     >>> p = poll()
@@ -183,11 +184,13 @@ And finally, we can all `signalfd()`:
 In case it's not obvious from the above example, when I typed
 `CONTROL-C` on my keyboard, sending a `SIGINT` to the Python shell, it
 caused the `p.poll()` method to exit, reporting activity on fd 3
-(which is the fd we were given by `signalfd()`).
+(which is the fd we were given by `signalfd()`).  We call
+`sigprocmask(2)` to prevent the normal asynchronous delivery of
+signals, which would otherwise result in Python handling the `SIGINT`
+and generating a `KeyboardInterrupt` exception.
 
 You can find this all packaged up nicely with a slightly more pythonic
-interface to the `sigsetops` stuff in my [python-signalfd][]
-repository on GitHub.
+interface in my [python-signalfd][] repository on GitHub.
 
 [python-signalfd]: https://github.com/larsks/python-signalfd
 
