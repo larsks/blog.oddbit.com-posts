@@ -363,6 +363,13 @@ UUID:
       - 4296f3ff-9dc0-4b0b-a633-c30eacc8493d
       - 8c49cd42-7c42-4a1f-af1d-492a0687fc12
 
+## See also
+
+- The Heat project maintains a [repository of example
+  templates][templaterepo].
+
+
+[templaterepo]: https://github.com/openstack/heat-templates
 [neutron]: https://wiki.openstack.org/wiki/Neutron
 [902154c]: https://github.com/openstack/heat/commit/902154c
 [yaml]: http://en.wikipedia.org/wiki/YAML
