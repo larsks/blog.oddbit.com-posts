@@ -29,6 +29,10 @@ Orchestration Templates").  In this article I will be using the HOT
 template syntax, which is fully specified on [the OpenStack
 website][hotspec].
 
+> NB: Heat is under active development, and there are a variety of
+> discussions going on right now regarding the HOT specification.  I
+> will try to keep this post up-to-date as the spec evolves.
+
 A HOT template is written using [YAML][] syntax and has three major
 sections:
 
