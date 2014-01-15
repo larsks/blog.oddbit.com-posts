@@ -20,9 +20,12 @@ must traverse a number of steps:
 
 When there are problem accessing the metadata, it can be helpful to
 verify that the metadata service itself is configured correctly and
-returning meaningful information.  Naively trying to contact the
-Nova metadata service listening on port 8775 will, not unexpectedly,
-fail:
+returning meaningful information.
+
+<!-- more -->
+
+Naively trying to contact the Nova metadata service listening on port
+8775 will, not unexpectedly, fail:
 
     $ curl http://localhost:8775/latest/meta-data/
     <html>
@@ -43,12 +46,12 @@ You can grab the UUID of a running instance with `nova list`:
     | 32d0524b-314d-4594-b3a3-607e3f2354f8 | test0 ...
     +--------------------------------------+-------...
 
-And this to your request (`-H 'x-instance-id:
-32d0524b-314d-4594-b3a3-607e3f2354f8'`), but ultimately (after also
-adding the tenant id), you'll find that you need to add a
-`x-instance-id-signature` header.  If you investigate the [Nova source
-code][], you'll find that this header is calculated via an HMAC over
-the instance ID and a shared secret:
+You can retry your request with an appropraite `X-Instance-ID` header
+(`-H 'x-instance-id: 32d0524b-314d-4594-b3a3-607e3f2354f8'`), but
+ultimately (after also adding the tenant id), you'll find that you
+need to add an `x-instance-id-signature` header.  If you investigate
+the [Nova source code][], you'll find that this header is calculated
+via an HMAC over the instance ID and a shared secret:
 
     expected_signature = hmac.new(
         CONF.neutron_metadata_proxy_shared_secret,
