@@ -4,6 +4,13 @@
 
 MAX_TITLE_LEN=30
 
+while getopts 'g' ch; do
+	case $ch in
+		(g) post_use_git=1;;
+	esac
+done
+shift $(( $OPTIND - 1 ))
+
 [ "$1" ] || exit 1
 
 title="$1"
@@ -14,9 +21,6 @@ stub=${stub,,}
 stub=${stub:0:$MAX_TITLE_LEN}
 filename="${date}-${stub}.md"
 branch=draft/$stub
-
-git co -b $branch posts
-git push -u origin $branch
 
 if [[ ! -f $filename ]]; then
 cat > $filename <<EOF
@@ -31,7 +35,11 @@ tags:
 EOF
 fi
 
+if [ "$post_use_git" = 1 ]; then
+git co -b $branch posts
+git push -u origin $branch
 git add -N $filename
+fi
 
 exec ${VISUAL:-${EDITOR:-vi}} $filename
 
