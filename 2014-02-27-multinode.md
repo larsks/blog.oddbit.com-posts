@@ -8,7 +8,7 @@ tags:
   - hangout
 ---
 
-I was the presenter for this mornings [RDO][] hangout, where I ran
+I was the presenter for this morning's [RDO][] hangout, where I ran
 through a simple demonstration of setting up a multinode OpenStack
 deployment using [packstack][].
 
