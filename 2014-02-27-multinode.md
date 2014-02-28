@@ -1,10 +1,11 @@
 ---
-title: Multinode
+title: Multinode OpenStack with Packstack
 date: 2014-02-27
 layout: post
 tags:
   - openstack
   - rdo
+  - hangout
 ---
 
 I was the presenter for this mornings [RDO][] hangout, where I ran
