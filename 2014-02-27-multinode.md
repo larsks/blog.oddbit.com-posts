@@ -13,9 +13,8 @@ deployment using [packstack][].
 
 Here's the video (also available on the [event page][]):
 
-<iframe width="560" height="315"
-src="//www.youtube.com/embed/DGf-ny25OAw" frameborder="0"
-allowfullscreen></iframe>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/DGf-ny25OAw"
+  frameborder="0" allowfullscreen="1"></iframe> 
 
 The slides are online [here][slides].
 
