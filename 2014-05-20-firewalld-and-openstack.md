@@ -93,8 +93,8 @@ After a reboot, things look like this:
       interfaces: em1
     public
       interfaces: int-br-ex phy-br-ex qvb58cc67ca-06 qvo58cc67ca-06
-   # firewall-cmd --zone openstack --list-services
-   dns
+    # firewall-cmd --zone openstack --list-services
+    dns
 
 [firewalld]: https://fedoraproject.org/wiki/FirewallD
 [networkmanager]: https://wiki.gnome.org/Projects/NetworkManager
