@@ -2,6 +2,8 @@
 #
 # usage: newpost "This is a title"
 
+[ "$DISPLAY" ] && VISUAL=gvim
+
 MAX_TITLE_LEN=30
 
 while getopts 'g' ch; do
