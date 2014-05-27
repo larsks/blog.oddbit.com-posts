@@ -1,5 +1,5 @@
 ---
-title: Video: Configuring OpenStack's external bridge on a single-interface system
+title: "Video: Configuring OpenStack's external bridge on a single-interface system"
 date: 2014-05-27
 layout: post
 tags:
