@@ -410,6 +410,14 @@ port `1234`:
 
     sh BOOT_ARGS=NO_DOCKER_TEST QEMU_ARGS="-s" boot-kernel
 
+> A caveat about attaching to qemu with gdb: qemu has a `-S` option
+> that will cause the virtual machine to halt at startup, such that
+> you can attach before it starts booting and -- in theory -- set
+> breakpoints in the early boot process.  In practice this doesn't
+> work well at all (possibly because the vm switches from 32- to
+> 64-bit operation during the boot process, which makes gdb unhappy).
+> You're better off attaching after the kernel has booted.
+
 In another window, we attach `gdb` to the running `qemu` process:
 
     $ gdb vmlinux
@@ -595,8 +603,12 @@ and [GHI 7123][].
 
 This problem has been corrected upstream in [PR 7179][].
 
+Package [docker-io-1.0.0-9.fc20][docker-io-package], which includes
+the above fix, is now available for Fedora 20 (and Fedora 19).
+
 [pr 7179]: https://github.com/dotcloud/docker/pull/7179
 [bz 1119849]: https://bugzilla.redhat.com/show_bug.cgi?id=1119849
 [ghi 6345]: https://github.com/dotcloud/docker/issues/6345
 [ghi 7123]: https://github.com/dotcloud/docker/issues/7123
+[docker-io-package]: https://admin.fedoraproject.org/updates/FEDORA-2014-8877/docker-io-1.0.0-9.fc20
 
