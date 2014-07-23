@@ -410,6 +410,14 @@ port `1234`:
 
     sh BOOT_ARGS=NO_DOCKER_TEST QEMU_ARGS="-s" boot-kernel
 
+> A caveat about attaching to qemu with gdb: qemu has a `-S` option
+> that will cause the virtual machine to halt at startup, such that
+> you can attach before it starts booting and -- in theory -- set
+> breakpoints in the early boot process.  In practice this doesn't
+> work well at all (possibly because the vm switches from 32- to
+> 64-bit operation during the boot process, which makes gdb unhappy).
+> You're better off attaching after the kernel has booted.
+
 In another window, we attach `gdb` to the running `qemu` process:
 
     $ gdb vmlinux
