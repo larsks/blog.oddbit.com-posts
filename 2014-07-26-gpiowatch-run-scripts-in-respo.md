@@ -150,3 +150,25 @@ Whereas if I use `switch` mode, I see:
     Something happened! Pin=23, value=0
     Something happened! Pin=23, value=0
 
+## Use the source, Luke!
+
+The source is available [on gitub][gpio-watch].  To get started, clone
+the repository with `git`:
+
+    $ git clone https://github.com/larsks/gpio-watch.git
+
+And then build the source using `make`:
+
+    $ cd gpio-watch
+    $ make
+    cc    -c -o main.o main.c
+    cc    -c -o gpio.o gpio.c
+    cc    -c -o fileutil.o fileutil.c
+    cc    -c -o logging.o logging.c
+    cc  -o gpio-watch main.o gpio.o fileutil.o logging.o -lrt
+
+There is basic documentation in `README.md` in the distribution.  If
+you run into any problems, feel free to [open a new issue][newissue].
+
+[newissue]: https://github.com/larsks/gpio-watch/issues/new
+
