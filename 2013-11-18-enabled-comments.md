@@ -1,5 +1,6 @@
 ---
 title: Enabled blog comments
+date: 2013-11-18
 layout: page
 tags:
   - blog

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Funny usage message
-date: 2010-2-8
+date: 2010-02-08
 tags:
   - development
   - android

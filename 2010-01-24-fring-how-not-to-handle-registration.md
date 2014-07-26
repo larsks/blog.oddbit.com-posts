@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fring: How not to handle registration"
-date: 2010-1-24
+date: 2010-01-24
 tags:
   - fring
   - review

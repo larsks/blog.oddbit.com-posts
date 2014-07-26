@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LDAP redundancy through proxy servers
-date: 2010-2-24
+date: 2010-02-24
 tags:
   - balance
   - ldap

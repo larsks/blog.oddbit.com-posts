@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Retrieving Blogger posts by post id
-date: 2010-1-29
+date: 2010-01-29
 tags:
   - python
   - blogger

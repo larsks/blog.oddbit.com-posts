@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Apache virtual host statistics
-date: 2010-2-19
+date: 2010-02-19
 tags:
   - release
   - apache

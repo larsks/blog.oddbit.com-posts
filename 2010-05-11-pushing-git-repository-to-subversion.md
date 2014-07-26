@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pushing a Git repository to Subversion
-date: 2010-5-11
+date: 2010-05-11
 tags:
   - git
   - subversion

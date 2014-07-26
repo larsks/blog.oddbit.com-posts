@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing CrashPlan under FreeBSD 8
-date: 2011-5-22
+date: 2011-05-22
 tags:
   - backup
   - storage

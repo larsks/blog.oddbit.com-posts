@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Importing vCard contacts into an LG 420G
-date: 2010-8-6
+date: 2010-08-06
 tags:
   - phone
   - vcard

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enphase Envoy XML Data Format
-date: 2012-2-13
+date: 2012-02-13
 ---
 
 We recently installed a (photovoltaic) solar array on our house.  The system uses [Enphase][1] microinverters, and includes a monitoring device called the "[Envoy][2]".  The Envoy collects data from the microinverters and sends it back to Enphase.  Enphase performs monitoring services for the array and also provides access to the data collected by the Envoy product.  

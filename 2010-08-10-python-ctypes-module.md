@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python ctypes module
-date: 2010-8-10
+date: 2010-08-10
 tags:
   - python
 ---

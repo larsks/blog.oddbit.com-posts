@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NFS and the 16-group limit
-date: 2010-2-2
+date: 2010-02-02
 tags:
   - groups
   - nfs

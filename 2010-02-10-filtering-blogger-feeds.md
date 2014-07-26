@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering Blogger feeds
-date: 2010-2-10
+date: 2010-02-10
 tags:
   - pipes
   - rss

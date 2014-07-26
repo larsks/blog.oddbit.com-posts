@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Patch to gPXE dhcp command
-date: 2010-7-22
+date: 2010-07-22
 tags:
   - gpxe
   - linux
