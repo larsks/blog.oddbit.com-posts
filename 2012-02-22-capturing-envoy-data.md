@@ -108,7 +108,7 @@ If you find some bugs, please let me know by creating a new issue [here][8]. Not
 
 [1]: http://blog.oddbit.com/2012/02/13/enphase-envoy-xml-data-format/
 [2]: https://github.com/larsks/envoy-tools
-[3]: /assets/envoy-capture.png
+[3]: /assets/2013/02/22/envoy-capture.png
 [5]: http://192.168.1.100/admin/lib/network_display?locale=en
 [6]: http://www.stunnel.org/
 [7]: http://bottlepy.org/

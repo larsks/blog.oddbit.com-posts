@@ -48,13 +48,13 @@ the syntax looks something like this:
 
 Which would produce output like this:
 
-![Dot output example](/assets/dot-example-2013-12-23.svg)
+![Dot output example](/assets/2013/12/23/dot-example.svg)
 
 When run on my laptop, with a simple all-in-one configuration and five
 instances across two networks, the result of running `mk-network-dot`
 looks like this:
 
-<a href="/assets/network-2013-12-23.svg"><img
+<a href="/assets/2013/12/23/network.svg"><img
 src="/assets/network-2013-12-23.svg" width="400"></img></a>
 
 There are a few caveats with this tool:

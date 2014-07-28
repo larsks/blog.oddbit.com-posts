@@ -235,7 +235,7 @@ connection timeout problem.
 [2]: http://www.amqp.org/
 [3]: http://www.cisco.com/en/US/docs/security/asdm/6_2/user/guide/protect.html#wp1291963
 [4]: http://en.wikipedia.org/wiki/Transmission_Control_Protocol#Connection_establishment
-[5]: /assets/asymmetric-routing.png
+[5]: /assets/2012/07/30/asymmetric-routing.png
 [6]: http://www.policyrouting.org/PolicyRoutingBook/ONLINE/TOC.html
 [7]: http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/
 [8]: http://www.jayconrod.com/cgi/view_post.py?23
