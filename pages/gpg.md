@@ -2,6 +2,14 @@
 title: GPG
 ---
 
+## Fingerprint
+
+<pre>
+3E70 A502 BB52 55B6 BB8E  86BE 362D 63A8 0853 D4CF
+</pre>
+
+## Public key
+
 <pre>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
