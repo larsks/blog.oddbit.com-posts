@@ -94,7 +94,7 @@ seconds (the default "embryonic connection timeout") the connection gets
 dropped by the firewall. The diagram below illustrates exactly what was
 happening:
 
-![][5]
+![assymetric routing][5]
 
 There are various ways of correcting this situation:
 
