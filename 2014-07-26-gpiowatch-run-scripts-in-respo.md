@@ -13,10 +13,12 @@ button presses.
 
 [raspberry pi]: http://raspberrypi.org/
 
-While normally I would reach for [Python][] for a simple project like
-this, constraints of the project made it necessary to implement
+Normally I would reach for [Python][] for a simple project like this,
+but constraints of the project made it necessary to implement
 something in C with minimal dependencies.  I didn't want to write
 something that was tied closely to my project...
+
+<!-- more -->
 
 [python]: http://python.org/
 

@@ -8,7 +8,7 @@ tags:
 - openstack
 ---
 
-While normally I like to post solutions, today's post is about a
+Normally I like to post solutions, but today's post is about a
 vexing problem to which I have not been able to find a solution.
 
 This started as a simple attempt to set up external connectivity on
@@ -17,6 +17,8 @@ wanted to add `eth0` to `br-ex` in order to model a typical method for
 providing external connectivity, but I ran into a very odd problem:
 the system would boot and work fine for a few seconds, but would then
 promptly lose network connectivity.
+
+<!-- more -->
 
 The immediate cause was that the MAC address on `br-ex` was changing.
 I was setting the MAC explicitly in the configuration file:
