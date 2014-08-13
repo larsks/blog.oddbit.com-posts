@@ -24,6 +24,14 @@ In the following examples, we have a host with address 10.12.0.76 on
 the 10.12.0.0/21 network.  We are creating a Docker container that we
 want to expose as 10.12.0.117.
 
+I am running Fedora 20 with Docker 1.1.2.  This means, in particular,
+that my `utils-linux` package is recent enough to include the
+[nsenter][] command. If you don't have that handy, there is a
+convenient Docker recipe to build it for you at [jpetazzo/nsenter][]
+on GitHub.
+
+[jpetazzo/nsenter]: https://github.com/jpetazzo/nsenter
+
 ## A little help along the way
 
 In this article we will often refer to the PID of a docker container.
