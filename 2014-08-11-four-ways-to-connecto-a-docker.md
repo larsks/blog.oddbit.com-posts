@@ -1,5 +1,5 @@
 ---
-title: Four ways to connecto a docker container to a local network
+title: Four ways to connect a docker container to a local network
 date: 2014-08-11
 layout: post
 tags:
