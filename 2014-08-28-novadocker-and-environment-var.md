@@ -8,7 +8,7 @@ tags:
 ---
 
 I've been playing with [Docker][] a bit recently, and decided to take
-a look at the [nova-docker][] driver for [OpenStack][].  The 
+a look at the [nova-docker][] driver for [OpenStack][].
 
 [docker]: https://docker.com/
 [nova-docker]: https://github.com/stackforge/nova-docker
