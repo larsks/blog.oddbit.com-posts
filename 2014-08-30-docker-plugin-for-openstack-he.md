@@ -15,7 +15,7 @@ this post I'll be taking an in-depth look at the Docker plugin for
 Heat, which has been available [since the Icehouse release][release] but is
 surprisingly under-documented.
 
-[last post]: http://blog.oddbit.com/2014/08/28/novadocker-and-environment-var/
+[last post]: |filename|/2014-08-28-novadocker-and-environment-var.md
 [docker driver for nova]: https://github.com/stackforge/nova-docker
 [release]: https://blog.docker.com/2014/03/docker-will-be-in-openstack-icehouse/
 
@@ -127,6 +127,10 @@ sources.
         $ rsync -a --exclude=tests/ contrib/heat_docker/heat_docker \
             /usr/lib/heat
 
+    We're excluding the `tests` directory here because it has
+    additional prerequisites that aren't operationally necessary but
+    that will prevent Heat from starting up if they are missing.
+
 1. Restart your `heat-engine` service.  On Fedora, that would be:
 
         # systemctl restart openstack-heat-engine
@@ -148,15 +152,20 @@ attempts to do this by setting the `user_data` parameter of a
     
 Unfortunately, an unquoted `#` introduces a comment in [YAML][], so
 this is completely ignored.  It would be written more correctly like
-this:
+this (the `|` introduces a block of literal text):
 
     user_data: |
       #include https://get.docker.io
 
+Or possibly like this, although this would restrict you to a single
+line and thus wouldn't be used much in practice:
+
+    user_data: "#include https://get.docker.io"
+
 And, all other things being correct, this would install Docker on a
 system...but would not necessarily start it, nor would it configure
 Docker to listen on a TCP socket.  On my Fedora system, I ended up
-with the following `user_data` script:
+creating the following `user_data` script:
 
     #!/bin/sh
     
@@ -193,7 +202,11 @@ with the following `user_data` script:
     done
 
 This takes care of making sure our packages are current, installing
-Docker, and arranging for it to listen on a tcp socket.
+Docker, and arranging for it to listen on a tcp socket.  For that last
+bit, we're creating a new `systemd` socket file
+(`/etc/systemd/system/docker-tcp.socket`), which means that `systemd`
+will actually open the socket for listening and start `docker` if
+necessary when a client connects.
 
 ## Templates: Synchronizing resources
 
@@ -311,6 +324,17 @@ script:
             "$WAIT_HANDLE":
               get_resource: docker_wait_handle
 
+The `str_replace` function probably deserves a closer look; the
+general format is:
+
+    str_replace:
+      template:
+      params:
+
+Where `template` is text content containing 0 or more things to be
+replaced, and `params` is a list of tokens to search for and replace
+in the `template`.
+
 We use `str_replace` to substitute the token `$WAIT_HANDLE` with the
 result of calling `get_resource` on our `docker_wait_handle` resource.
 This results in a URL that contains an EC2-style signed URL that will
@@ -322,7 +346,7 @@ images, but you could accomplish the same thing with `curl`:
       --data-binary '{"Status": "SUCCESS",
         "Reason": "Setup complete",
         "Data": "OK", "UniqueId": "00000"}' \
-      "http://192.168.200.1:8000/v1/waitcondition/..."
+      "$WAIT_HANDLE"
 
 You need to have correctly configured Heat in order for this to work;
 I've written a short [companion article][] that contains a checklist
@@ -338,8 +362,8 @@ configuration before starting Docker contains, how do we create a
 container?  As Scott Lowe noticed in his [blog post about Heat and
 Docker][scott], there is very little documentation available out there
 for the Docker plugin (something I am trying to remedy with this blog
-post!).  Things are quite as bleak as you might think, because Heat
-resources are to a certain extent self-documenting.  If you run:
+post!).  Things are not quite as bleak as you might think, because
+Heat resources are to a certain extent self-documenting.  If you run:
 
 [scott]: http://blog.scottlowe.org/2014/08/22/a-heat-template-for-docker-containers/
 
@@ -406,6 +430,7 @@ For example:
 
     port_specs:
       - 3306
+      - 53/udp
     
 The `port_bindings` parameter is a mapping that allows you to bind
 host ports to ports in the container, similar to the `-p` argument to
@@ -425,6 +450,14 @@ To bind port 9090 in a container to port 80 on the host:
 
     port_bindings:
       9090: 80
+
+And in theory, this should also work for UDP ports:
+
+    port_bindings:
+      53/udp: 5300
+
+...but at least with the current development version of Docker this
+results in incorrect behavior.
 
 With all of this in mind, we can create a container resource
 definition:
