@@ -167,6 +167,11 @@ This is a companion to my [article the Docker plugin for Heat][1].
         volumes:
             /var/tmp/data_on_host: /srv/data_in_container
 
+- `volumes_from` : String
+
+    *This option is broken in the current version of the Docker
+    plugin.*
+
 ### Attributes
 
 - `info` : Map

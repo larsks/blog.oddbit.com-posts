@@ -349,13 +349,18 @@ images, but you could accomplish the same thing with `curl`:
       "$WAIT_HANDLE"
 
 You need to have correctly configured Heat in order for this to work;
-I've written a short [companion article][] that contains a checklist
+I've written a short [companion article][waithelp] that contains a checklist
 and pointers to additional documentation to help work around some
 common issues.
 
-[companion article]: |filename|/2014-08-30-using-wait-conditions-with-hea.md
+[waithelp]: |filename|/2014-08-30-using-wait-conditions-with-hea.md
 
 ## Templates: Defining Docker containers
+
+**UPDATE**: I have generated some [annotated documentation for the
+Docker plugin][dockerdoc].
+
+[dockerdoc]: |filename|/2014-08-31-docker-contain-doc.md
 
 Now that we have arranged for Heat to wait for the server to finish
 configuration before starting Docker contains, how do we create a
