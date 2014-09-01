@@ -18,26 +18,26 @@ issues I encountered:
 
 ## Bugs in the Heat plugin
 
-- https://bugs.launchpad.net/heat/+bug/1364017
+- <https://bugs.launchpad.net/heat/+bug/1364017>
 
-  docker plugin fails to delete a container resource in
+    docker plugin fails to delete a container resource in
   `CREATE_FAILED` state.
 
-- https://bugs.launchpad.net/heat/+bug/1364041
+- <https://bugs.launchpad.net/heat/+bug/1364041>
 
-  docker plugin `volumes_from` parameter should be a list.
+    docker plugin `volumes_from` parameter should be a list.
 
-- https://bugs.launchpad.net/heat/+bug/1364039
+- <https://bugs.launchpad.net/heat/+bug/1364039>
 
-  docker plugin `volumes_from` parameter results in an error
+    docker plugin `volumes_from` parameter results in an error
 
-- https://bugs.launchpad.net/heat/+bug/1364019
+- <https://bugs.launchpad.net/heat/+bug/1364019>
 
-  docker plugin does not actually remove containers on delete
+    docker plugin does not actually remove containers on delete
 
 ## Bugs in docker Python module
 
-- https://github.com/docker/docker-py/pull/310
+- <https://github.com/docker/docker-py/pull/310>
 
-  allow ports to be specified as `port/proto`.
+    allow ports to be specified as `port/proto`.
 
