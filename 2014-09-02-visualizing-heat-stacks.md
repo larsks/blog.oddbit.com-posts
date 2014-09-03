@@ -17,12 +17,14 @@ resource-list`, for example)...
 ...but I really like visualizing things, so I wrote a quick hack
 called [dotstack][] that will generate [dot][] language output from a
 Heat stack.  You can process this with [Graphviz][] to produce output
-like this:
+like this, in which graph nodes are automatically colorized by
+resource type:
 
 <a href="/assets/2014/09/02/sample.svg"><img
   src="/assets/2014/09/02/sample.svg" width="400"/></a>
 
-Or like this:
+Or like this, in which each node contains information about its
+resource type and physical resource id:
 
 <a href="/assets/2014/09/02/sample-detailed.svg"><img
   src="/assets/2014/09/02/sample-detailed.svg" width="400"/></a>
