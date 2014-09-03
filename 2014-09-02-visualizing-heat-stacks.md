@@ -1,0 +1,36 @@
+---
+title: Visualizing Heat stacks
+date: 2014-09-02
+layout: post
+tags:
+  - openstack
+  - heat
+---
+
+I spent some time today learning about Heat [autoscaling groups][],
+which are incredibly nifty but a little opaque from the Heat command
+line, since commands such as `heat resource-list` don't recurse into
+nested stacks.  It is possible to introspect these resources (you can
+pass the physical resource id of a nested stack to `heat
+resource-list`, for example)...
+
+...but I really like visualizing things, so I wrote a quick hack
+called [dotstack][] that will generate [dot][] language output from a
+Heat stack.  You can process this with [Graphviz][] to produce output
+like this:
+
+<a href="/assets/2014/09/02/sample.svg"><img
+  src="/assets/2014/09/02/sample.svg" width="400"/></a>
+
+Or like this:
+
+<a href="/assets/2014/09/02/sample-detailed.svg"><img
+  src="/assets/2014/09/02/sample-detailed.svg" width="400"/></a>
+
+The source code is available on [github][dotstack].
+
+[dot]:  http://en.wikipedia.org/wiki/DOT_(graph_description_language)
+[graphviz]: http://www.graphviz.org/
+[dotstack]: http://github.com/larsks/dotstack
+[autoscaling groups]: https://wiki.openstack.org/wiki/Heat/AutoScaling
+
