@@ -480,7 +480,7 @@ definition:
       properties:
         docker_endpoint:
           str_replace:
-            template: http://$HOST:2375/
+            template: "tcp://$HOST:2375"
             params:
               "$HOST":
                 get_attr:
@@ -506,7 +506,7 @@ Take a close look at how we're setting the `docker_endpoint` property:
 
     docker_endpoint:
       str_replace:
-        template: http://$HOST:2375/
+        template: "tcp://$HOST:2375"
         params:
           "$HOST":
             get_attr:
