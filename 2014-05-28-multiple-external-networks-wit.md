@@ -11,8 +11,7 @@ tags:
 In the old days (so, like, last year), Neutron supported a single
 external network per L3 agent.  You would run something like this...
 
-    $ neutron net-create external --router:external=true \
-      --disable-dhcp
+    $ neutron net-create external --router:external=true
 
 ...and neutron would map this to the bridge defined in
 `external_network_bridge` in `/etc/neutron/l3_agent.ini`.  If you
