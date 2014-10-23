@@ -127,7 +127,7 @@ relevant `Dockerfile`:
 
     COPY dummy_service /usr/share/puppet/modules/dummy_service
 
-And I modified the `Dockerfile` for my ssh image to look like this:
+I modified the `Dockerfile` for my ssh image to look like this:
 
     FROM larsks/rdo-puppet-base
 
@@ -137,6 +137,16 @@ And I modified the `Dockerfile` for my ssh image to look like this:
       puppet apply \
         --modulepath=/usr/share/openstack-puppet/modules:/usr/share/puppet/modules \
         node.pp
+
+And finally I modified `node.pp` to look like this:
+
+    Service {
+      provider => dummy,
+    }
+
+    class { 'ssh': }
+
+This sets the default `provider` for `service` resources to `dummy`.
 
 With these changes, the `docker build` operation completes
 successfully:
