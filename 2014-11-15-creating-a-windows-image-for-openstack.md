@@ -211,6 +211,24 @@ get console access to your instance (e.g., via the Horizon dashboard),
 you can log in as the "Administrator" user, at which point you will be
 prompted to set an initial password for that account.
 
+### Logging
+
+You can find logs for `cloudbase-init` in `c:\program files
+(x86)\cloudbase solutions\cloudbase-init\log\cloudbase-init.log`.
+
+If appropriately configured, `cloudbase-init` will also log to the
+virtual serial port.  This log is available in OpenStack by running
+`nova console-log <instance>`.  For example:
+
+    $ nova console-log my-windows-server
+    2014-11-19 04:10:45.887 1272 INFO cloudbaseinit.init [-] Metadata service loaded: 'HttpService'
+    2014-11-19 04:10:46.339 1272 INFO cloudbaseinit.init [-] Executing plugin 'MTUPlugin'
+    2014-11-19 04:10:46.371 1272 INFO cloudbaseinit.init [-] Executing plugin 'NTPClientPlugin'
+    2014-11-19 04:10:46.387 1272 INFO cloudbaseinit.init [-] Executing plugin 'SetHostNamePlugin'
+    .
+    .
+    .
+
 ## Putting it all together
 
 I have an [install script][] that drives the process, but it's
