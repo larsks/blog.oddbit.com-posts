@@ -156,14 +156,9 @@ a group of linked containers that share a common network namespace).
 After a few minutes, you should eventually see:
 
     # docker ps
-    CONTAINER ID        IMAGE                     COMMAND                CREATED
-             STATUS              PORTS               NAMES
-    644c8fc5a79c        mysql:latest              "/entrypoint.sh mysq   11 seconds
-    ago      Up 8 seconds                            k8s--dbserver.fd48803d--dbserve
-    r.etcd--3d30eac0_-_745c_-_11e4_-_b32a_-_fa163e6e92ce--58794467
-    3561e39f198c        kubernetes/pause:latest   "/pause"               2 minutes a
-    go	 Up 2 minutes                            k8s--net.d96a64a9--dbserver.etc
-    d--3d30eac0_-_745c_-_11e4_-_b32a_-_fa163e6e92ce--d872be51
+    CONTAINER ID        IMAGE                     COMMAND                CREATED             STATUS              PORTS               NAMES
+    644c8fc5a79c        mysql:latest              "/entrypoint.sh mysq   3 minutes ago       Up 3 minutes                            k8s--dbserver.fd48803d--dbserver.etcd--3d30eac0_-_745c_-_11e4_-_b32a_-_fa163e6e92ce--58794467   
+    3561e39f198c        kubernetes/pause:latest   "/pause"               5 minutes ago       Up 5 minutes                            k8s--net.d96a64a9--dbserver.etcd--3d30eac0_-_745c_-_11e4_-_b32a_-_fa163e6e92ce--d872be51        
 
 And `kubecfg` should show the pod as running:
 
