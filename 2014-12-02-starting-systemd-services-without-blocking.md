@@ -1,0 +1,30 @@
+---
+title: Starting systemd services without blocking
+date: 2014-12-02
+layout: post
+tags:
+  - systemd
+---
+
+Recently, I've been playing around with [Fedora Atomic and
+Kubernetes][atomic-post].  I ran into a frustrating problem in which I
+would attempt to start a service from within a script launched by
+[cloud-init][], only to have have `systemctl` block indefinitely
+because the service I was attempting to start was dependent on
+`cloud-init` finishing first.
+
+[atomic-post]: |filename|/2014-11-24-fedora-atomic-openstack-and-kubernetes-oh-my.md
+[cloud-init]:
+
+It turns out that `systemctl` has a flag meant exactly for this
+situation:
+
+       --no-block
+           Do not synchronously wait for the requested operation to finish. If
+           this is not specified, the job will be verified, enqueued and
+           systemctl will wait until it is completed. By passing this
+           argument, it is only verified and enqueued.
+
+Replacing `systemctl start <service>` with `systemctl start --no-block
+<service>` has solved that particular problem.
+
