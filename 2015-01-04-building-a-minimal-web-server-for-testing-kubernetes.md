@@ -129,9 +129,10 @@ Bummer.  It looks like the NSS libraries are still biting us, and it
 looks as if statically compiling code that uses NSS [may be tricky][].
 Fortunately, it's relatively simple to patch out the parts of the
 `thttpd` code that are trying to switch to another uid/gid.  The
-following patch will do the trick:
+following [patch][] will do the trick:
 
 [may be tricky]: https://stackoverflow.com/questions/3430400/linux-static-linking-is-dead
+[patch]: https://github.com/larsks/docker-image-thttpd/blob/master/builder/thttpd-runasroot.patch
 
     diff --git a/thttpd.c b/thttpd.c
     index fe21b44..397feb1 100644
