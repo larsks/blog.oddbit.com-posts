@@ -213,7 +213,7 @@ following into `/etc/systemd/system/docker-openvswitch-agent.service`:
     Type=simple
     User=neutron
     ExecStart=/usr/bin/neutron-openvswitch-agent --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini --config-file /etc/neutron/ovs-docker.conf --log-file /var/log/neutron/docker-openvswitch-agent.log
-    #PrivateTmp=true
+    PrivateTmp=true
     KillMode=process
 
     [Install]
@@ -223,32 +223,35 @@ following into `/etc/systemd/system/docker-openvswitch-agent.service`:
 
 **NB**
 
-You will note that in the above unit file I have commented out the
-`PrivateTmp` directive.  This directive causes the service to run with
+While working on this configuration I ran into an undesirable
+interaction between Docker and [systemd][]'s `PrivateTmp` directive.
+
+This directive causes the service to run with
 a private [mount namespace][] such that `/tmp` for the service is not
 the same as `/tmp` for other services.  This is a great idea from a
 security perspective, but can cause problems in the following
 scenario:
 
 1. Start a Docker container with `nova boot ...`
-2. Restart the `docker-openvswitch-agent` service
+2. Restart any service that uses the `PrivateTmp` directive
 3. Attempt to delete the Docker container with `nova delete ...`
 
-Docker will fail to clean up the container because the private
+Docker will fail to destroy the container because the private
 namespace created by the `PrivateTmp` directive preserves a reference
 to the Docker `devicemapper` mount in
 `/var/lib/docker/devicemapper/mnt/...` that was active at the time the
-service was restarted.
+service was restarted.  To recover from this situation, you will need
+to restart whichever service is still holding a reference to the
+Docker mounts.
 
-To recover from this situation, simply restart the
-`docker-openvswitch-agent`, which will destroy the private mount
-namespace and release the mounts.  At this point, you should be able
-to run `nova delete` to delete the instance (you may need to run `nova
-reset-state` first to clear the error condition that resulted from the
-above failure).
+I have [posted to the systemd-devel][docker-vs-privatetmp] mailing
+list to see if there are any solutions to this behavior.  As I note in
+that email, this behavior appears to be identical to that described in
+Fedora bug [851970][], which was closed two years ago.
 
 [mount namespace]: http://lwn.net/Articles/531114/
 [docker-vs-privatetmp]: http://lists.freedesktop.org/archives/systemd-devel/2015-January/027162.html
+[851970]: https://bugzilla.redhat.com/show_bug.cgi?id=851970
 
 ----
 
