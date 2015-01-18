@@ -227,11 +227,25 @@ You will note that in the above unit file I have commented out the
 `PrivateTmp` directive.  This directive causes the service to run with
 a private [mount namespace][] such that `/tmp` for the service is not
 the same as `/tmp` for other services.  This is a great idea from a
-security perspective, but for some reason the mount namespace
-associated with this service continues to hold references to Docker
-mounts even after they have been unmounted in the global mount
-namespace.  This prevents Docker from completely deleting the
-containers.
+security perspective, but can cause problems in the following
+scenario:
+
+1. Start a Docker container with `nova boot ...`
+2. Restart the `docker-openvswitch-agent` service
+3. Attempt to delete the Docker container with `nova delete ...`
+
+Docker will fail to clean up the container because the private
+namespace created by the `PrivateTmp` directive preserves a reference
+to the Docker `devicemapper` mount in
+`/var/lib/docker/devicemapper/mnt/...` that was active at the time the
+service was restarted.
+
+To recover from this situation, simply restart the
+`docker-openvswitch-agent`, which will destroy the private mount
+namespace and release the mounts.  At this point, you should be able
+to run `nova delete` to delete the instance (you may need to run `nova
+reset-state` first to clear the error condition that resulted from the
+above failure).
 
 [mount namespace]: http://lwn.net/Articles/531114/
 
