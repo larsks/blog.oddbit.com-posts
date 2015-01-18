@@ -248,6 +248,7 @@ reset-state` first to clear the error condition that resulted from the
 above failure).
 
 [mount namespace]: http://lwn.net/Articles/531114/
+[docker-vs-privatetmp]: http://lists.freedesktop.org/archives/systemd-devel/2015-January/027162.html
 
 ----
 
