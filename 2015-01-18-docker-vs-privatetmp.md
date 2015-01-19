@@ -194,6 +194,12 @@ Your content would not be visible.  The mount of
 namespace into the Docker mount namespace because of the *private*
 flag.
 
+## Thanks
 
+I had some help figuring this out.  Thanks to [Lennart Poettering],
+Andrey Borzenkov, and [Colin Walters][].
+
+[lennart poettering]: https://en.wikipedia.org/wiki/Lennart_Poettering
+[colin walters]: http://blog.verbum.org/
 
 
