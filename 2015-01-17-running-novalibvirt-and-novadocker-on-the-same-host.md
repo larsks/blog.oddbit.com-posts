@@ -253,6 +253,11 @@ Fedora bug [851970][], which was closed two years ago.
 [docker-vs-privatetmp]: http://lists.freedesktop.org/archives/systemd-devel/2015-January/027162.html
 [851970]: https://bugzilla.redhat.com/show_bug.cgi?id=851970
 
+**Update** I wrote a [separate post][] about this issue, which
+includes some discussion about what's going on and a solution.
+
+[separate post]: |filename|/2015-01-18-docker-vs-privatetmp.md
+
 ----
 
 If we activate this service...
