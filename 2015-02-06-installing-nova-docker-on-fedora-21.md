@@ -70,7 +70,7 @@ method):
 
 [rhbz#1187882]: https://bugzilla.redhat.com/show_bug.cgi?id=1187882
 
-    # python --enablerepo=rawhide install python-six systemd
+    # yum --enablerepo=rawhide install python-six systemd
 
 At this point, having upgraded `systemd`, you should probably reboot:
 
