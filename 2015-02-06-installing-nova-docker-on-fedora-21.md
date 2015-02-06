@@ -1,6 +1,6 @@
 ---
 title: Installing nova-docker in N easy steps
-date: 2015-02-05
+date: 2015-02-06
 layout: post
 tags:
 - docker
@@ -178,17 +178,19 @@ And now we should be able to start a container:
 
 After a bit, `nova list` should show:
 
-    +--------------------------------------+-------+--------+------------+-------------+------------------+
-    | ID                                   | Name  | Status | Task State | Power State | Networks         |
-    +--------------------------------------+-------+--------+------------+-------------+------------------+
-    | 430a197e-a0ca-4e72-a7db-1969d0773cf7 | test0 | ACTIVE | -          | Running     | private=10.0.0.6 |
-    +--------------------------------------+-------+--------+------------+-------------+------------------+
+    +------...+-------+--------+...+------------------+
+    | ID   ...| Name  | Status |...| Networks         |
+    +------...+-------+--------+...+------------------+
+    | 430a1...| test0 | ACTIVE |...| private=10.0.0.6 |
+    +------...+-------+--------+...+------------------+
 
 And we should also see the container if we run `docker ps`:
 
     # docker ps
     CONTAINER ID        IMAGE                  COMMAND                CREATED             STATUS              PORTS               NAMES
     ee864da30cf1        larsks/thttpd:latest   "/thttpd -D -l /dev/   7 hours ago         Up 7 hours                              nova-430a197e-a0ca-4e72-a7db-1969d0773cf7   
+
+## Getting connected
 
 At this point, the container will *not* be network accessible; it's
 attached to a private tenant network.  Let's assign it a floating ip
@@ -222,15 +224,10 @@ And now we can ping our Docker container:
 And access the webserver:
 
     # curl http://172.24.4.229
-    .
-    .
-    .
-      ____                            _         _       _   _                 
-     / ___|___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_(_) ___  _ __  ___ 
-    | |   / _ \| '_ \ / _` | '__/ _` | __| | | | |/ _` | __| |/ _ \| '_ \/ __|
-    | |__| (_) | | | | (_| | | | (_| | |_| |_| | | (_| | |_| | (_) | | | \__ \
-     \____\___/|_| |_|\__, |_|  \__,_|\__|\__,_|_|\__,_|\__|_|\___/|_| |_|___/
-                      |___/                                                   
+    <!DOCTYPE html>
+    <html>
+      <head>            
+        <title>Your web server is working</title>
     .
     .
     .
