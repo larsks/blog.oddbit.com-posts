@@ -95,7 +95,7 @@ On the Etcd side, Kiwi uses keys under the `/kiwi/publicips` prefix to
 coordinate address ownership among Kiwi instances.  It listens to
 events from Etcd regarding key create/delete/set/etc operations in
 this prefix by calling
-`/v2/keys/kiwi/publicips?watch=true&recursive=true'.  This is a
+`/v2/keys/kiwi/publicips?watch=true&recursive=true`.  This is a
 long-poll request, rather than a streaming request: that means that a
 request will only ever receive a single event, but it may need to wait
 for a while before it receives that response.  This model worked well
