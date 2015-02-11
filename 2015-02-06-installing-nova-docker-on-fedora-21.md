@@ -1,5 +1,5 @@
 ---
-title: Installing nova-docker in N easy steps
+title: Installing nova-docker on Fedora 21/RDO Juno
 date: 2015-02-06
 layout: post
 tags:
