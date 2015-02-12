@@ -88,10 +88,10 @@ As of this writing (`HEAD` is "984900a Give some time for docker.stop
 to work"), you need to apply [a patch][] to `nova-docker` to get it to
 work with the current Nova `master` branch:
 
-[a patch]: https://review.openstack.org/#/c/154984/
+[a patch]: https://review.openstack.org/#/c/154750/
 
     $ git fetch https://review.openstack.org/stackforge/nova-docker \
-      refs/changes/84/154984/2 \
+      refs/changes/50/154750/3 \
       && git checkout FETCH_HEAD
 
 Once [that change][a patch] has merged, this step should no longer be
