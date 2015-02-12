@@ -108,8 +108,7 @@ repository:
     $ git clone https://git.openstack.org/openstack-dev/devstack
     $ cd devstack
 
-Then `cd` into the `devstack` directory and create a `local.conf` file
-with the following content:
+Then create a `local.conf` file with the following content:
 
     [[local|localrc]]
     ADMIN_PASSWORD=secret
@@ -130,6 +129,7 @@ with the following content:
     FIXED_RANGE=10.254.1.0/24
     NETWORK_GATEWAY=10.254.1.1
 
+    # This enables Neutron, because that's how I roll.
     disable_service n-net
     enable_service q-svc
     enable_service q-agt
@@ -165,7 +165,7 @@ configuration file for `nova-docker`:
 
 ## Start the installation
 
-So, no we're all ready to roll!
+So, now we're all ready to roll!
 
     $ ./stack.sh
     [Call Trace]
@@ -175,7 +175,7 @@ So, no we're all ready to roll!
     /home/ubuntu/devstack/functions-common: line 322: /home/ubuntu/stack/logs/error.log: No such file or directory
 
 ...or not.  This error happens if devstack is unable to turn your
-hostname into an IP address.  So I will set `HOST_IP` in my
+hostname into an IP address.  We can set `HOST_IP` in our
 environment:
 
     $ HOST_IP=10.0.0.232 ./stack.sh
@@ -190,10 +190,12 @@ OpenStack environment:
 
     $ . openrc admin
 
-First, we need an appropriate image; my `larsks/thttpd`
+Next, we need an appropriate image; my [larsks/thttpd][] image
 is small (so it's quick to download) and does not require any
 interactive terminal (so it's appropriate for nova-docker), so let's
 start with that:
+
+[larsks/thttpd]: https://registry.hub.docker.com/u/larsks/thttpd/
 
     $ docker pull larsks/thttpd
     $ docker save larsks/thttpd |
@@ -215,7 +217,7 @@ After a bit, we should see:
     | 0c3...| test0 | ACTIVE |...| Running     | private=10.254.1.4 |
     +----...+-------+--------+...+-------------+--------------------+
 
-Let's assign a floating ip address:
+Let's create a floating ip address:
 
     $ nova floating-ip-create
     +------------+-----------+----------+--------+
@@ -228,7 +230,7 @@ And assign it to our container:
 
     $ nova floating-ip-associate test0 172.24.4.3
 
-And now access your service:
+And now access our service:
 
     $ curl http://172.24.4.3
     <!DOCTYPE html>
