@@ -94,7 +94,8 @@ work with the current Nova `master` branch:
       refs/changes/50/154750/3 \
       && git checkout FETCH_HEAD
 
-Once [that change][a patch] has merged, this step should no longer be
+Once [that change][a patch] has merged (**update**, 2015-02-12: the
+patch has merged), this step should no longer be
 necessary.  With the patch we applied, we can install the
 `nova-docker` driver:
 
