@@ -158,12 +158,6 @@ This will result in things getting installed in subdirectories of
 `$HOME/stack`.  We enable Neutron and leave pretty much everything
 else set to default values.
 
-Once `stack.sh` is finished running, we need to install a `rootwrap`
-configuration file for `nova-docker`:
-
-    $ sudo cp nova-docker/etc/nova/rootwrap.d/docker.filters \
-      /etc/nova/rootwrap.d/
-
 ## Start the installation
 
 So, now we're all ready to roll!
@@ -182,6 +176,14 @@ environment:
     $ HOST_IP=10.0.0.232 ./stack.sh
 
 And then go grab a cup of coffee or something.
+
+## Install nova-docker rootwrap filters
+
+Once `stack.sh` is finished running, we need to install a `rootwrap`
+configuration file for `nova-docker`:
+
+    $ sudo cp nova-docker/etc/nova/rootwrap.d/docker.filters \
+      /etc/nova/rootwrap.d/
 
 ## Starting a Docker container
 
