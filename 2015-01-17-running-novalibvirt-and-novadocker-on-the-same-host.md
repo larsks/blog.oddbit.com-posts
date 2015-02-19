@@ -18,6 +18,16 @@ favor of `nova-docker`.
 [libvirt]: http://www.libvirt.org/
 [nova-docker]: https://github.com/stackforge/nova-docker
 
+---
+
+**NB** As pointed out by *gustavo* in the comments, running two
+`neutron-openvswitch-agents` on the same host -- as suggested in this
+article -- is going to lead to nothing but sadness and doom.  So
+kids, don't try this at home.  I'm leaving the article here because I
+think it still has some interesting bits.
+
+---
+
 I guess the simplest solution would be to spin up a vm on which to run
 `nova-docker`, but why use a simple solution when there are things to
 be learned?  I wanted to know if it were possible (and if so, how) to
