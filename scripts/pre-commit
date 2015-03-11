@@ -2,25 +2,16 @@
 #
 # Syntax check markdown files before committing.
 
-set -e
+git stash -q --keep-index
+trap 'git stash pop -q' EXIT
 
-git diff-index --name-only HEAD |
-git checkout-index --stdin --temp | (
-	retcode=0
+git diff-index --cached --name-only HEAD |
+while read path; do
+	# we only care about markdown files
+	[ "${path##*.}" = md ] || continue
 
-	while read tmp actual; do
-		if [ "${actual##*.}" = md ]; then
-			if ! maruku -o /dev/null -b $tmp > /dev/null 2>&1; then
-				echo "ERROR: $actual: markdown errors"
-				retcode=1
-			fi
-		fi
+	md-verify-links $path || exit 1
+done
 
-		rm -f $tmp
-	done
-
-	exit $retcode
-)
-
-exit 0
+exit $?
 
