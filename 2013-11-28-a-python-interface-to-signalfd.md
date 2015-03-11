@@ -27,6 +27,8 @@ including:
 - Writing a Python module in C
 - Using the `ctypes` module (which I played with [a few years ago][])
 
+[a few years ago]: |filename|/2010-08-10-python-ctypes-module.md
+
 However, I decided to use this as an excuse to learn about the
 [cffi][] module.  You can find the complete code in my
 [python-signalfd][] repository and an explanation of the process

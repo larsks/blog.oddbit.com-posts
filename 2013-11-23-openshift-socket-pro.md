@@ -11,6 +11,8 @@ In this article, a followup to my [previous post][] regarding
 long-poll servers and Python, we investigate the code changes that
 were necessary to make the code work when deployed on OpenShift.
 
+[previous post]: |filename|/2013-11-23-long-polling-with-ja.md
+
 <!-- more -->
 
 In the previous post, we implemented IO polling to watch for client
