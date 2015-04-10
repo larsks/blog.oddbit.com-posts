@@ -35,7 +35,6 @@ However, I decided to use this as an excuse to learn about the
 below.
 
 [back in 2007]: http://lwn.net/Articles/225714/
-[a few years ago]: {% post_url 2010-08-10-python-ctypes-module %}
 [cffi]: https://pypi.python.org/pypi/cffi
 [cffi documentation]: http://cffi.readthedocs.org/
 

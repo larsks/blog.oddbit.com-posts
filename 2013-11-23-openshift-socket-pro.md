@@ -11,8 +11,6 @@ In this article, a followup to my [previous post][] regarding
 long-poll servers and Python, we investigate the code changes that
 were necessary to make the code work when deployed on OpenShift.
 
-[previous post]: |filename|/2013-11-23-long-polling-with-ja.md
-
 <!-- more -->
 
 In the previous post, we implemented IO polling to watch for client
@@ -135,5 +133,5 @@ expected...
 [cors]: http://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [issues]: https://github.com/larsks/pubsub_example/issues
 [node.js]: http://nodejs.org/
-[previous post]: {% post_url 2013-11-23-long-polling-with-ja %}
+[previous post]: |filename|/2013-11-23-long-polling-with-ja.md
 
