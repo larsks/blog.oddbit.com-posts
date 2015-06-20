@@ -21,7 +21,7 @@ environment, focusing on my [heat-kubernetes][] templates.
 
 As part of that presentation, I've put together a short demonstration video:
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/KuYPfnGVvm0" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/tS5X0qi04ZU" frameborder="0" allowfullscreen></iframe>
 
 This shows off the autoscaling behavior available with recent versions
 of these templates (and also serves as a very brief introduction to
