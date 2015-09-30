@@ -1,6 +1,6 @@
 ---
 title: "OpenStack Networking without DHCP"
-date: "2015-06-26"
+date: 2015-06-26
 layout: post
 tags:
 - openstack
