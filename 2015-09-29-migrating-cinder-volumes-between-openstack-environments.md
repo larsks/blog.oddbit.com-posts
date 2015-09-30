@@ -84,7 +84,9 @@ There are two ways we can deal with this:
    attached.  This should be done with care, because the on-disk
    filesystem may not be in consistent state.
 
-   The `--force` flag was introduced in OpenStack Liberty.
+     The `--force` flag was introduced in OpenStack Liberty.  If you
+     are using an earlier OpenStack release you will need to use the
+     following procedure.
 
 1. We can make the volume available by detaching it from the server.
    In this case, you probably want to shut down the server first:
@@ -191,7 +193,7 @@ Which will give you:
     YTc1LWUxNDMtNGQ4YS05YjkzLWUyNDZhZjhlNmE3ZCIsICJzaXplIjogMX0=
 
 While not critical to this process, it may be interesting to see that
-this string actually decodes do:
+this string actually decodes to:
 
     {
         "availability_zone": "nova",
