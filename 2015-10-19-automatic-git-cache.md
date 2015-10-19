@@ -12,13 +12,14 @@ today:
 > [I] would really like a git lookaside cache which operated on an upstream
 > repo, but pulled objects locally when they're available
 
-In this post I present a proof-of-concept solution and isn't something
-that has actually been used or tested anywhere.
+In this post I present a proof-of-concept solution to this request.
+Please note that thisand isn't something that has actually been used
+or tested anywhere!
 
 If you access a git repository via `ssh`, it's easy to provide a
 wrapper for git operations via the `command=` option in an
-`authorized_keys` file.  We can take advantage of this to update a
-a local repository prior to responding to a `clone`/`pull`/etc.
+`authorized_keys` file.  We can take advantage of this to update a a
+local "cache" repository prior to responding to a `clone`/`pull`/etc.
 operation.
 
 A simple wrapper might look like this:
@@ -60,19 +61,19 @@ file that looks something like this:
 Let's set up a local repository mirror:
 
     # su - git
-    $ mkdir repos
-    $ cd repos
-    $ git clone --mirror http://github.com/openstack-dev/devstack.git
+    git$ mkdir repos
+    git$ cd repos
+    git$ git clone --mirror http://github.com/openstack-dev/devstack.git
 
 In order to tell the wrapper script that it should perform the
 automatic update logic on this repository, we need to touch the
 appropriate flag file:
 
-    $ touch devstack.git/git-auto-update
+    git$ touch devstack.git/git-auto-update
 
 If we then attempt to clone that repository:
 
-    $ git clone git@localhost:devstack.git
+    lars$ git clone git@localhost:devstack.git
 
 The wrapper script will check for the presence of that flag file, and
 if it exists it will first perform a `git remote update` before
