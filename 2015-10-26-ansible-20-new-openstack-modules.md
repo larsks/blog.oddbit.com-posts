@@ -5,6 +5,7 @@ layout: post
 tags:
   - ansible
   - openstack
+  - ansible_20_series
 ---
 
 This is the second in a loose sequence of articles looking at new

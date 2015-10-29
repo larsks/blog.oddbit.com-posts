@@ -5,6 +5,7 @@ layout: post
 tags:
   - ansible
   - docker
+  - ansible_20_series
 ---
 
 As the release of [Ansible][] 2.0 draws closer, I'd like to take a
