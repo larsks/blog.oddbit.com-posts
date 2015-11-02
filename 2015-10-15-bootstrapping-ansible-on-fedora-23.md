@@ -71,12 +71,22 @@ Ansible modules:
     - hosts: all
       gather_facts: true
       tasks:
+        - lineinefile:
+            dest: /etc/hosts
+            line: "{{ansible_eth0.ipv4.address}} {{inventory_hostname}}"
+            regexp: "{{inventory_hostname}}"
         - package:
             name: git
             state: present
 
+As the above example demonstrates, now that the necessary Python stack
+is installed on the remote Fedora 23 host, Ansible is is able to
+gather [facts][] about the host that can be used in tasks, templates,
+etc.
+
 Note that with the `raw` module I had to use the `dnf` command
 explicitly, while in the above playbook I can use the `package` module
-for package installation because Ansible is now able to gather facts
-from the remote host and automatically determine which package manager
-is appropriate.
+for package installation, which relies on available facts to determine
+the correct package module.
+
+[facts]: http://docs.ansible.com/ansible/playbooks_variables.html#information-discovered-from-systems-facts
