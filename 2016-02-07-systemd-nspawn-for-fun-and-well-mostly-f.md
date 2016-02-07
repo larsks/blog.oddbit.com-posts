@@ -21,10 +21,8 @@ give you flexible container management.
 
 There are many different ways in which it can be used.  I'm going to
 focus on one that's a bit of a corner use case that I find
-particularly interesting.
-
-In this article we're going to explore the [systemd-nspawn][] tool,
-and see how we can use it to spawn lightweight containers for
+particularly interesting.  In this article we're going to explore how
+we can use [systemd-nspawn][] to spawn lightweight containers for
 architectures other than that of our host system.
 
 ## In which we perform magic
@@ -39,12 +37,12 @@ We're going to use this technique to accomplish the following:
 - Allow us to spawn a `systemd-nspawn` container into a Raspberry Pi
   filesystem.
 
-When `systemd`-based system boots, the [systemd-binfmt][] service will
-automatically register configurations found in `/etc/binfmt.d` or
-`/usr/lib/binfmt.d`.  You can set these up by hand, of course, but
-we're going to take the asy route and install the `qemu-user` package,
-which includes both the necessary `binfmt.d` configuration files as
-well as the associated emulators:
+When a `systemd`-based system boots, the [systemd-binfmt][] service
+(if it's enabled) will automatically register configurations found in
+`/etc/binfmt.d` or `/usr/lib/binfmt.d`.  You can set these up by hand,
+of course, but we're going to take the easy route and install the
+`qemu-user` package, which includes both the necessary `binfmt.d`
+configuration files as well as the associated emulators:
 
     # dnf -y install qemu-user
 
