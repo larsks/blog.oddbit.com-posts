@@ -14,7 +14,7 @@ but if you think of it as [Docker][] with a slightly different target
 you wouldn't be far wrong, either.  It can be used to spawn containers
 on your host, and has a variety of options for configuring the
 containerized environment through the use of private networking, bind
-mounts, capability controls, nad a variety of other facilities that
+mounts, capability controls, and a variety of other facilities that
 give you flexible container management.
 
 [archquote]: https://wiki.archlinux.org/index.php/Systemd-nspawn
@@ -24,6 +24,36 @@ focus on one that's a bit of a corner use case that I find
 particularly interesting.  In this article we're going to explore how
 we can use [systemd-nspawn][] to spawn lightweight containers for
 architectures other than that of our host system.
+
+## Why systemd-nspawn?
+
+While everything described in this article could be accomplished
+through the use of `chroot` and a chunk of additional configuration,
+using `systemd-nspawn` makes it much easier.  For example,
+`systemd-nspawn` takes care of making virtual filesystems like
+`/proc`, `/sys`, and a minimal `/dev` available inside the container
+(without which some programs simply won't work).  And of course
+`systemd-nspawn` takes care of cleaning up these mounts when the
+container exits.  For a simple container, this:
+
+    # systemd-nspawn -D /mnt /some/command
+
+Is roughly equivalent to:
+
+    # mount -o bind /proc /mnt/proc
+    # mount -o bind /sys /mnt/sys
+    # mount -t tmpfs tmpfs /mnt/run
+    # mount -t tmpfs tmpfs /mnt/dev
+    # ...populate /mnt/dev here...
+    # chroot /mnt /some/command
+    # umount /mnt/dev
+    # umount /mnt/run
+    # umount /mnt/sys
+    # umount /mnt/proc
+
+`systemd-nspawn` does all of this for us, and does much of it via
+private mount namespaces so that the temporary filesystems aren't
+visible from the host.
 
 ## In which we perform magic
 
