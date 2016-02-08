@@ -40,7 +40,7 @@ options:
 Let's say we had a Fedora filesystem mounted on `/fedora` and we want
 to run the following playbook:
 
-    - hosts: /mnt
+    - hosts: /fedora
       tasks:
         - raw: dnf -y install python libselinux-python python2-dnf
         - dnf:
@@ -49,30 +49,30 @@ to run the following playbook:
 
 Using the `chroot` driver, we get:
 
-    $ sudo ansible-playbook -i /mnt, -c chroot playbook.yml
+    $ sudo ansible-playbook -i /fedora, -c chroot playbook.yml
 
     PLAY ***************************************************************************
 
     TASK [raw] *********************************************************************
-    fatal: [/mnt]: FAILED! => {"changed": false, "failed": true, "rc": -6, "stderr": "Fatal Python error: Failed to open /dev/urandom\n", "stdout": "", "stdout_lines": []}
+    fatal: [/fedora]: FAILED! => {"changed": false, "failed": true, "rc": -6, "stderr": "Fatal Python error: Failed to open /dev/urandom\n", "stdout": "", "stdout_lines": []}
 
 Adding the necessary tasks to our playbook to set up the chroot
 environment properly will add a lot of additional complexity and will
 make the playbook substantially less generic.  Now compare that to the
 result of running the same playbook using the `nspawn` driver:
 
-    $ sudo ansible-playbook -i /mnt, -c nspawn playbook.yml
+    $ sudo ansible-playbook -i /fedora, -c nspawn playbook.yml
 
     PLAY ***************************************************************************
 
     TASK [raw] *********************************************************************
-    ok: [/mnt]
+    ok: [/fedora]
 
     TASK [dnf] *********************************************************************
-    changed: [/mnt]
+    changed: [/fedora]
 
     PLAY RECAP *********************************************************************
-    /mnt                       : ok=2    changed=1    unreachable=0    failed=0   
+    /fedora                       : ok=2    changed=1    unreachable=0    failed=0   
 
 ## Ansible in emulation
 
@@ -83,7 +83,7 @@ architecture through the use of QEMU user-mode emulation.  We can
 apply the same idea to Ansible with an inventory entry like this:
 
     target
-      ansible_host=/mnt
+      ansible_host=/fedora
       ansible_connection=nspawn
       ansible_nspawn_extra_args="--bind /usr/bin/qemu-arm"
 
