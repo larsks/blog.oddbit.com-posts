@@ -61,6 +61,8 @@ environment properly will add a lot of additional complexity and will
 make the playbook substantially less generic.  Now compare that to the
 result of running the same playbook using the `nspawn` driver:
 
+    $ sudo ansible-playbook -i /mnt, -c nspawn playbook.yml
+
     PLAY ***************************************************************************
 
     TASK [raw] *********************************************************************
