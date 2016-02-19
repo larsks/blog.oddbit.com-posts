@@ -73,7 +73,7 @@ If you just want to take things out for a spin using the defaults
 *and* you can ssh to your target host as `root`, you can skip the
 remainder of this article and just run:
 
-    ansible-playbook playbooks/centosci/minmal.yml \
+    ansible-playbook playbooks/centosci/minimal.yml \
       -e virthost=my.target.host
 
 Or for an HA deployment:
@@ -183,7 +183,7 @@ default looks like this:
         flavor: compute
 
 To create a minimal environment with a single controller and a single
-compute node, we could instead put the folling into our configuration
+compute node, we could instead put the following into our configuration
 file:
 
     overcloud_nodes:
