@@ -4,6 +4,7 @@ date: 2016-02-19
 layout: post
 tags:
   - gerrit
+  - gruf
 ---
 
 In my [last article][last] article I introduced [Gruf][], a command line

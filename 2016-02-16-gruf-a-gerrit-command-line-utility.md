@@ -4,7 +4,10 @@ date: 2016-02-16
 layout: post
 tags:
   - gerrit
+  - gruf
 ---
+
+(See also [the followup](|filename|/2016-02-19-gruf-gets-superpowers.md) to this article.)
 
 I've recently started spending more time interacting with [Gerrit][],
 the code review tool used both by [OpenStack][], at
