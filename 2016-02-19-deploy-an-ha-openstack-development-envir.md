@@ -230,6 +230,15 @@ accomplish this by adding the following to the configuration:
       <cpu mode='host-passthrough'/>
     libvirt_args: --libvirt-type kvm
 
+For this to work, you will need to have your target host correctly
+configured to support nested KVM, which generally means adding the
+following to `/etc/modprobe.d/kvm.conf`:
+
+    options kvm_intel nested=1
+
+(And possibly unloading/reloading the `kvm_intel` module if it was
+already loaded.)
+
 ### Disable some steps
 
 The default behavior is to:
