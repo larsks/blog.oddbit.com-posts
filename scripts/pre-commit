@@ -2,19 +2,19 @@
 #
 # Syntax check markdown files before committing.
 
-# disabled for now
-exit 0
+rc=0
+tmpdir=$(mktemp -d precommitXXXXXX)
+trap "rm -rf $tmpdir" EXIT
 
-git stash -q --keep-index
-trap 'git stash pop -q' EXIT
+set -e
 
-git diff-index --cached --name-only HEAD |
-while read path; do
-	# we only care about markdown files
-	[ "${path##*.}" = md ] || continue
+git checkout-index -a --prefix=$tmpdir/
 
-	md-verify-links $path || exit 1
+git diff-index --cached --name-only HEAD --diff-filter=ACMR |
+while read file; do
+	if ! remark --frail --no-stdout "$file"; then
+		rc=1
+	fi
 done
 
-exit $?
-
+exit $rc
