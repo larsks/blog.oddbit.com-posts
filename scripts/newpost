@@ -1,0 +1,63 @@
+#!/bin/bash
+
+MAX_TITLE_LEN=30
+
+tags=()
+while getopts t: ch; do
+	case $ch in
+		(t)	tags+=($OPTARG)
+		;;
+
+	(\?)	exit 2
+		;;
+	esac
+done
+shift $(( OPTIND - 1 ))
+
+title="$1"
+
+if ! [[ $title ]]; then
+	echo "ERROR: you must provide a title" >&2
+	exit 1
+fi
+
+date=$(date +%Y-%m-%d)
+stub=$(tr -dc '[a-zA-Z ]' <<< $title)
+stub=${stub// /-}
+stub=${stub,,}
+stub=${stub:0:$MAX_TITLE_LEN}
+filename="${date}-${stub}.md"
+branch="drafts/${stub}"
+
+if git show-ref --verify --quiet "refs/heads/$branch"; then
+	git checkout "$branch"
+else
+	git checkout -b "$branch" master
+fi
+
+if [[ ! -f "$filename" ]]; then
+(
+cat <<EOF
+---
+title: $title
+date: $date
+layout: post
+tags:
+EOF
+
+for tag in "${tags[@]}"; do
+	echo "- $tag"
+done
+
+cat <<EOF
+---
+
+EOF
+) > "$filename"
+
+git add "$filename"
+git commit -m "added $filename"
+
+fi
+
+echo "$filename"
