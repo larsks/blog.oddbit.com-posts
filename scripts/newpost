@@ -30,9 +30,9 @@ filename="${date}-${stub}.md"
 branch="drafts/${stub}"
 
 if git show-ref --verify --quiet "refs/heads/$branch"; then
-	git checkout "$branch"
+	git checkout "$branch" > /dev/null
 else
-	git checkout -b "$branch" master
+	git checkout -b "$branch" master > /dev/null
 fi
 
 if [[ ! -f "$filename" ]]; then
@@ -55,8 +55,10 @@ cat <<EOF
 EOF
 ) > "$filename"
 
+(
 git add "$filename"
 git commit -m "added $filename"
+) > /dev/null
 
 fi
 
