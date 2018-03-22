@@ -8,6 +8,15 @@ tags:
   - openvswitch
 ---
 
+**Update (2018-03-22)** Since I wrote this document back in 2014,
+Docker has developed the [macvlan network
+driver](https://docs.docker.com/network/macvlan/). That gives you a
+*supported* mechanism for direct connectivity to a local layer 2
+network.  I've [written an article about working with the macvlan
+driver](/2018/03/12/using-docker-macvlan-networks/).
+
+---
+
 This article discusses four ways to make a Docker container appear on
 a local network.  These are not suggested as practical solutions, but
 are meant to illustrate some of the underlying network technology
