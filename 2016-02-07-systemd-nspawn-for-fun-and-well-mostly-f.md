@@ -71,20 +71,20 @@ When a `systemd`-based system boots, the [systemd-binfmt][] service
 (if it's enabled) will automatically register configurations found in
 `/etc/binfmt.d` or `/usr/lib/binfmt.d`.  You can set these up by hand,
 of course, but we're going to take the easy route and install the
-`qemu-user` package, which includes both the necessary `binfmt.d`
+`qemu-user-static` package, which includes both the necessary `binfmt.d`
 configuration files as well as the associated emulators:
 
-    # dnf -y install qemu-user
+    # dnf -y install qemu-user-static
 
-The `qemu-user` package on my system has installed, among other files,
+The `qemu-user-static` package on my system has installed, among other files,
 `/usr/lib/binfmt.d/qemu-arm.conf`, which looks like this:
 
-    :qemu-arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x28\x00:\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/qemu-arm:
+    :qemu-arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x28\x00:\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/qemu-arm-static:
 
 This gets registered with `/proc/sys/fs/binfmt_misc/register` and
 informs the kernel that there is a new binfmt called `qemu-arm`, and
 that files that contain the specified byte pattern in the header
-should be handled with `/usr/bin/qemu-arm`.
+should be handled with `/usr/bin/qemu-arm-static`.
 
 With all this set up, we can mount a Raspberry Pi filesystem (I'm
 starting with [minibian][])...
@@ -97,35 +97,14 @@ starting with [minibian][])...
 
 ...and then start up a process in it:
 
-    # systemd-nspawn -q -D /mnt /bin/bash
-    execv() failed: No such file or directory
+    # systemd-nspawn -D /mnt
+    Spawning container mnt on /mnt.
+    Press ^] three times within 1s to kill container.
+    root@mnt:~#
 
-Oh, no! What happened?  The file is clearly there:
-
-    # ls -l /mnt/bin/bash
-    -rwxr-xr-x. 1 root root 863400 Oct 18  2014 /mnt/bin/bash
-
-But the necessary interpreter (`qemu-arm`) is not where the kernel
-expects to find it *within the chroot environment*.  Fortunately, we
-can use the `--bind` option to `systemd-nspawn` to make the necessary
-files available inside the container without needing to copy anything
-in:
-
-    # systemd-nspawn -q --bind /usr/bin/qemu-arm -D /mnt /bin/bash
-    execv() failed: No such file or directory
-
-Which fails *again*, because on my Fedora host the `qemu-arm` binary
-is dynamically linked, and it can't find any of the necessary
-libraries.  Fortunately, everything it wants is in `/lib64`, which
-doesn't conflict with anything in our target filesystem, so at last:
-
-    # systemd-nspawn -q --bind /usr/bin/qemu-arm \
-      --bind /lib64 -D /mnt /bin/bash
-    root@mnt:/#
-
-And there we are!  We're now running inside a container running an ARM
-userspace.  We can modify the image by installing or udpating
-packages or making any other necessary configuration changes:
+And there we are!  We're now running a shell inside a container
+running an ARM userspace.  We can modify the image by installing or
+udpating packages or making any other necessary configuration changes:
 
     root@mnt:/# apt-get install raspberrypi-bootloader
     Reading package lists... Done
