@@ -262,5 +262,4 @@ timing:
 ```
 
 With these tools it becomes much easier to design playbooks for
-testing your infrastructure. I'll be following up this article with
-some practical examples of this.
+testing your infrastructure.
