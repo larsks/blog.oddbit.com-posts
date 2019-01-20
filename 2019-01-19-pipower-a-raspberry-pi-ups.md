@@ -141,8 +141,10 @@ If you stop either of the systemd units, your Pi will either shutdown (if you `s
 
 With a few more pins available -- maybe an [attiny84][] -- it might be fun to provide battery voltage and current measurements to the Pi via an i2c interface. I would probably also add a status LED to show the current state of the controller code.
 
-<a href="/assets/2019/01/20/pipower-eth-left.png"><img src="/assets/2019/01/20/pipower-eth-left.png" width="600" alt="pipower left view"/></a>
+<div clear="both"></div>
+<a href="/assets/2019/01/20/pipower-eth-left.png"><img src="/assets/2019/01/20/pipower-eth-left.png" width="400" alt="pipower left view" style="float: left; margin: 2ex 1ex 2ex 0"/></a>
 
-<a href="/assets/2019/01/20/pipower-eth-right.png"><img src="/assets/2019/01/20/pipower-eth-right.png" width="600" alt="pipower right view"/></a>
+<a href="/assets/2019/01/20/pipower-eth-right.png"><img src="/assets/2019/01/20/pipower-eth-right.png" width="400" alt="pipower right view" style="float: right; margin: 2ex 0 2ex 1ex"/></a>
+<div clear="both"></div>
 
 [attiny84]: https://www.microchip.com/wwwproducts/en/ATtiny84
