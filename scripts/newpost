@@ -39,14 +39,14 @@ if [[ ! -f "$filename" ]]; then
 (
 cat <<EOF
 ---
-title: $title
-date: $date
+title: "$title"
+date: "$date"
 layout: post
 tags:
 EOF
 
 for tag in "${tags[@]}"; do
-	echo "- $tag"
+	echo "- \"$tag\""
 done
 
 cat <<EOF
