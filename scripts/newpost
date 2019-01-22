@@ -3,9 +3,18 @@
 MAX_TITLE_LEN=30
 
 tags=()
-while getopts t: ch; do
+while getopts d:s:t:n ch; do
 	case $ch in
-		(t)	tags+=($OPTARG)
+	(t)	tags+=($OPTARG)
+	;;
+
+	(n)	NOBRANCH=1
+	;;
+
+	(s)	stub=$OPTARG
+		;;
+
+	(d)	date=$OPTARG
 		;;
 
 	(\?)	exit 2
@@ -21,18 +30,26 @@ if ! [[ $title ]]; then
 	exit 1
 fi
 
-date=$(date +%Y-%m-%d)
-stub=$(tr -dc '[a-zA-Z ]' <<< $title)
-stub=${stub// /-}
-stub=${stub,,}
-stub=${stub:0:$MAX_TITLE_LEN}
+if [ -z "$date" ]; then
+	date=$(date +%Y-%m-%d)
+fi
+
+if [ -z "$stub" ]; then
+	stub=$(tr -dc '[a-zA-Z ]' <<< $title)
+	stub=${stub// /-}
+	stub=${stub,,}
+	stub=${stub:0:$MAX_TITLE_LEN}
+fi
+
 filename="${date}-${stub}.md"
 branch="drafts/${stub}"
 
-if git show-ref --verify --quiet "refs/heads/$branch"; then
-	git checkout "$branch" > /dev/null
-else
-	git checkout -b "$branch" master > /dev/null
+if [ "$NOBRANCH" != 1 ]; then
+	if git show-ref --verify --quiet "refs/heads/$branch"; then
+		git checkout "$branch" > /dev/null
+	else
+		git checkout -b "$branch" master > /dev/null
+	fi
 fi
 
 if [[ ! -f "$filename" ]]; then
