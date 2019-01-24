@@ -236,7 +236,9 @@ The code recognized and responded to the button press, and is now in state [STAT
     2: /t PORTB = 10101
     3: /t PINB = 10111
 
-This brings us to `STATE_POWERFF1`, during which the controller will wait some amount of time before cutting power to the Pi. Our debug build has reduced this timer to 1 second, but if you don't have time for that we can simply run until the next state transition like this:
+This brings us to [STATE_POWEROFF1][], during which the controller will wait some amount of time before cutting power to the Pi. Our debug build has reduced this timer to 1 second, but if you don't have time for that we can simply run until the next state transition like this:
+
+[state_poweroff1]: https://github.com/larsks/pipower/blob/b822b91af88d8baeb4e0e69fa5e69c074b96c32f/pipower.c#L203
 
     (gdb) disable 1
     (gdb) tb loop if state != STATE_POWEROFF1
@@ -253,7 +255,9 @@ This brings us to `STATE_POWERFF1`, during which the controller will wait some a
 
 This works by disabling the unqualified breakpoint at the top of `loop()` and creating a new temporary breakpoint (meaning it will be removed once it triggers) that will only trigger when the global `state` value has changed.
 
-From `STATE_POWEROFF2`, Pipower will enter the various `IDLE*` stages, during which it enters a very low power sleep mode.
+From [STATE_POWEROFF2][], Pipower will enter the various `IDLE*` stages, during which it enters a very low power sleep mode.
+
+[state_poweroff2]: https://github.com/larsks/pipower/blob/b822b91af88d8baeb4e0e69fa5e69c074b96c32f/pipower.c#L213
 
 ---
 
