@@ -1,6 +1,7 @@
 ---
 title: "Debugging attiny85 code, part 2: Automating GDB with scripts"
-date: "2019-01-22"
+date: "2019-01-22 01:00:00"
+seq: 2
 layout: post
 tags:
 - "attiny85"
@@ -41,9 +42,8 @@ You'll also want to be familiar with the [attiny85][] or a similar AVR microcont
 
 ## Goals
 
-In [the first post][] on this topic, we looked at how one can use `gdb` and [simavr][] to debug your attiny85 (or other AVR code) without flashing it to a device. In this post, I would like to extend that by looking at how we can automate some aspects of the debugging process.
+In [the first post][pt1] on this topic, we looked at how one can use `gdb` and [simavr][] to debug your attiny85 (or other AVR code) without flashing it to a device. In this post, I would like to extend that by looking at how we can automate some aspects of the debugging process.
 
-[the first post]: |filename|2019-01-22-debugging-attiny-code-pt-1.md
 [simavr]: https://github.com/buserror/simavr
 
 ## Sending commands to gdb
