@@ -51,3 +51,22 @@ To this:
     (.data + .bss + .noinit)
 
 That's a savings of just under 800 bytes, which on the one hand doesn't seem like it a lot...but on the other hand saves 10% of the available memory!
+
+## Debugging caveat
+
+If you remove `malloc()` from your code and then try to debug it with `gdb`, you may find yourself staring at the following error:
+
+    evaluation of this expression requires the program to have a function "malloc".
+
+This will happen if you ask `gdb` to do something that requires allocating memory for e.g., a string buffer.  The solution is to ensure that `malloc()` is linked into your code when you build for debugging. I use something like the following:
+
+```c
+#ifdef DEBUG
+__attribute__((optimize("O0")))
+void _force_malloc() {
+  malloc(0);
+}
+#endif
+```
+
+The `__attribute__((optimize("O0")))` directive disables all optimizations for this function, which should prevent gcc from optimizing out the reference to `malloc()`.
