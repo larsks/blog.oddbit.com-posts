@@ -1,5 +1,5 @@
 ---
-title: "Avr-gcc and --short-enums"
+title: "AVR micro-optimization: Avr-gcc and --short-enums"
 date: "2019-01-28"
 layout: post
 tags:
@@ -11,6 +11,8 @@ tags:
 ## How big is an enum?
 
 I noticed something odd while browsing through the assembly output of some AVR C code [I wrote recently][pipower]. In the code, I have the following expression:
+
+[pipower]: |filename|2019-01-19-pipower-a-raspberry-pi-ups.md
 
     int main() {
         setup();
@@ -127,5 +129,3 @@ While the compiler is still performing comparisons on 16 bit values...
       sts state,r24
 
 So, the tl;dr is that the `--short-enums` flag makes a lot of sense when compiling code for an 8-bit device, and arguably makes the compiler generate code that is more intuitive.
-
-[pipower]: |filename|2019-01-19-pipower-a-raspberry-pi-ups.md
