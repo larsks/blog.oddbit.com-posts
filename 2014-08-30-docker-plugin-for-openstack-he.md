@@ -7,6 +7,7 @@ tags:
   - openstack
   - heat
   - orchestration
+  - pull-request
 ---
 
 I have been looking at both Docker and OpenStack recently. In my [last

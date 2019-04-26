@@ -5,6 +5,7 @@ layout: post
 tags:
   - ansible
   - systemd
+  - pull-request
 ---
 
 I wrote [earlier][] about [systemd-nspawn][], and how it can take much

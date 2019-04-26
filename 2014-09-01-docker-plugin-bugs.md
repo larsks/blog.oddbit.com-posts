@@ -6,6 +6,7 @@ tags:
 - openstack
 - docker
 - heat
+- pull-request
 ---
 
 This is a companion to my [article on the Docker plugin for Heat][1].

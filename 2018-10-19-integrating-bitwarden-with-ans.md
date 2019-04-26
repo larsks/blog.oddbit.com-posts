@@ -6,6 +6,7 @@ tags:
 - bitwarden
 - security
 - ansible
+- pull-request
 ---
 
 [Bitwarden][] is a password management service (like [LastPass][] or

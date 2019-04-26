@@ -6,6 +6,7 @@ tags:
   - ansible
   - openstack
   - ansible_20_series
+  - pull-request
 ---
 
 This is the second in a loose sequence of articles looking at new
