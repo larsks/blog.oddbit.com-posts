@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Service discovery in the cloud using Avahi
-date: 2012-11-27
+date: "2012-11-27"
 ---
 
 I'm been writing [a provisioning tool][drifter] for OpenStack

@@ -1,6 +1,6 @@
 ---
 title: Multiple external networks with a single L3 agent
-date: 2014-05-28
+date: "2014-05-28"
 layout: post
 tags:
 - openstack

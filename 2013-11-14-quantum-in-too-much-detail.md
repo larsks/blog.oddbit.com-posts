@@ -1,7 +1,7 @@
 ---
 title: Quantum in Too Much Detail
 layout: post
-date: 2013-11-14
+date: "2013-11-14"
 tags:
   - openstack
   - quantum

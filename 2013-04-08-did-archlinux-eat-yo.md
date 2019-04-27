@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Did Arch Linux eat your KVM?
-date: 2013-04-08
+date: "2013-04-08"
 tags:
   - archlinux
   - virtualization

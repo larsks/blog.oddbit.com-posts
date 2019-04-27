@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A quote about XMLRPC
-date: 2013-02-25
+date: "2013-02-25"
 tags:
   - puppet
 ---

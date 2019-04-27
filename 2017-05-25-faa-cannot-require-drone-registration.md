@@ -1,6 +1,6 @@
 ---
 title: "FAA Cannot Require Drone Registration"
-date: 2017-05-25
+date: "2017-05-25"
 layout: post
 tags:
   - uav

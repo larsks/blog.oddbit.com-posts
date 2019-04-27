@@ -1,6 +1,6 @@
 ---
 title: "Running NTP in a Container"
-date: 2015-10-09
+date: "2015-10-09"
 layout: post
 tags:
   - docker

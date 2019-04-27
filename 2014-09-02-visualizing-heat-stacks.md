@@ -1,6 +1,6 @@
 ---
 title: Visualizing Heat stacks
-date: 2014-09-02
+date: "2014-09-02"
 layout: post
 tags:
   - openstack

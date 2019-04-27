@@ -1,6 +1,6 @@
 ---
 title: Docker plugin bugs
-date: 2014-09-01
+date: "2014-09-01"
 layout: post
 tags:
 - openstack

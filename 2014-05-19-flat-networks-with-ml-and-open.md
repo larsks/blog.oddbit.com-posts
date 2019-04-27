@@ -1,6 +1,6 @@
 ---
 title: Flat networks with ML2 and OpenVSwitch
-date: 2014-05-19
+date: "2014-05-19"
 layout: post
 tags:
 - openvswitch

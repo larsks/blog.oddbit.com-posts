@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Parsing Libvirt XML with xmllint
-date: 2012-12-21
+date: "2012-12-21"
 ---
 
 I've been playing around with the [LXC][] support in libvirt recently,

@@ -1,6 +1,6 @@
 ---
 title: Multiple 1-Wire Buses on the Raspberry Pi
-date: 2018-03-27
+date: "2018-03-27"
 layout: post
 tags:
 - hardware

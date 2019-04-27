@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chasing OpenStack idle connection timeouts
-date: 2012-07-30
+date: "2012-07-30"
 tags:
   - openstack
   - networking

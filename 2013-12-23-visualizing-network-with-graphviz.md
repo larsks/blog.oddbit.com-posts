@@ -1,6 +1,6 @@
 ---
 title: Visualizing Neutron Networking with GraphViz
-date: 2013-12-23
+date: "2013-12-23"
 layout: post
 tags:
   - openstack

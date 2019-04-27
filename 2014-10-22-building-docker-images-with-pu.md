@@ -1,6 +1,6 @@
 ---
 title: Building Docker images with Puppet
-date: 2014-10-22
+date: "2014-10-22"
 layout: post
 tags:
   - puppet

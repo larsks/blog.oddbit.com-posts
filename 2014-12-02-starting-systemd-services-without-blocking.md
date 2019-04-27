@@ -1,6 +1,6 @@
 ---
 title: Starting systemd services without blocking
-date: 2014-12-02
+date: "2014-12-02"
 layout: post
 tags:
   - systemd

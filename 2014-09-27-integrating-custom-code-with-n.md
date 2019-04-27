@@ -1,6 +1,6 @@
 ---
 title: Integrating custom code with Nova using hooks
-date: 2014-09-27
+date: "2014-09-27"
 layout: post
 tags:
   - openstack

@@ -1,6 +1,6 @@
 ---
 title: Creating a Windows image for OpenStack
-date: 2014-11-15
+date: "2014-11-15"
 layout: post
 tags:
   - openstack

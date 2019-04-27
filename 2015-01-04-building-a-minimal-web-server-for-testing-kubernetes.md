@@ -1,6 +1,6 @@
 ---
 title: Building a minimal web server for testing Kubernetes
-date: 2015-01-04
+date: "2015-01-04"
 layout: post
 tags:
   - docker

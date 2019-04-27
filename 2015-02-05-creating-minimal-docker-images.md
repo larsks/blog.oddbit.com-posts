@@ -1,6 +1,6 @@
 ---
 title: Creating minimal Docker images from dynamically linked ELF binaries
-date: 2015-02-05
+date: "2015-02-05"
 layout: post
 tags:
 - docker

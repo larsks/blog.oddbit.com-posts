@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Puppet, scope, and inheritance
-date: 2011-08-16
+date: "2011-08-16"
 tags:
   - puppet
 ---

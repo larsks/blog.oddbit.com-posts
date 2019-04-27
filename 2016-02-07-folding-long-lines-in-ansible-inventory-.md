@@ -1,6 +1,6 @@
 ---
 title: "Folding long lines in Ansible inventory files"
-date: 2016-02-07
+date: "2016-02-07"
 layout: post
 tags:
   - ansible

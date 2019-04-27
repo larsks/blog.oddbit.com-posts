@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Merging directories with OpenLDAP's Meta backend
-date: 2010-02-16
+date: "2010-02-16"
 tags:
   - meta
   - proxy

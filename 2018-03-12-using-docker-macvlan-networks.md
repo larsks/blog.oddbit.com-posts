@@ -1,6 +1,6 @@
 ---
 title: Using Docker macvlan networks
-date: 2018-03-12
+date: "2018-03-12"
 layout: post
 tags:
 - networking

@@ -1,6 +1,6 @@
 ---
 title: "OpenStack, Containers, and Logging"
-date: 2017-06-14
+date: "2017-06-14"
 layout: post
 tags:
   - openstack

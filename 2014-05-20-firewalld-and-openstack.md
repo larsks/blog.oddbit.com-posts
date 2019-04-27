@@ -1,6 +1,6 @@
 ---
 title: Firewalld, NetworkManager, and OpenStack
-date: 2014-05-20
+date: "2014-05-20"
 layout: post
 tags:
 - openstack

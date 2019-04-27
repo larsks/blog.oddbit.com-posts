@@ -1,6 +1,6 @@
 ---
 title: Systemd unit for managing USB gadgets
-date: 2018-10-19
+date: "2018-10-19"
 layout: post
 tags:
 - raspberrypi

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kerberos authenticated queries to Active Directory
-date: 2010-06-29
+date: "2010-06-29"
 tags:
   - ldap
   - active_directory

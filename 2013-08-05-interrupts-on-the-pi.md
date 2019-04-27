@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interrupts on the PiFace
-date: 2013-08-05
+date: "2013-08-05"
 tags:
   - raspberrypi
   - python

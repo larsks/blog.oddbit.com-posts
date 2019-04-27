@@ -1,6 +1,6 @@
 ---
 title: Fedora Atomic, OpenStack, and Kubernetes (oh my)
-date: 2014-11-24
+date: "2014-11-24"
 layout: post
 tags:
 - openstack

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A second look at Arch Linux
-date: 2013-01-25
+date: "2013-01-25"
 ---
 
 This is a followup to an [earlier post about Arch Linux][previous].

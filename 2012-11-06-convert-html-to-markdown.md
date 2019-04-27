@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Converting HTML to Markdown
-date: 2012-11-06
+date: "2012-11-06"
 tags:
   - markdown
   - meta

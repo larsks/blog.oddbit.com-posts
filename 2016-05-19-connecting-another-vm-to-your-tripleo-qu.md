@@ -1,6 +1,6 @@
 ---
 title: "Connecting another vm to your tripleo-quickstart deployment"
-date: 2016-05-19
+date: "2016-05-19"
 layout: post
 tags:
   - openvswitch

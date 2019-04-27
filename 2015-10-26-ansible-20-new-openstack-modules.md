@@ -1,6 +1,6 @@
 ---
 title: "Ansible 2.0: New OpenStack modules"
-date: 2015-10-26
+date: "2015-10-26"
 layout: post
 tags:
   - ansible

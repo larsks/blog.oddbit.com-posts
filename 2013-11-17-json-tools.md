@@ -1,6 +1,6 @@
 ---
 title: "json-tools: cli for generating and filtering json"
-date: 2013-11-17
+date: "2013-11-17"
 tags:
   - json
   - openstack

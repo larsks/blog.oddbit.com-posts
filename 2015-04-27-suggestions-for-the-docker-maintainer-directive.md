@@ -1,6 +1,6 @@
 ---
 title: "Suggestions for the Docker MAINTAINER directive"
-date: 2015-04-27
+date: "2015-04-27"
 layout: post
 tags:
   - docker

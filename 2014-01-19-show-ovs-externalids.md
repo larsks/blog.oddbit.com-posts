@@ -1,6 +1,6 @@
 ---
 title: Show OVS external-ids
-date: 2014-01-19
+date: "2014-01-19"
 layout: post
 tags:
 - openstack

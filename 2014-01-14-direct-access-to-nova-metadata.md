@@ -1,6 +1,6 @@
 ---
 title: Direct access to Nova metadata
-date: 2014-01-14
+date: "2014-01-14"
 layout: post
 tags:
 - openstack

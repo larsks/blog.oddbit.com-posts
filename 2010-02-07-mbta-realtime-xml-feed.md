@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MBTA realtime XML feed
-date: 2010-02-07
+date: "2010-02-07"
 tags:
   - xml
   - gps

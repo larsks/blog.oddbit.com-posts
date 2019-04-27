@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Automatic hostname entries for libvirt domains
-date: 2013-10-04
+date: "2013-10-04"
 Slug: automatic-dns-entries-for-libvirt-domains
 tags:
   - libvirt

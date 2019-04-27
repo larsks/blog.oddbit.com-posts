@@ -1,6 +1,6 @@
 ---
 title: Docker vs. PrivateTmp
-date: 2015-01-18
+date: "2015-01-18"
 layout: post
 tags:
   - docker

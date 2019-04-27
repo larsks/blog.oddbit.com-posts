@@ -1,6 +1,6 @@
 ---
 title: "Automatic git cache"
-date: 2015-10-19
+date: "2015-10-19"
 layout: post
 tags:
   - git

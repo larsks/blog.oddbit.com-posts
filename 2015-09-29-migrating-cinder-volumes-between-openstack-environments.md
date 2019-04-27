@@ -1,6 +1,6 @@
 ---
 title: "Migrating Cinder volumes between OpenStack environments using shared NFS storage"
-date: 2015-09-29
+date: "2015-09-29"
 layout: post
 tags:
 - openstack

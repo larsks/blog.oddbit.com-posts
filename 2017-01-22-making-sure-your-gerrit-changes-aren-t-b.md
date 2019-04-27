@@ -1,6 +1,6 @@
 ---
 title: "Making sure your Gerrit changes aren't broken"
-date: 2017-01-22
+date: "2017-01-22"
 layout: post
 tags:
   - openstack

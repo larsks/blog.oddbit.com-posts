@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How do I LXC console?
-date: 2013-01-28
+date: "2013-01-28"
 ---
 
 It took me an unreasonably long time to boot an LXC container with

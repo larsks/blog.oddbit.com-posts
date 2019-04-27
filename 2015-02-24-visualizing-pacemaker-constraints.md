@@ -1,6 +1,6 @@
 ---
 title: Visualizing Pacemaker resource constraints
-date: 2015-02-24
+date: "2015-02-24"
 layout: post
 tags:
   - pacemaker

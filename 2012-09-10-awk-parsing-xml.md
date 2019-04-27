@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Parsing XML with Awk
-date: 2012-09-10
+date: "2012-09-10"
 tags:
   - awk
   - xml

@@ -1,6 +1,6 @@
 ---
 title: Stupid OpenStack Tricks
-date: 2014-01-16
+date: "2014-01-16"
 layout: post
 tags:
 - openstack

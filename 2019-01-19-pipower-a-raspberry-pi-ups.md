@@ -1,6 +1,6 @@
 ---
 title: "PiPower: A Raspberry Pi UPS"
-date: 2019-01-19
+date: "2019-01-19"
 layout: post
 tags:
 - raspberrypi

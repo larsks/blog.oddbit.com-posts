@@ -1,6 +1,6 @@
 ---
 title: "Stupid Ansible Tricks: Running a role from the command line"
-date: 2015-10-19
+date: "2015-10-19"
 layout: post
 tags:
   - ansible

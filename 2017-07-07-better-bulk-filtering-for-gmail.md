@@ -1,6 +1,6 @@
 ---
 title: "Better bulk filtering for Gmail"
-date: 2017-07-07
+date: "2017-07-07"
 layout: post
 tags:
   - gmail

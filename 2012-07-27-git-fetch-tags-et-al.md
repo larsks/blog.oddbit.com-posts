@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git fetch, tags, remotes, and more
-date: 2012-07-27
+date: "2012-07-27"
 tags:
   - git
 ---

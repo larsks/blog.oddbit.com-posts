@@ -1,6 +1,6 @@
 ---
 title: Accessing the serial console of your Nova servers
-date: 2014-12-22
+date: "2014-12-22"
 layout: post
 tags:
   - openstack

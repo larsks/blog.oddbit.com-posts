@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blocking VNC with iptables
-date: 2010-02-04
+date: "2010-02-04"
 tags:
   - linux
   - classification

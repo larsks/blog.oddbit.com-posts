@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cleaning up Subversion with Git
-date: 2010-01-29
+date: "2010-01-29"
 tags:
   - svn
   - versioncontrol

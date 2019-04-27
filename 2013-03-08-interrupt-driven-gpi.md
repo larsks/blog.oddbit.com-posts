@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interrupt driven GPIO with Python
-date: 2013-03-08
+date: "2013-03-08"
 tags:
   - raspberrypi
   - hardware

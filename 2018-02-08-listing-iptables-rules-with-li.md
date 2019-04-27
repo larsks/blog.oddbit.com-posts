@@ -1,6 +1,6 @@
 ---
 title: Listing iptables rules with line numbers
-date: 2018-02-08
+date: "2018-02-08"
 layout: post
 tags:
 - shell

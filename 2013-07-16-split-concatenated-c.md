@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Split concatenated certificates with awk
-date: 2013-07-16
+date: "2013-07-16"
 tags:
   - awk
 ---

@@ -1,6 +1,6 @@
 ---
 title: Sharing a terminal session with termshare
-date: 2014-05-21
+date: "2014-05-21"
 layout: post
 tags:
 - tools

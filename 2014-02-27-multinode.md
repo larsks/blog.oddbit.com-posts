@@ -1,6 +1,6 @@
 ---
 title: Multinode OpenStack with Packstack
-date: 2014-02-27
+date: "2014-02-27"
 layout: post
 tags:
   - openstack

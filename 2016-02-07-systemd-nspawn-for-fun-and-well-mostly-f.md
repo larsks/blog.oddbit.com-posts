@@ -1,6 +1,6 @@
 ---
 title: "Systemd-nspawn for fun and...well, mostly for fun"
-date: 2016-02-07
+date: "2016-02-07"
 layout: post
 tags:
   - systemd

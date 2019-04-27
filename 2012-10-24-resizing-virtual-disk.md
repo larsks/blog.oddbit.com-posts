@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Growing a filesystem on a virtual disk
-date: 2012-10-24
+date: "2012-10-24"
 tags:
   - virtualization
   - kvm

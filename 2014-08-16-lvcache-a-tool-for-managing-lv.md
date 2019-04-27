@@ -1,6 +1,6 @@
 ---
 title: "lvcache: a tool for managing LVM caches"
-date: 2014-08-16
+date: "2014-08-16"
 layout: post
 tags:
   - lvm

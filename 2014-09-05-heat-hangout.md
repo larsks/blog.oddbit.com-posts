@@ -1,6 +1,6 @@
 ---
 title: Heat Hangout
-date: 2014-09-05
+date: "2014-09-05"
 layout: post
 tags:
   - openstack

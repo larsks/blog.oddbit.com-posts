@@ -1,6 +1,6 @@
 ---
 title: "A systemd-nspawn connection driver for Ansible"
-date: 2016-02-08
+date: "2016-02-08"
 layout: post
 tags:
   - ansible

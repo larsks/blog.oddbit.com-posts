@@ -1,6 +1,6 @@
 ---
 title: "Some notes on PWM on the Raspberry Pi"
-date: 2017-09-26
+date: "2017-09-26"
 layout: post
 tags:
   - raspberrypi

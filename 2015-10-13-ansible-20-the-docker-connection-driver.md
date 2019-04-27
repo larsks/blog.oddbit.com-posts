@@ -1,6 +1,6 @@
 ---
 title: "Ansible 2.0: The Docker connection driver"
-date: 2015-10-13
+date: "2015-10-13"
 layout: post
 tags:
   - ansible

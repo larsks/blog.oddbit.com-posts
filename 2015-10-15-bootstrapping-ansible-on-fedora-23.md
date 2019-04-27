@@ -1,6 +1,6 @@
 ---
 title: "Bootstrapping Ansible on Fedora 23"
-date: 2015-10-15
+date: "2015-10-15"
 layout: post
 tags:
   - ansible

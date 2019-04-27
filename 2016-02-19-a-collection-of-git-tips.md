@@ -1,6 +1,6 @@
 ---
 title: "A collection of git tips"
-date: 2016-02-19
+date: "2016-02-19"
 layout: post
 tags:
   - git

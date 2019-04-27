@@ -1,6 +1,6 @@
 ---
 title: "Fun with devicemapper snapshots"
-date: 2018-01-25
+date: "2018-01-25"
 layout: post
 tags:
   - storage

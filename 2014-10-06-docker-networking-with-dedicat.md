@@ -1,6 +1,6 @@
 ---
 title: Docker networking with dedicated network containers
-date: 2014-10-06
+date: "2014-10-06"
 layout: post
 tags:
   - docker

@@ -1,6 +1,6 @@
 ---
 title: A Python interface to signalfd() using FFI
-date: 2013-11-28
+date: "2013-11-28"
 layout: post
 tags:
   - python

@@ -1,6 +1,6 @@
 ---
 title: "Gruf gets superpowers"
-date: 2016-02-19
+date: "2016-02-19"
 layout: post
 tags:
   - gerrit

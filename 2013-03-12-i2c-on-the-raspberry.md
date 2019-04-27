@@ -1,7 +1,7 @@
 ---
 layout: post
 title: I2C on the Raspberry Pi
-date: 2013-03-12
+date: "2013-03-12"
 tags:
   - hardware
   - raspberrypi

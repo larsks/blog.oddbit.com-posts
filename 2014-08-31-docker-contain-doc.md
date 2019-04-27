@@ -1,6 +1,6 @@
 ---
 title: Annotated documentation for DockerInc::Docker::Container
-date: 2014-08-30
+date: "2014-08-30"
 layout: post
 tags:
   - docker

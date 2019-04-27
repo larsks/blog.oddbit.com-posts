@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux UPnP Gateway
-date: 2010-01-29
+date: "2010-01-29"
 tags:
   - networking
   - peertopeer

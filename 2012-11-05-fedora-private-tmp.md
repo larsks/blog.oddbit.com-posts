@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Private /tmp directories in Fedora
-date: 2012-11-05
+date: "2012-11-05"
 tags:
   - fedora
   - systemd

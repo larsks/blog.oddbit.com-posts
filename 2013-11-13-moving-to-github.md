@@ -1,6 +1,6 @@
 ---
 title: Moving to GitHub
-date: 2013-11-13
+date: "2013-11-13"
 layout: post
 tags:
   - blog

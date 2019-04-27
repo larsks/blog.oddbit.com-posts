@@ -1,6 +1,6 @@
 ---
 title: "Gruf, a Gerrit command line utility"
-date: 2016-02-16
+date: "2016-02-16"
 layout: post
 tags:
   - gerrit

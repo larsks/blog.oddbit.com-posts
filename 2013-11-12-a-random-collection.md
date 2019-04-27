@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A random collection of OpenStack Tools
-date: 2013-11-12
+date: "2013-11-12"
 tags:
   - openstack
 ---

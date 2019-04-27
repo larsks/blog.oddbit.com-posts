@@ -1,7 +1,7 @@
 ---
 title: >
   Deploying an HA OpenStack development environment with tripleo-quickstart
-date: 2016-02-19
+date: "2016-02-19"
 layout: post
 tags:
   - openstack

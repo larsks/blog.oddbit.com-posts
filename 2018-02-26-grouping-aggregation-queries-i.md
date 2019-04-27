@@ -1,6 +1,6 @@
 ---
 title: Grouping aggregation queries in Gnocchi 4.0.x
-date: 2018-02-26
+date: "2018-02-26"
 layout: post
 tags:
 - openstack

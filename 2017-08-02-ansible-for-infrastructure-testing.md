@@ -1,6 +1,6 @@
 ---
 title: "Ansible for Infrastructure Testing"
-date: 2017-08-02
+date: "2017-08-02"
 layout: post
 tags:
   - ansible

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fixing RPM with evil magic
-date: 2011-07-26
+date: "2011-07-26"
 tags:
   - rpm
 ---

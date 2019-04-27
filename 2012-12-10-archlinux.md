@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A first look at Arch Linux
-date: 2012-12-10
+date: "2012-12-10"
 ---
 
 I decided to take a look at [Arch Linux][] this evening.  It's an

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cleaning up LXC cgroups
-date: 2013-01-28
+date: "2013-01-28"
 ---
 
 I spent some time today looking at systemd (44) under Fedora (17).

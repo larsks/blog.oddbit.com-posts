@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Document classification with POPFile
-date: 2012-11-08
+date: "2012-11-08"
 tags:
   - bayes
   - analytics

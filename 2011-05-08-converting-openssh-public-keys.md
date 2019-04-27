@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Converting OpenSSH public keys
-date: 2011-05-08
+date: "2011-05-08"
 tags:
   - openssl
   - openssh

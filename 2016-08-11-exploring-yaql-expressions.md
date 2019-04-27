@@ -1,6 +1,6 @@
 ---
 title: "Exploring YAQL Expressions"
-date: 2016-08-11
+date: "2016-08-11"
 layout: post
 tags:
   - openstack

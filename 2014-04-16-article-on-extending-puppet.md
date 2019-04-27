@@ -1,6 +1,6 @@
 ---
 title: Extending Puppet
-date: 2014-04-16
+date: "2014-04-16"
 layout: post
 tags:
   - puppet

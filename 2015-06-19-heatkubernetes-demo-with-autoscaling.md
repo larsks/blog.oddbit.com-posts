@@ -1,6 +1,6 @@
 ---
 title: "Heat-kubernetes Demo with Autoscaling"
-date: 2015-06-19
+date: "2015-06-19"
 layout: post
 tags:
 - openstack

@@ -1,6 +1,6 @@
 ---
 title: "gpio-watch: Run scripts in response to GPIO signals"
-date: 2014-07-26
+date: "2014-07-26"
 layout: post
 tags:
   - raspberrypi

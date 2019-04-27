@@ -1,6 +1,6 @@
 ---
 title: Running nova-libvirt and nova-docker on the same host
-date: 2015-01-17
+date: "2015-01-17"
 layout: post
 tags:
   - openstack

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Oracle JDK under CentOS
-date: 2012-11-26
+date: "2012-11-26"
 ---
 
 I needed to replace the native OpenJDK based Java VM with the Oracle

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Controlling a servo with your Arduino
-date: 2013-03-07
+date: "2013-03-07"
 tags:
   - arduino
   - hardware

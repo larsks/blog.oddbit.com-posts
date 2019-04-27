@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rate limiting made simple
-date: 2011-12-26
+date: "2011-12-26"
 tags:
   - networking
   - linux

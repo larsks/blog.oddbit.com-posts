@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why does the Neutron documentation recommend three interfaces?
-date: 2013-10-28
+date: "2013-10-28"
 tags:
   - openstack
   - neutron

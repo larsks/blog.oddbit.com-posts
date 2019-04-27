@@ -1,6 +1,6 @@
 ---
 title: External networking for Kubernetes services
-date: 2015-02-10
+date: "2015-02-10"
 layout: post
 tags:
   - docker

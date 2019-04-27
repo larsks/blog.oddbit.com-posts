@@ -1,6 +1,6 @@
 ---
 title: Cloud-init and the case of the changing hostname
-date: 2014-12-10
+date: "2014-12-10"
 layout: post
 tags:
   - openstack

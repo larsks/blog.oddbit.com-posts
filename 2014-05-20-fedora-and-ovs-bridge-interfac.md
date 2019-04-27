@@ -1,6 +1,6 @@
 ---
 title: Fedora and OVS Bridge Interfaces
-date: 2014-05-20
+date: "2014-05-20"
 layout: post
 tags:
 - fedora

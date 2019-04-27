@@ -1,6 +1,6 @@
 ---
 title: Integrating Bitwarden with Ansible
-date: 2018-10-19
+date: "2018-10-19"
 layout: post
 tags:
 - bitwarden

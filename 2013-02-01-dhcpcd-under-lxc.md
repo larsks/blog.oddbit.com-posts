@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Running dhcpcd under LXC
-date: 2013-02-01
+date: "2013-02-01"
 ---
 
 I've been working with [Arch Linux][] recently, which uses [dhcpcd][]

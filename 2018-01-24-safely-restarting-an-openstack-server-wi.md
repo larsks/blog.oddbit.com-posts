@@ -1,6 +1,6 @@
 ---
 title: "Safely restarting an OpenStack server with Ansible"
-date: 2018-01-24
+date: "2018-01-24"
 layout: post
 tags:
   - ansible

@@ -1,6 +1,6 @@
 ---
 title: "Diagnosing problems with an OpenStack deployment"
-date: 2015-03-09
+date: "2015-03-09"
 layout: post
 tags:
 - openstack

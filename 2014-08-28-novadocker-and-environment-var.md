@@ -1,6 +1,6 @@
 ---
 title: nova-docker and environment variables
-date: 2014-08-28
+date: "2014-08-28"
 layout: post
 tags:
   - openstack

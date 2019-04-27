@@ -1,6 +1,6 @@
 ---
 title: Installing nova-docker with devstack
-date: 2015-02-11
+date: "2015-02-11"
 layout: post
 tags:
   - openstack
