@@ -1,7 +1,7 @@
 ---
+aliases: ["/2018/02/27/listening-for-connections-on-a/"]
 title: Listening for connections on all ports/any port
 date: "2018-02-27"
-layout: post
 tags:
 - networking
 ---

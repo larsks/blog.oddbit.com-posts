@@ -1,7 +1,7 @@
 ---
+aliases: ["/2019/01/22/debugging-attiny-code-pt-1/"]
 title: "Debugging attiny85 code, part 1: simavr and gdb"
 date: "2019-01-22"
-layout: post
 tags:
 - "avr"
 - "gdb"
@@ -28,9 +28,9 @@ I've split this into three posts:
 
     Using `simavr` to collect information about the state of microcontroller pins while our code is running.
 
-[pt1]: |filename|2019-01-22-debugging-attiny-code-pt-1.md
-[pt2]: |filename|2019-01-22-debugging-attiny-code-pt-2.md
-[pt3]: |filename|2019-01-22-debugging-attiny-code-pt-3.md
+[pt1]: {{< ref "2019-01-22-debugging-attiny-code-pt-1.md" >}}
+[pt2]: {{< ref "2019-01-22-debugging-attiny-code-pt-2.md" >}}
+[pt3]: {{< ref "2019-01-22-debugging-attiny-code-pt-3.md" >}}
 
 This is part 1.
 

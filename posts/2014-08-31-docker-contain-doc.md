@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/08/31/docker-contain-doc/"]
 title: Annotated documentation for DockerInc::Docker::Container
 date: "2014-08-30"
-layout: post
 tags:
   - docker
   - openstack

@@ -1,7 +1,7 @@
 ---
+aliases: ["/2015/07/26/in-which-we-are-amazed-it-doesnt-all-fall-apart/"]
 title: "In which we are amazed it doesn't all fall apart"
 date: "2015-07-26"
-layout: post
 tags:
   - openstack
   - rant

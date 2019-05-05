@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2010/01/29/retrieving-blogger-posts-by-post-id/"]
 title: Retrieving Blogger posts by post id
 date: "2010-01-29"
 tags:

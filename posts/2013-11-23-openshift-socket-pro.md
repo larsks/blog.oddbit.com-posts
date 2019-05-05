@@ -1,7 +1,7 @@
 ---
+aliases: ["/2013/11/23/openshift-socket-pro/"]
 title: Sockets on OpenShift
 date: "2013-11-23"
-layout: post
 tags:
   - openshift
   - javascript

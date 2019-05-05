@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/05/21/sharing-a-terminal-session-wit/"]
 title: Sharing a terminal session with termshare
 date: "2014-05-21"
-layout: post
 tags:
 - tools
 - terminal

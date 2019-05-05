@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/05/28/booting-an-instance-with-multi/"]
 title: Booting an instance with multiple fixed addresses
 date: "2014-05-28"
-layout: post
 tags:
 - openstack
 - neutron

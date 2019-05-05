@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2010/05/11/pushing-git-repository-to-subversion/"]
 title: Pushing a Git repository to Subversion
 date: "2010-05-11"
 tags:

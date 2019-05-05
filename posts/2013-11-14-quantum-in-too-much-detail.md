@@ -1,6 +1,6 @@
 ---
+aliases: ["/2013/11/14/quantum-in-too-much-detail/"]
 title: Quantum in Too Much Detail
-layout: post
 date: "2013-11-14"
 tags:
   - openstack

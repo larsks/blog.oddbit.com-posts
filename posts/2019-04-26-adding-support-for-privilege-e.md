@@ -1,7 +1,7 @@
 ---
+aliases: ["/2019/04/26/adding-support-for-privilege-e/"]
 title: "Adding support for privilege escalation to Ansible's docker connection driver"
 date: "2019-04-26"
-layout: post
 tags:
 - "ansible"
 - "pull-request"

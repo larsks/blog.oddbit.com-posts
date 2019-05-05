@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2010/01/24/fring-how-not-to-handle-registration/"]
 title: "Fring: How not to handle registration"
 date: "2010-01-24"
 tags:

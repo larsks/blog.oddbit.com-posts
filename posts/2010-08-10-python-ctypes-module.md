@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2010/08/10/python-ctypes-module/"]
 title: Python ctypes module
 date: "2010-08-10"
 tags:

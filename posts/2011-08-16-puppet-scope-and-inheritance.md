@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2011/08/16/puppet-scope-and-inheritance/"]
 title: Puppet, scope, and inheritance
 date: "2011-08-16"
 tags:

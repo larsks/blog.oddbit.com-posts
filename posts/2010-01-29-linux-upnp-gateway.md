@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2010/01/29/linux-upnp-gateway/"]
 title: Linux UPnP Gateway
 date: "2010-01-29"
 tags:

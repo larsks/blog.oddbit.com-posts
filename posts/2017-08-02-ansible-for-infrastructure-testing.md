@@ -1,7 +1,7 @@
 ---
+aliases: ["/2017/08/02/ansible-for-infrastructure-testing/"]
 title: "Ansible for Infrastructure Testing"
 date: "2017-08-02"
-layout: post
 tags:
   - ansible
   - ansible-assertive

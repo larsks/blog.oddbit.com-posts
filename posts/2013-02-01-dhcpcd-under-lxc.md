@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2013/02/01/dhcpcd-under-lxc/"]
 title: Running dhcpcd under LXC
 date: "2013-02-01"
 ---

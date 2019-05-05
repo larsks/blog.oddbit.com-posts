@@ -1,7 +1,7 @@
 ---
+aliases: ["/2018/03/27/multiple-1-wire-buses-on-the-/"]
 title: Multiple 1-Wire Buses on the Raspberry Pi
 date: "2018-03-27"
-layout: post
 tags:
 - hardware
 - raspiberrypi

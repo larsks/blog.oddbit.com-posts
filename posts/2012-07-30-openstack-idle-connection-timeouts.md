@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2012/07/30/openstack-idle-connection-timeouts/"]
 title: Chasing OpenStack idle connection timeouts
 date: "2012-07-30"
 tags:

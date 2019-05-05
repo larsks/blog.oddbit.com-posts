@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/09/05/heat-hangout/"]
 title: Heat Hangout
 date: "2014-09-05"
-layout: post
 tags:
   - openstack
   - rdo

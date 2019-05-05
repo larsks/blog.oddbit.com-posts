@@ -1,6 +1,6 @@
 ---
+aliases: ["/2015/08/13/provider-external-networks-details/"]
 title: Provider external networks (in an appropriate amount of detail)
-layout: post
 date: "2015-08-13"
 tags:
   - openstack

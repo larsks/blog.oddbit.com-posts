@@ -1,7 +1,7 @@
 ---
+aliases: ["/2013/12/23/visualizing-network-with-graphviz/"]
 title: Visualizing Neutron Networking with GraphViz
 date: "2013-12-23"
-layout: post
 tags:
   - openstack
   - neutron

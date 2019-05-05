@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/11/24/fedora-atomic-openstack-and-kubernetes-oh-my/"]
 title: Fedora Atomic, OpenStack, and Kubernetes (oh my)
 date: "2014-11-24"
-layout: post
 tags:
 - openstack
 - kubernetes

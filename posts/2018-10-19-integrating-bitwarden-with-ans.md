@@ -1,7 +1,7 @@
 ---
+aliases: ["/2018/10/19/integrating-bitwarden-with-ans/"]
 title: Integrating Bitwarden with Ansible
 date: "2018-10-19"
-layout: post
 tags:
 - bitwarden
 - security

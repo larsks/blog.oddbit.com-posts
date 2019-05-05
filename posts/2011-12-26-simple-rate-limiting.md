@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2011/12/26/simple-rate-limiting/"]
 title: Rate limiting made simple
 date: "2011-12-26"
 tags:

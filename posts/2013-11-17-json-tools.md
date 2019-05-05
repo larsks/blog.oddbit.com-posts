@@ -1,10 +1,10 @@
 ---
+aliases: ["/2013/11/17/json-tools/"]
 title: "json-tools: cli for generating and filtering json"
 date: "2013-11-17"
 tags:
   - json
   - openstack
-layout: post
 ---
 Interacting with JSON-based APIs from the command line can be
 difficult, and OpenStack is filled with REST APIs that consume or

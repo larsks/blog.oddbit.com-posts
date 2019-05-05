@@ -1,7 +1,7 @@
 ---
+aliases: ["/2015/01/18/docker-vs-privatetmp/"]
 title: Docker vs. PrivateTmp
 date: "2015-01-18"
-layout: post
 tags:
   - docker
   - systemd

@@ -1,7 +1,7 @@
 ---
+aliases: ["/2013/11/23/long-polling-with-ja/"]
 title: Long polling with Javascript and Python
 date: "2013-11-23"
-layout: post
 tags:
   - python
   - javascript

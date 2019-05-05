@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2013/07/16/split-concatenated-c/"]
 title: Split concatenated certificates with awk
 date: "2013-07-16"
 tags:

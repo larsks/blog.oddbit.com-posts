@@ -1,7 +1,7 @@
 ---
+aliases: ["/2016/02/19/a-collection-of-git-tips/"]
 title: "A collection of git tips"
 date: "2016-02-19"
-layout: post
 tags:
   - git
 ---

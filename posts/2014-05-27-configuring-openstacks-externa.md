@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/05/27/configuring-openstacks-externa/"]
 title: "Video: Configuring OpenStack's external bridge on a single-interface system"
 date: "2014-05-27"
-layout: post
 tags:
 - openstack
 - networking

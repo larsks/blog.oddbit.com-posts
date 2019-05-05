@@ -1,7 +1,7 @@
 ---
+aliases: ["/2013/11/22/automatic-maintenanc/"]
 title: Automatic maintenance of tag feeds
 date: "2013-11-22"
-layout: post
 tags:
   - blog
   - git

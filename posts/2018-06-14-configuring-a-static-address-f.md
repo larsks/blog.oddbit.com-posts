@@ -1,7 +1,7 @@
 ---
+aliases: ["/2018/06/14/configuring-a-static-address-f/"]
 title: Configuring a static address for wlan0 on Raspbian Stretch
 date: "2018-06-14"
-layout: post
 tags:
 - networking
 - raspberrypi

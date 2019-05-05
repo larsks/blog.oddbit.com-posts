@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2010/02/19/apache-virtual-host-statistics/"]
 title: Apache virtual host statistics
 date: "2010-02-19"
 tags:

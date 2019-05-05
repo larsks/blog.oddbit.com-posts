@@ -1,7 +1,7 @@
 ---
+aliases: ["/2018/01/24/safely-restarting-an-openstack-server-wi/"]
 title: "Safely restarting an OpenStack server with Ansible"
 date: "2018-01-24"
-layout: post
 tags:
   - ansible
   - openstack

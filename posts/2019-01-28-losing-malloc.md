@@ -1,7 +1,7 @@
 ---
+aliases: ["/2019/01/28/losing-malloc/"]
 title: "AVR micro-optimization: Losing malloc"
 date: "2019-01-28"
-layout: post
 tags:
 - "avr"
 - "attiny85"

@@ -1,7 +1,7 @@
 ---
+aliases: ["/2018/01/25/fun-with-devicemapper-snapshots/"]
 title: "Fun with devicemapper snapshots"
 date: "2018-01-25"
-layout: post
 tags:
   - storage
   - devicemapper

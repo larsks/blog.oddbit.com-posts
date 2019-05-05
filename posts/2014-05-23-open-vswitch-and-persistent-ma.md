@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/05/23/open-vswitch-and-persistent-ma/"]
 title: Open vSwitch and persistent MAC addresses
 date: "2014-05-23"
-layout: post
 tags:
 - openvswitch
 - networking

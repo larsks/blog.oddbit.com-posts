@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2010/02/04/vnc-blockingrst/"]
 title: Blocking VNC with iptables
 date: "2010-02-04"
 tags:

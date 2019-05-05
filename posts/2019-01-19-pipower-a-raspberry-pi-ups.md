@@ -1,7 +1,7 @@
 ---
+aliases: ["/2019/01/19/pipower-a-raspberry-pi-ups/"]
 title: "PiPower: A Raspberry Pi UPS"
 date: "2019-01-19"
-layout: post
 tags:
 - raspberrypi
 - attiny85

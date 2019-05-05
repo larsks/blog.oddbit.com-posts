@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2013/01/25/archlinux-second-look/"]
 title: A second look at Arch Linux
 date: "2013-01-25"
 ---

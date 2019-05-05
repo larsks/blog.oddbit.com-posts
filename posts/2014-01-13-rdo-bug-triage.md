@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/01/13/rdo-bug-triage/"]
 title: RDO Bug Triage
 date: "2014-01-13"
-layout: post
 tags:
 - openstack
 - redhat

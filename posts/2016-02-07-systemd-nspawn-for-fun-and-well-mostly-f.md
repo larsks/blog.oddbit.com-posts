@@ -1,7 +1,7 @@
 ---
+aliases: ["/2016/02/07/systemd-nspawn-for-fun-and-well-mostly-f/"]
 title: "Systemd-nspawn for fun and...well, mostly for fun"
 date: "2016-02-07"
-layout: post
 tags:
   - systemd
   - containers

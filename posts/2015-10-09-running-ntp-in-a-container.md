@@ -1,7 +1,7 @@
 ---
+aliases: ["/2015/10/09/running-ntp-in-a-container/"]
 title: "Running NTP in a Container"
 date: "2015-10-09"
-layout: post
 tags:
   - docker
   - atomic

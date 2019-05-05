@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/09/23/stupid-cli-quickly-share-screencap/"]
 title: "Stupid command line tricks: Quickly share screen captures"
 date: "2014-09-23"
-layout: post
 tags:
 - cli
 ---

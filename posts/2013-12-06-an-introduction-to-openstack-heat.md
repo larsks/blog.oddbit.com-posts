@@ -1,7 +1,7 @@
 ---
+aliases: ["/2013/12/06/an-introduction-to-openstack-heat/"]
 title: An introduction to OpenStack Heat
 date: "2013-12-06"
-layout: post
 tags:
   - openstack
   - heat

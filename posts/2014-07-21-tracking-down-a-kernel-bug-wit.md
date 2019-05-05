@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/07/21/tracking-down-a-kernel-bug-wit/"]
 title: Tracking down a kernel bug with git bisect
 date: "2014-07-21"
-layout: post
 tags:
   - docker
   - kernel

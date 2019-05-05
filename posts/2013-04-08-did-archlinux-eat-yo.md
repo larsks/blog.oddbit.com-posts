@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2013/04/08/did-archlinux-eat-yo/"]
 title: Did Arch Linux eat your KVM?
 date: "2013-04-08"
 tags:

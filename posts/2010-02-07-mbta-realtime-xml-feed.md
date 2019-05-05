@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2010/02/07/mbta-realtime-xml-feed/"]
 title: MBTA realtime XML feed
 date: "2010-02-07"
 tags:

@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2010/07/22/patch-to-gpxe-dhcp-command/"]
 title: Patch to gPXE dhcp command
 date: "2010-07-22"
 tags:

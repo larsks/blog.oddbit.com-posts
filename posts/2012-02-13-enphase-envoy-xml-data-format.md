@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2012/02/13/enphase-envoy-xml-data-format/"]
 title: Enphase Envoy XML Data Format
 date: "2012-02-13"
 ---

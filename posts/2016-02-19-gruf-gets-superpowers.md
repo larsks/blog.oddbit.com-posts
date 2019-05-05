@@ -1,7 +1,7 @@
 ---
+aliases: ["/2016/02/19/gruf-gets-superpowers/"]
 title: "Gruf gets superpowers"
 date: "2016-02-19"
-layout: post
 tags:
   - gerrit
   - gruf

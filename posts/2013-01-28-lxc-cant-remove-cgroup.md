@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2013/01/28/lxc-cant-remove-cgroup/"]
 title: Cleaning up LXC cgroups
 date: "2013-01-28"
 ---

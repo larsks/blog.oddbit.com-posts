@@ -1,7 +1,7 @@
 ---
+aliases: ["/2016/05/19/connecting-another-vm-to-your-tripleo-qu/"]
 title: "Connecting another vm to your tripleo-quickstart deployment"
 date: "2016-05-19"
-layout: post
 tags:
   - openvswitch
   - openstack

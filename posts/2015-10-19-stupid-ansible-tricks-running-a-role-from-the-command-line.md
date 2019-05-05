@@ -1,7 +1,7 @@
 ---
+aliases: ["/2015/10/19/stupid-ansible-tricks-running-a-role-from-the-command-line/"]
 title: "Stupid Ansible Tricks: Running a role from the command line"
 date: "2015-10-19"
-layout: post
 tags:
   - ansible
 ---

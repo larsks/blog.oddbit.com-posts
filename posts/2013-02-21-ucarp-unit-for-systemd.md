@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2013/02/21/ucarp-unit-for-systemd/"]
 title: A systemd unit for ucarp
 date: "2013-02-21"
 ---

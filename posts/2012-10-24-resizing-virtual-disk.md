@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2012/10/24/resizing-virtual-disk/"]
 title: Growing a filesystem on a virtual disk
 date: "2012-10-24"
 tags:

@@ -1,7 +1,7 @@
 ---
+aliases: ["/2017/05/25/faa-cannot-require-drone-registration/"]
 title: "FAA Cannot Require Drone Registration"
 date: "2017-05-25"
-layout: post
 tags:
   - uav
   - faa

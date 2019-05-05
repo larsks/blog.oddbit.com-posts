@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/07/26/gpiowatch-run-scripts-in-respo/"]
 title: "gpio-watch: Run scripts in response to GPIO signals"
 date: "2014-07-26"
-layout: post
 tags:
   - raspberrypi
   - gpio

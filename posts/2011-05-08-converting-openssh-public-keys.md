@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2011/05/08/converting-openssh-public-keys/"]
 title: Converting OpenSSH public keys
 date: "2011-05-08"
 tags:

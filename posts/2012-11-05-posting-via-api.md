@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2012/11/05/posting-via-api/"]
 title: Posting to Scriptogr.am using the API
 date: "2012-11-05"
 tags:

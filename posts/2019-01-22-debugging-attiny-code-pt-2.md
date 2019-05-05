@@ -1,8 +1,8 @@
 ---
+aliases: ["/2019/01/22/debugging-attiny-code-pt-2/"]
 title: "Debugging attiny85 code, part 2: Automating GDB with scripts"
 date: "2019-01-22"
 seq: 2
-layout: post
 tags:
 - "attiny85"
 - "avr"

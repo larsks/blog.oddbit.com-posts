@@ -1,7 +1,7 @@
 ---
+aliases: ["/2015/02/19/stupid-pacemaker-xml-tricks/"]
 title: Stupid Pacemaker XML tricks
 date: "2015-02-19"
-layout: post
 tags:
   - pacemaker
   - xml

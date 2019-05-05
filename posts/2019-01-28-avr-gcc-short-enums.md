@@ -1,7 +1,7 @@
 ---
+aliases: ["/2019/01/28/avr-gcc-short-enums/"]
 title: "AVR micro-optimization: Avr-gcc and --short-enums"
 date: "2019-01-28"
-layout: post
 tags:
 - "avr"
 - "attiny85"

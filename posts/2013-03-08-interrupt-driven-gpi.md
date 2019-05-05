@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2013/03/08/interrupt-driven-gpi/"]
 title: Interrupt driven GPIO with Python
 date: "2013-03-08"
 tags:

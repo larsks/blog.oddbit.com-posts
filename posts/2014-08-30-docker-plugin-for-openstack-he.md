@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/08/30/docker-plugin-for-openstack-he/"]
 title: Docker plugin for OpenStack Heat
 date: "2014-08-30"
-layout: post
 tags:
   - docker
   - openstack

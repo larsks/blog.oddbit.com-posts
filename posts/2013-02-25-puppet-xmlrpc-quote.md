@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2013/02/25/puppet-xmlrpc-quote/"]
 title: A quote about XMLRPC
 date: "2013-02-25"
 tags:

@@ -1,7 +1,7 @@
 ---
+aliases: ["/2018/03/12/using-docker-macvlan-networks/"]
 title: Using Docker macvlan networks
 date: "2018-03-12"
-layout: post
 tags:
 - networking
 - docker

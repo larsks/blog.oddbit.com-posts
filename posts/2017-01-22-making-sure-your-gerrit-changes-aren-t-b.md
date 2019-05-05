@@ -1,7 +1,7 @@
 ---
+aliases: ["/2017/01/22/making-sure-your-gerrit-changes-aren-t-b/"]
 title: "Making sure your Gerrit changes aren't broken"
 date: "2017-01-22"
-layout: post
 tags:
   - openstack
   - gerrit

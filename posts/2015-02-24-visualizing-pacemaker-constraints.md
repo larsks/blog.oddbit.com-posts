@@ -1,7 +1,7 @@
 ---
+aliases: ["/2015/02/24/visualizing-pacemaker-constraints/"]
 title: Visualizing Pacemaker resource constraints
 date: "2015-02-24"
-layout: post
 tags:
   - pacemaker
   - visualization

@@ -1,7 +1,7 @@
 ---
+aliases: ["/2014/01/19/show-ovs-externalids/"]
 title: Show OVS external-ids
 date: "2014-01-19"
-layout: post
 tags:
 - openstack
 - openvswitch

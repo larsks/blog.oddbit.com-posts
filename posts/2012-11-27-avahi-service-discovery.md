@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2012/11/27/avahi-service-discovery/"]
 title: Service discovery in the cloud using Avahi
 date: "2012-11-27"
 ---

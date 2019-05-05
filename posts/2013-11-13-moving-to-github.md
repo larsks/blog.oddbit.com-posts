@@ -1,7 +1,7 @@
 ---
+aliases: ["/2013/11/13/moving-to-github/"]
 title: Moving to GitHub
 date: "2013-11-13"
-layout: post
 tags:
   - blog
 ---
@@ -110,6 +110,7 @@ run it across all the posts.)
 In order to preserve links pointing at the old blog I needed to generate
 a bunch of HTML redirect files.  [Scriptogram][] posts had permalinks
 of the form `/post/<slug>`, where `<slug>` was computed from the post
+aliases: ["/2013/11/13/moving-to-github/"]
 title.  GitHub posts (with `permalinks: pretty`) have the form
 `/<year>/<month>/<day>/<title>`, where `<title>` comes from the
 filename rather than the post metadata.

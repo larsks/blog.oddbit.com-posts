@@ -1,7 +1,7 @@
 ---
+aliases: ["/2018/02/08/listing-iptables-rules-with-li/"]
 title: Listing iptables rules with line numbers
 date: "2018-02-08"
-layout: post
 tags:
 - shell
 - iptables

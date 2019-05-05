@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2010/02/08/funny-usage-message/"]
 title: Funny usage message
 date: "2010-02-08"
 tags:

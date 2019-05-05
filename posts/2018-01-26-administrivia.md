@@ -1,7 +1,7 @@
 ---
+aliases: ["/2018/01/26/administrivia/"]
 title: "Administrivia: Pelican and theme update"
 date: "2018-01-26"
-layout: post
 tags:
   - administrivia
 ---

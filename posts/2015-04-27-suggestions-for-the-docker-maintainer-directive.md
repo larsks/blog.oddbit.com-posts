@@ -1,7 +1,7 @@
 ---
+aliases: ["/2015/04/27/suggestions-for-the-docker-maintainer-directive/"]
 title: "Suggestions for the Docker MAINTAINER directive"
 date: "2015-04-27"
-layout: post
 tags:
   - docker
 ---

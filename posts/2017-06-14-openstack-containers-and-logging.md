@@ -1,7 +1,7 @@
 ---
+aliases: ["/2017/06/14/openstack-containers-and-logging/"]
 title: "OpenStack, Containers, and Logging"
 date: "2017-06-14"
-layout: post
 tags:
   - openstack
   - logging

@@ -1,5 +1,5 @@
 ---
-layout: post
+aliases: ["/2013/03/07/controlling-a-servo/"]
 title: Controlling a servo with your Arduino
 date: "2013-03-07"
 tags:
