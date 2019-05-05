@@ -1,6 +1,6 @@
 ---
 title: "Debugging attiny85 code, part 1: simavr and gdb"
-date: "2019-01-22 00:00:00"
+date: "2019-01-22"
 layout: post
 tags:
 - "avr"

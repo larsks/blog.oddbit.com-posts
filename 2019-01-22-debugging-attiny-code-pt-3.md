@@ -1,6 +1,6 @@
 ---
 title: "Debugging attiny85 code, part 3: Tracing with simavr"
-date: "2019-01-22 02:00:00"
+date: "2019-01-22"
 seq: 3
 layout: post
 tags:
