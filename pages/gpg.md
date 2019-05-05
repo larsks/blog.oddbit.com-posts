@@ -1,5 +1,7 @@
 ---
 title: GPG
+type: page
+layout: single
 ---
 
 ## Fingerprint
