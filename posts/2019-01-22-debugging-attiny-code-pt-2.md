@@ -24,9 +24,9 @@ This is the second of three posts about using `gdb` and `simavr` to debug AVR co
 
     Using `simavr` to collect information about the state of microcontroller pins while our code is running.
 
-[pt1]: |filename|2019-01-22-debugging-attiny-code-pt-1.md
-[pt2]: |filename|2019-01-22-debugging-attiny-code-pt-2.md
-[pt3]: |filename|2019-01-22-debugging-attiny-code-pt-3.md
+[pt1]: {{< ref "2019-01-22-debugging-attiny-code-pt-1.md" >}}
+[pt2]: {{< ref "2019-01-22-debugging-attiny-code-pt-2.md" >}}
+[pt3]: {{< ref "2019-01-22-debugging-attiny-code-pt-3.md" >}}
 
 ## Prerequisites
 

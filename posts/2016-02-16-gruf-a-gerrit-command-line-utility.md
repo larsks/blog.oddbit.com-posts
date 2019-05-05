@@ -7,7 +7,7 @@ tags:
   - gruf
 ---
 
-(See also [the followup](|filename|/2016-02-19-gruf-gets-superpowers.md) to this article.)
+(See also [the followup]({{< ref "/2016-02-19-gruf-gets-superpowers.md" >}}) to this article.)
 
 I've recently started spending more time interacting with [Gerrit][],
 the code review tool used both by [OpenStack][], at

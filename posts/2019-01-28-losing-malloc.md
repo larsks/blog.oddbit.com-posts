@@ -21,7 +21,7 @@ When write OO-style code in C, I usually start with something like the following
 
 And when initially writing [pipower][], that's exactly what I did.  But while thinking about it after the fact, I realized the following:
 
-[pipower]: |filename|2019-01-19-pipower-a-raspberry-pi-ups.md
+[pipower]: {{< ref "2019-01-19-pipower-a-raspberry-pi-ups.md" >}}
 
 - I'm designing for a fixed piece of hardware. I have a fixed number of inputs; I don't actually need to create new `Button` variables dynamically at runtime.
 - The ATtiny85 only has 8KB of memory.  Do I really need the overhead of `malloc()`?

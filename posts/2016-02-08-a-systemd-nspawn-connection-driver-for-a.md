@@ -13,7 +13,7 @@ of the fiddly work out of setting up functional `chroot` environments.
 I'm a regular [Ansible][] user, and I wanted to be able to apply some
 of those techniques to my playbooks.
 
-[earlier]: |filename|/2016-02-07-systemd-nspawn-for-fun-and-well-mostly-f.md
+[earlier]: {{< ref "/2016-02-07-systemd-nspawn-for-fun-and-well-mostly-f.md" >}}
 [systemd-nspawn]: https://www.freedesktop.org/software/systemd/man/systemd-nspawn.html
 
 Ansible already has a `chroot` module, of course, but for some

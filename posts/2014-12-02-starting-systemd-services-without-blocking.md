@@ -13,7 +13,7 @@ would attempt to start a service from within a script launched by
 because the service I was attempting to start was dependent on
 `cloud-init` finishing first.
 
-[atomic-post]: |filename|/2014-11-24-fedora-atomic-openstack-and-kubernetes-oh-my.md
+[atomic-post]: {{< ref "/2014-11-24-fedora-atomic-openstack-and-kubernetes-oh-my.md" >}}
 [cloud-init]: http://cloudinit.readthedocs.org/
 
 It turns out that `systemctl` has a flag meant exactly for this

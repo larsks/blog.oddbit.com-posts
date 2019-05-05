@@ -16,7 +16,7 @@ this post I'll be taking an in-depth look at the Docker plugin for
 Heat, which has been available [since the Icehouse release][release] but is
 surprisingly under-documented.
 
-[last post]: |filename|/2014-08-28-novadocker-and-environment-var.md
+[last post]: {{< ref "/2014-08-28-novadocker-and-environment-var.md" >}}
 [docker driver for nova]: https://github.com/stackforge/nova-docker
 [release]: https://blog.docker.com/2014/03/docker-will-be-in-openstack-icehouse/
 
@@ -354,14 +354,14 @@ I've written a short [companion article][waithelp] that contains a checklist
 and pointers to additional documentation to help work around some
 common issues.
 
-[waithelp]: |filename|/2014-08-30-using-wait-conditions-with-hea.md
+[waithelp]: {{< ref "/2014-08-30-using-wait-conditions-with-hea.md" >}}
 
 ## Templates: Defining Docker containers
 
 **UPDATE**: I have generated some [annotated documentation for the
 Docker plugin][dockerdoc].
 
-[dockerdoc]: |filename|/2014-08-31-docker-contain-doc.md
+[dockerdoc]: {{< ref "/2014-08-31-docker-contain-doc.md" >}}
 
 Now that we have arranged for Heat to wait for the server to finish
 configuration before starting Docker contains, how do we create a

@@ -11,7 +11,7 @@ tags:
 
 This is a companion to my [article on the Docker plugin for Heat][1].
 
-[1]: |filename|/2014-08-30-docker-plugin-for-openstack-he.md
+[1]: {{< ref "/2014-08-30-docker-plugin-for-openstack-he.md" >}}
 
 While writing that article, I encountered a number of bugs in the
 Docker plugin and elsewhere.  I've submitted patches for most of the

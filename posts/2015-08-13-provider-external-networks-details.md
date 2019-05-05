@@ -17,8 +17,8 @@ covered the configuration side of it in much more detail than I
 discussed the underlying network architecture.  This post addresses
 the architecture side.
 
-[1]: |filename|/2013-11-14-quantum-in-too-much-detail.md
-[2]: |filename|/2014-05-28-multiple-external-networks-wit.md
+[1]: {{< ref "/2013-11-14-quantum-in-too-much-detail.md" >}}
+[2]: {{< ref "/2014-05-28-multiple-external-networks-wit.md" >}}
 
 ## The players
 

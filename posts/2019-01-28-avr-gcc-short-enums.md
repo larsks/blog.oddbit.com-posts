@@ -12,7 +12,7 @@ tags:
 
 I noticed something odd while browsing through the assembly output of some AVR C code [I wrote recently][pipower]. In the code, I have the following expression:
 
-[pipower]: |filename|2019-01-19-pipower-a-raspberry-pi-ups.md
+[pipower]: {{< ref "2019-01-19-pipower-a-raspberry-pi-ups.md" >}}
 
     int main() {
         setup();

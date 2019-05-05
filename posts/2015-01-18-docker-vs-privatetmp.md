@@ -13,7 +13,7 @@ undesirable interaction between Docker and [systemd][] services that
 utilize the `PrivateTmp` directive.
 
 [systemd]: http://www.freedesktop.org/wiki/Software/systemd/
-[the other day]: |filename|/2015-01-17-running-novalibvirt-and-novadocker-on-the-same-host.md
+[the other day]: {{< ref "/2015-01-17-running-novalibvirt-and-novadocker-on-the-same-host.md" >}}
 
 The [PrivateTmp][] directive, if `true`, "sets up a new file system
 namespace for the executed processes and mounts private `/tmp` and

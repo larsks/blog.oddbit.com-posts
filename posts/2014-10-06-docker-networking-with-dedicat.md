@@ -42,7 +42,7 @@ interface and attach another to a bridge on your system.  [Pipework][]
 can help with this, but you can also perform all the [changes by
 hand][]
 
-[changes by hand]: |filename|/2014-08-11-four-ways-to-connect-a-docker.md
+[changes by hand]: {{< ref "/2014-08-11-four-ways-to-connect-a-docker.md" >}}
 
 Once your networking is configured, start your actual service
 container with `--net=container:<id-of-noop-container>`.  Your service
