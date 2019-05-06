@@ -100,7 +100,7 @@ A filter plugin defines one or more Python functions that can be used in Jinja2 
 For example, there is a `unique` filter, which takes a list and returns a new list consisting of only unique values. If we had a list of names and wanted to eliminiate duplicates, we might use something like this:
 
 
-```ansible
+```yaml
 - set_fact:
     unique_names: "{{ ['alice', 'bob', 'alice', 'mallory', 'bob', 'mallory']|unique }}" 
 ```
@@ -139,7 +139,7 @@ class FilterModule(object):
 
 We need to put the new module in a directory named `filter_plugins` that is adjacent to our playbook. If we were to place the `upper` filter module in, say, `filter_plugins/upper.py`, we could then add a task like this to our playbook:
 
-```ansible
+```yaml
 - debug:
     msg: "{{ 'this is a test'|upper }}"
 ```
@@ -224,7 +224,7 @@ The logic here is fairly simple:
 Using it makes for a clear and simple playbook:
 
 
-```ansible
+```yaml
 - set_fact:
     key_list: "{{ keytool.stdout|keys_to_list }}"
 ```
