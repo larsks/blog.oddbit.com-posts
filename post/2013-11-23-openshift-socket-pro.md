@@ -133,5 +133,5 @@ expected...
 [cors]: http://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [issues]: https://github.com/larsks/pubsub_example/issues
 [node.js]: http://nodejs.org/
-[previous post]: {{< ref "/2013-11-23-long-polling-with-ja.md" >}}
+[previous post]: {{< ref "2013-11-23-long-polling-with-ja.md" >}}
 

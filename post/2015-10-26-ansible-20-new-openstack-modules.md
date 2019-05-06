@@ -16,7 +16,7 @@ provide an overview of the new-and-much-improved suite of modules for
 interacting with an [OpenStack][] environment, and provide a few
 examples of their use.
 
-[docker connection driver]: {{< ref "/2015-10-13-ansible-20-the-docker-connection-driver.md" >}}
+[docker connection driver]: {{< ref "2015-10-13-ansible-20-the-docker-connection-driver.md" >}}
 [openstack]: http://www.openstack.org/
 
 In versions of Ansible prior to 2.0, there was a small collection of

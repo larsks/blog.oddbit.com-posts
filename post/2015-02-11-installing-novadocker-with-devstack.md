@@ -14,7 +14,7 @@ under Ubuntu 14.04 (Trusty).  I wrote a [similar post][] for Fedora
 21, although that one was using the [RDO][] Juno packages, while this
 one is using [devstack][] and the upstream sources.
 
-[similar post]: {{< ref "/2015-02-06-installing-nova-docker-on-fedora-21.md" >}}
+[similar post]: {{< ref "2015-02-06-installing-nova-docker-on-fedora-21.md" >}}
 [rdo]: http://openstack.redhat.com/
 [ask]: https://ask.openstack.org/en/question/60679/installing-docker-on-openstack-with-ubuntu/
 [nova-docker]: http://github.com/stackforge/nova-docker/

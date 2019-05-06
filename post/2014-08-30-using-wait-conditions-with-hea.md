@@ -29,6 +29,6 @@ will need to make sure that that you have:
 Steve Hardy has a blog post on [stack domain users][2] that goes into
 detail on configuring authentication for Heat and Keystone.
 
-[1]: {{< ref "/2014-08-30-docker-plugin-for-openstack-he.md" >}}
+[1]: {{< ref "2014-08-30-docker-plugin-for-openstack-he.md" >}}
 [2]: http://hardysteven.blogspot.co.uk/2014/04/heat-auth-model-updates-part-2-stack.html
 

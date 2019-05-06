@@ -266,7 +266,7 @@ Fedora bug [851970][], which was closed two years ago.
 **Update** I wrote a [separate post][] about this issue, which
 includes some discussion about what's going on and a solution.
 
-[separate post]: {{< ref "/2015-01-18-docker-vs-privatetmp.md" >}}
+[separate post]: {{< ref "2015-01-18-docker-vs-privatetmp.md" >}}
 
 ----
 
