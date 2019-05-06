@@ -52,7 +52,12 @@ In this walkthrough I won't be attempting to fix a bug, so perhaps the term "deb
 
 [Pipower][] is implemented as a simple state machine. In each operational state, changes to input pins or timer expirations can cause it to transition into another state. The complete set of states look like this:
 
-<a href="/assets/2019/01/22/pipower_states.png"><img src="/assets/2019/01/22/pipower_states.png" width="400"/></a>
+{{< figure
+src="/assets/2019/01/22/pipower_states.png"
+link="/assets/2019/01/22/pipower_states.png"
+title="PiPower state diagram"
+width="400"
+>}}
 
 We're going to walk through a particular set of state transitions.
 

@@ -10,7 +10,11 @@ tags:
 - "simavr"
 ---
 
-<a href="/assets/2019/01/22/pipower_trace.png"><img src="/assets/2019/01/22/pipower_trace.png" width="800"/></a>
+{{< figure
+src="/assets/2019/01/22/pipower_trace.png"
+link="/assets/2019/01/22/pipower_trace.png"
+width="800"
+>}}
 
 This is the third of three posts about using `gdb` and `simavr` to debug AVR code. The complete series is:
 
@@ -117,15 +121,27 @@ We can view the `.vcd` file using [gtkwave][].  From the command line, you can r
 
 This will bring up the main `gtkwave` window, which look like this:
 
-<a href="/assets/2019/01/22/gtkwave-1.png"><img src="/assets/2019/01/22/gtkwave-1.png" width="800"/></a>
+{{< figure
+src="/assets/2019/01/22/gtkwave-1.png"
+link="/assets/2019/01/22/gtkwave-1.png"
+width="800"
+>}}
 
 Select `logic` in the SST ("Signal Search Tree") pane.  This will display the available signals in the next pane down.  Select all the signals (click on the top one, then shift-click on the last one) and select "Append".  You should end up with a display that looks like this:
 
-<a href="/assets/2019/01/22/gtkwave-2.png"><img src="/assets/2019/01/22/gtkwave-2.png" width="800"/></a>
+{{< figure
+src="/assets/2019/01/22/gtkwave-2.png"
+link="/assets/2019/01/22/gtkwave-2.png"
+width="800"
+>}}
 
 The graph is displaying our collected signal data, but the initial time scale isn't particularly useful.  Select "Time -> Zoom -> Zoom Best Fit"; you should end up with something that looks like:
 
-<a href="/assets/2019/01/22/gtkwave-3.png"><img src="/assets/2019/01/22/gtkwave-3.png" width="800"/></a>
+{{< figure
+src="/assets/2019/01/22/gtkwave-3.png"
+link="/assets/2019/01/22/gtkwave-3.png"
+width="800"
+>}}
 
 (Note that any time you resize the window you'll need to manually adjust the zoom level.  You can use the menu item, or just press `CTRL`-`ALT`-`F`.)
 
@@ -133,11 +149,19 @@ You can now see a graph of how the various pins changed over the runtime of the 
 
 You'll note that the `state` information is displayed numerically, which isn't particularly helpful.  We can fix that by setting up a "Translate Filter File".  Right click on the `STATE[7:0]` label in the "Signals" pane, then select "Data Format -> Translate Filter File -> Enable and Select".  In the "Select Signal Filter" window that pops up...
 
-<a href="/assets/2019/01/22/gtkwave-4.png"><img src="/assets/2019/01/22/gtkwave-4.png" width="400"/></a>
+{{< figure
+src="/assets/2019/01/22/gtkwave-4.png"
+link="/assets/2019/01/22/gtkwave-4.png"
+width="800"
+>}}
 
 ...select "Add Filter to List".  Browse to the `sim` directory of the `pipower` project, and select `state_filter.txt`. Now select that same file in the "Filter Select" list, then click OK. You should now see state names displayed in the graph:
 
-<a href="/assets/2019/01/22/gtkwave-5.png"><img src="/assets/2019/01/22/gtkwave-5.png" width="800"/></a>
+{{< figure
+src="/assets/2019/01/22/gtkwave-5.png"
+link="/assets/2019/01/22/gtkwave-5.png"
+width="800"
+>}}
 
 ---
 

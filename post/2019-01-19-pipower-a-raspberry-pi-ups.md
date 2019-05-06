@@ -8,7 +8,11 @@ tags:
 - arduino
 ---
 
-<a href="/assets/2019/01/20/pipower-top.png"><img width="400" src="/assets/2019/01/20/pipower-top.png" alt="pipower top view" style="float: left; margin: 0 2ex 2ex 0;"/></a>
+{{< figure
+src="/assets/2019/01/20/pipower-top.png"
+link="/assets/2019/01/20/pipower-top.png"
+width="400"
+>}}
 
 I have a Raspberry Pi running [RetroPie][] hooked up to a television.  It's powered from a USB port on the TV, which is convenient, but it means that whenever we shut off the TV we're pulling the plug on the Pi. While there haven't been any problems so far, this is a classic recipe for filesystem problems or data loss at some point.  I started looking into UPS options to alleviate this issue. I wanted something with the following features:
 

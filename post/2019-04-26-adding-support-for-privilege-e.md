@@ -64,10 +64,11 @@ In the above output, you'll note that there are no actual errors, but unexpected
 
 ## Use the source, Luke
 
-<figure style="float: right; padding: 1ex; border: thin solid black; margin: 1ex">
-<img src="/assets/2019/04/26/sausage.jpg" width="400"/>
-<figcaption>Discovering how the sausage is made...</figcaption>
-</figure>
+{{< figure
+src="/assets/2019/04/26/sausage.jpg"
+caption="Discovering how the sausage is made..."
+width="400"
+>}}
 
 Looking at the source, I was surprised: while Ansible has individual plugins for different privilege escalation methods, it is entirely up to the individual connection plugin to implement the logic necessary to make use of these mechanisms. I had expected privilege escalation support to be implemented in the base connection plugin (`ConnectionBase` in `lib/ansible/plugins/connection/__init__.py`), but it's not.  So while the [ssh plugin][] has a fairly complex set of logic for handing the `become` prompt, and the [local plugin][] had a relatively simple solution, the `docker` connection had done.
 
