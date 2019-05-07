@@ -9,11 +9,17 @@ install:
 
 script:
   - |
-    cd ci &&
+    git clone --recursive https://github.com/larsks/blog.oddbit.com-ci \
+      $TRAVIS_BUILD_DIR/../ci
+    git clone --recursive https://github.com/larsks/blog.oddbit.com-hugo \
+      $TRAVIS_BUILD_DIR/../site
+
+  - |
+    cd $TRAVIS_BUILD_DIR/../ci &&
     ansible-playbook prepare.yml
 
   - |
-    cd ~/build/site &&
+    cd $TRAVIS_BUILD_DIR/../site &&
     ansible-playbook deploy.yml \
       --skip-tags publish \
       -e hugo_content_directory=$TRAVIS_BUILD_DIR
@@ -22,10 +28,10 @@ deploy:
   provider: pages
   skip_cleanup: true
   keep_history: true
-  local_dir: $HOME/build/site/public
+  local_dir: $TRAVIS_BUILD_DIR/../site/public
   github_token: $GITHUB_TOKEN
   repo: larsks/blog.oddbit.com
   target_branch: gh-pages
   verbose: true
-  on:
+  "on":
     branch: master
