@@ -1,0 +1,28 @@
+---
+dist: xenial
+
+language: python
+python: "3.7"
+
+install:
+  - pip install ansible
+
+script:
+  - ansible-playbook ci/prepare.yml
+  - |
+    cd ~/build/site &&
+    ansible-playbook deploy.yml \
+      --skip-tags publish \
+      -e hugo_content_directory=$TRAVIS_BUILD_DIR
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  local_dir: $HOME/build/site/public
+  github_token: $GITHUB_TOKEN
+  repo: larsks/blog.oddbit.com
+  target_branch: gh-pages
+  verbose: true
+  on:
+    branch: master
