@@ -8,7 +8,10 @@ install:
   - pip install ansible
 
 script:
-  - ansible-playbook ci/prepare.yml
+  - |
+    cd ci &&
+    ansible-playbook prepare.yml
+
   - |
     cd ~/build/site &&
     ansible-playbook deploy.yml \
