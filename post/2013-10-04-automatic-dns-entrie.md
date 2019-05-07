@@ -2,7 +2,6 @@
 aliases: ["/2013/10/04/automatic-dns-entrie/"]
 title: Automatic hostname entries for libvirt domains
 date: "2013-10-04"
-Slug: automatic-dns-entries-for-libvirt-domains
 tags:
   - libvirt
   - virtualization
