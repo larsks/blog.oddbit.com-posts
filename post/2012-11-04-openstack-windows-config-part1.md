@@ -1,7 +1,6 @@
 ---
 aliases: ["/2012/11/04/openstack-windows-config-part1/"]
 title: Automatic configuration of Windows instances in OpenStack, part 1
-Slug: openstack-windows-1
 date: "2012-11-04"
 tags:
   - openstack
@@ -11,10 +10,7 @@ tags:
 This is the first of two articles in which I discuss my work in
 getting some Windows instances up and running in our [OpenStack][]
 environment.  This article is primarily about problems I encountered
-along the way, while the [second article][] focuses on the mechanism I
-eventually put in place.
-
-[second article]: /post/openstack-windows-2
+along the way.
 
 ## Motivations
 
@@ -155,14 +151,10 @@ admins](http://serverfault.com/questions/444446/mounting-whole-disk-filesystems-
 In the absence of a partition map, Windows assumes that the device is
 empty.
 
-Oops.  At this point it was obvious I was treading on ground best lest
+Oops.  At this point it was obvious I was treading on ground best left
 undisturbed.
-
-This ends my tail of woe; tune in next...um, article...in which I
-discuss the solution we're using.
 
 [documentation]: http://docs.openstack.org/trunk/openstack-compute/admin/content/hypervisor-configuration-basics.html
 [metadata service]: http://docs.openstack.org/trunk/openstack-compute/admin/content/metadata-service.html
 [cygwin]: http://cygwin.com/
 [openstack]: http://www.openstack.org/
-
