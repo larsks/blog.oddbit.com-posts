@@ -1,6 +1,7 @@
 ---
 title: "New comment system"
 date: "2019-05-07"
+weight: 0
 tags:
 - "administrivia"
 - "github"
