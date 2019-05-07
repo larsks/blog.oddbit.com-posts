@@ -10,7 +10,7 @@ tags:
 
 Pssst! Hey...hey, buddy, wanna get an extra KB for cheap?
 
-When write OO-style code in C, I usually start with something like the following, in which I use `malloc()` to allocate memory for a variable of a particular type, perform some initialization actions, and then return it to the caller:
+When I write OO-style code in C, I usually start with something like the following, in which I use `malloc()` to allocate memory for a variable of a particular type, perform some initialization actions, and then return it to the caller:
 
     Button *button_new(uint8_t pin, uint8_t poll_freq) {
         Button *button = (Button *)malloc(sizeof(Button));
