@@ -1,81 +1,71 @@
-#!/bin/bash
+#!/usr/bin/python3
 
-MAX_TITLE_LEN=30
+import click
+import datetime
+import pathlib
+import string
+import subprocess
+import sys
+import yaml
 
-tags=()
-while getopts d:s:t:n ch; do
-	case $ch in
-	(t)	tags+=($OPTARG)
-	;;
 
-	(n)	NOBRANCH=1
-	;;
+@click.command()
+@click.option('-t', '--tag', multiple=True)
+@click.option('-M', '--max-length', default=30, type=int)
+@click.option('-d', '--date')
+@click.option('-s', '--stub')
+@click.option('-D', '--draft', is_flag=True)
+@click.option('-g', '--git', is_flag=True)
+@click.option('-S', '--stdout', is_flag=True)
+@click.option('-w', '--weight', type=int)
+@click.option('-P', '--post-directory', default='post', type=pathlib.Path)
+@click.argument('title')
+def new_post(tag, max_length, date, stub, git, stdout, draft, weight,
+             post_directory, title):
+    metadata = {'title': title}
 
-	(s)	stub=$OPTARG
-		;;
+    if tag:
+        metadata['tags'] = tag
 
-	(d)	date=$OPTARG
-		;;
+    if weight is not None:
+        metadata['weight'] = weight
 
-	(\?)	exit 2
-		;;
-	esac
-done
-shift $(( OPTIND - 1 ))
+    if draft:
+        metadata['draft'] = True
 
-title="$1"
+    if date:
+        metadata['date'] = date
+    else:
+        metadata['date'] = datetime.datetime.now().strftime('%Y-%m-%d')
 
-if ! [[ $title ]]; then
-	echo "ERROR: you must provide a title" >&2
-	exit 1
-fi
+    stub = ''.join(c for c in title
+                   if c in string.ascii_letters + string.digits + '-_ '
+                   ).replace(' ', '-').lower()[:max_length]
 
-if [ -z "$date" ]; then
-	date=$(date +%Y-%m-%d)
-fi
+    filename = '{}-{}.md'.format(metadata['date'], stub)
+    branch = 'draft/{}'.format(stub)
+    metadata['filename'] = filename
+    path = post_directory / filename
 
-if [ -z "$stub" ]; then
-	stub=$(tr -dc '[a-zA-Z ]' <<< $title)
-	stub=${stub// /-}
-	stub=${stub,,}
-	stub=${stub:0:$MAX_TITLE_LEN}
-fi
+    with (sys.stdout if stdout else open(path, 'w')) as fd:
+        fd.write('\n'.join(['---',
+                            yaml.safe_dump(metadata, default_flow_style=False),
+                            '---', '', '']))
 
-filename="post/${date}-${stub}.md"
-branch="drafts/${stub}"
+    if not stdout:
+        if git:
+            pipeline = [
+                ['git', 'checkout', 'master'],
+                ['git', 'checkout', '-B', branch],
+                ['git', 'add', path],
+                ['git', 'commit', '-m' 'added {}'.format(path)],
+            ]
 
-if [ "$NOBRANCH" != 1 ]; then
-	if git show-ref --verify --quiet "refs/heads/$branch"; then
-		git checkout "$branch" > /dev/null
-	else
-		git checkout -b "$branch" master > /dev/null
-	fi
-fi
+            for command in pipeline:
+                subprocess.run(command, stdout=subprocess.DEVNULL)
 
-if [[ ! -f "$filename" ]]; then
-(
-cat <<EOF
----
-title: "$title"
-date: "$date"
-tags:
-EOF
+        print(path)
 
-for tag in "${tags[@]}"; do
-	echo "- \"$tag\""
-done
 
-cat <<EOF
----
-
-EOF
-) > "$filename"
-
-(
-git add "$filename"
-git commit -m "added $filename"
-) > /dev/null
-
-fi
-
-echo "$filename"
+if __name__ == '__main__':
+    new_post()
