@@ -41,7 +41,7 @@ if [ -z "$stub" ]; then
 	stub=${stub:0:$MAX_TITLE_LEN}
 fi
 
-filename="${date}-${stub}.md"
+filename="post/${date}-${stub}.md"
 branch="drafts/${stub}"
 
 if [ "$NOBRANCH" != 1 ]; then
@@ -58,7 +58,6 @@ cat <<EOF
 ---
 title: "$title"
 date: "$date"
-layout: post
 tags:
 EOF
 
