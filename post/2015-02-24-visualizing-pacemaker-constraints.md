@@ -31,9 +31,11 @@ Given a document like [this][cib.xml], if you run:
 
 You get a graph like [this][cib.svg]:
 
-<a href="/assets/2015/02/24/cib.svg"><img
-  src="/assets/2015/02/24/cib.svg"
-  width="800"/></a>
+{{< figure
+src="/assets/2015/02/24/cib.svg"
+link="/assets/2015/02/24/cib.svg"
+width="800"
+>}}
 
 Nodes are colored by their tag (so, `primitive`, `clone`, etc).
 

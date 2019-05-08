@@ -22,8 +22,10 @@ something that was tied closely to my project...
 
 [python]: http://python.org/
 
-<a href="https://xkcd.com/974/"><img
-  src="http://imgs.xkcd.com/comics/the_general_problem.png"/></a>
+{{< figure
+link="https://xkcd.com/974/"
+src="http://imgs.xkcd.com/comics/the_general_problem.png"
+>}}
 
 ...so I ended up writing [gpio-watch][], a simple tool for connecting
 shell scripts (or any other executable) to GPIO events.  There are a

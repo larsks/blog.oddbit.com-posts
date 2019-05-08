@@ -40,8 +40,11 @@ The lay of the land
 This is a simplified architecture diagram of network connectivity in a
 quantum/neutron managed world:
 
-<a href="/assets/2013/11/14/quantum-gre.svg"><img
-  src="/assets/2013/11/14/quantum-gre.svg" width="600"/></a>
+{{< figure
+src="/assets/2013/11/14/quantum-gre.svg"
+link="/assets/2013/11/14/quantum-gre.svg"
+width="600"
+>}}
 
 Section names in this document include
 parenthetical references to the nodes on the map relevant to that

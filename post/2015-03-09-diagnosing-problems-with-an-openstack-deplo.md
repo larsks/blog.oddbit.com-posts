@@ -6,9 +6,10 @@ tags:
 - openstack
 ---
 
-<img src="/assets/2015/03/09/lucy.jpg"
-     width="200" 
-     style="float: right; margin: 2ex; border: thin solid black;"/>
+{{< figure
+src="/assets/2015/03/09/lucy.jpg"
+width="200" 
+>}}
 
 I recently had the chance to help a colleague debug some problems in
 his OpenStack installation.  The environment was unique because it was

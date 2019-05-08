@@ -54,8 +54,11 @@ When run on my laptop, with a simple all-in-one configuration and five
 instances across two networks, the result of running `mk-network-dot`
 looks like this:
 
-<a href="/assets/2013/12/23/network.svg"><img
-src="/assets/network-2013-12-23.svg" width="400"></img></a>
+{{< figure
+src="/assets/2013/12/23/network.svg"
+link="/assets/2013/12/23/network.svg"
+width="400"
+>}}
 
 There are a few caveats with this tool:
 

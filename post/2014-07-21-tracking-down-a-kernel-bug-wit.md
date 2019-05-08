@@ -42,7 +42,10 @@ subcommand, which after checking out a commit will run a script to
 determine if the current commit is "good" or "bad".  So all I have to
 do is write a script...that's not so bad!
 
-<img src="/assets/ha-ha.jpg" width="300"/>
+{{< figure
+src="/assets/ha-ha.jpg"
+width="300"
+>}}
 
 It actually ended up being somewhat tricky.
 

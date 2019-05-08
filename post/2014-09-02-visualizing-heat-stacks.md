@@ -20,14 +20,20 @@ Heat stack.  You can process this with [Graphviz][] to produce output
 like this, in which graph nodes are automatically colorized by
 resource type:
 
-<a href="/assets/2014/09/02/sample.svg"><img
-  src="/assets/2014/09/02/sample.svg" width="400"/></a>
+{{< figure
+src="/assets/2014/09/02/sample.svg"
+link="/assets/2014/09/02/sample.svg"
+width="400"
+>}}
 
 Or like this, in which each node contains information about its
 resource type and physical resource id:
 
-<a href="/assets/2014/09/02/sample-detailed.svg"><img
-  src="/assets/2014/09/02/sample-detailed.svg" width="400"/></a>
+{{< figure
+src="/assets/2014/09/02/sample-detailed.svg"
+link="/assets/2014/09/02/sample-detailed.svg"
+width="400"
+>}}
 
 The source code is available on [github][dotstack].
 

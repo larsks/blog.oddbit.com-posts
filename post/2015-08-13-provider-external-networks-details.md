@@ -34,8 +34,11 @@ particular OpenStack configuration, specifically:
 This is a simplified architecture diagram of the network connectivity
 in this scenario:
 
-<a href="/assets/2015/08/13/neutron-provider-external.svg"><img
-  src="/assets/2015/08/13/neutron-provider-external.svg" width="600"/></a>
+{{< ref
+src="/assets/2015/08/13/neutron-provider-external.svg"
+link="/assets/2015/08/13/neutron-provider-external.svg"
+width="600"
+>}}
 
 Everything on the compute hosts is identical to [my previous
 article][1], so I will only be discussing the network host here.

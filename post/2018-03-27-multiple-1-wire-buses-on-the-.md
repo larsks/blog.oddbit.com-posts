@@ -8,8 +8,11 @@ tags:
 - iot
 ---
 
-<a href="/assets/2018/03/27/onewire.jpg"><img
-src="/assets/2018/03/27/onewire.jpg" width="800"></a>
+{{< figure
+src="/assets/2018/03/27/onewire.jpg"
+link="/assets/2018/03/27/onewire.jpg"
+width="800"
+>}}
 
 The DS18B20 is a popular temperature sensor that uses the [1-Wire][]
 protocol for communication. Recent versions of the Linux kernel
