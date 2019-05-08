@@ -20,7 +20,7 @@ script:
 
   - |
     cd $TRAVIS_BUILD_DIR/../site &&
-    ansible-playbook deploy.yml \
+    ansible-playbook render.yml \
       --skip-tags publish \
       -e hugo_content_directory=$TRAVIS_BUILD_DIR
 
