@@ -460,9 +460,7 @@ To bind port 9090 in a container to port 80 on the host:
 And in theory, this should also work for UDP ports (but in practice
 there is an issue between the Docker plugin and the `docker-py` Python
 module which makes it impossible to expose UDP ports via `port_specs`;
-this is fixed in [PR #310][] on GitHub).
-
-[pr #310]: https://github.com/docker/docker-py/pull/310
+this is fixed in {{< pull-request "docker/docker-py/310" >}} on GitHub).
 
     port_bindings:
       53/udp: 5300

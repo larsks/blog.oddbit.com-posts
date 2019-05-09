@@ -604,12 +604,11 @@ This issue was reported against Fedora in [BZ 1121345][] and [BZ
 1119849][].  This issue was also reported against Docker in [GHI 6345][]
 and [GHI 7123][].
 
-This problem has been corrected upstream in [PR 7179][].
+This problem has been corrected upstream in {{< pull-request "dotcloud/docker/7179" >}}.
 
 Package [docker-io-1.0.0-9.fc20][docker-io-package], which includes
 the above fix, is now available for Fedora 20 (and Fedora 19).
 
-[pr 7179]: https://github.com/dotcloud/docker/pull/7179
 [bz 1119849]: https://bugzilla.redhat.com/show_bug.cgi?id=1119849
 [ghi 6345]: https://github.com/dotcloud/docker/issues/6345
 [ghi 7123]: https://github.com/dotcloud/docker/issues/7123

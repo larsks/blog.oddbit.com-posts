@@ -35,11 +35,10 @@ I set out to write a lookup plugin to implement the integration...
 Matt Stofko [beat me to it][].  While it worked, the directory
 structure of Matt's repository made it difficult to integrate into an
 existing Ansible project. It was also missing some convenience
-features I wanted to see, so I have submitted [a pull request][] that
+features I wanted to see, so I have submitted {{< pull-request "c0sco/ansible-modules-bitwarden/1" >}} that
 makes several changes to the module.
 
 [beat me to it]: https://github.com/c0sco/ansible-modules-bitwarden/
-[a pull request]: https://github.com/c0sco/ansible-modules-bitwarden/pull/1
 
 You can find my fork of the Bitwarden lookup plugin at
 <https://github.com/larsks/ansible-modules-bitwarden>.

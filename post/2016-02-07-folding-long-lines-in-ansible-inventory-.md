@@ -31,7 +31,7 @@ Into this:
 I think that's a lot easier to read.
 
 If you think this is a good idea (or not!), feel free to comment on
-the [PR][#14359].  I considered (and implemented, then discarded)
+the {{< pull-request "ansible/ansible/14359" >}}.  I considered (and implemented, then discarded)
 using a backslash-based model instead...
 
     myhost \

@@ -21,12 +21,10 @@ situations -- such as targeting an emulated `chroot` environment --
 that just means a lot of extra work.  Using `systemd-nspawn` makes
 this trivial.
 
-I've submitted [pull request #14334][#14334] to the Ansible project,
+I've submitted {{< pull-request "ansible/ansible/14334" >}} to the Ansible project,
 which introduces a new connection driver named `nspawn`.  It acts very
 much like the `chroot` driver, but it adds a few new configuration
 options:
-
-[#14334]: https://github.com/ansible/ansible/pull/14334
 
 - `ansible_nspawn_args` -- analagous to `ansible_ssh_args`, setting
   this will override the arguments that are passed to `systemd-nspawn`

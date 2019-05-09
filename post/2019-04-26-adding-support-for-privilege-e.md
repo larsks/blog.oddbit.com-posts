@@ -76,8 +76,7 @@ width="400"
 
 Looking at the source, I was surprised: while Ansible has individual plugins for different privilege escalation methods, it is entirely up to the individual connection plugin to implement the logic necessary to make use of these mechanisms. I had expected privilege escalation support to be implemented in the base connection plugin (`ConnectionBase` in `lib/ansible/plugins/connection/__init__.py`), but it's not.  So while the [ssh plugin][] has a fairly complex set of logic for handing the `become` prompt, and the [local plugin][] had a relatively simple solution, the `docker` connection had none.
 
-Fortunately, in many ways the `docker` plugin is almost identical to the `local` plugin, which means that rather than doing actual work I was able to largely cut-and-paste the privilege escalation support from the `local` plugin into the `docker` plugin.  You can find this work in [pull request #55816][#55816].
+Fortunately, in many ways the `docker` plugin is almost identical to the `local` plugin, which means that rather than doing actual work I was able to largely cut-and-paste the privilege escalation support from the `local` plugin into the `docker` plugin.  You can find this work in pull request {{< pull-request "ansible/ansible/55816" >}}.
 
-[#55816]: https://github.com/ansible/ansible/pull/55816
 [ssh plugin]: https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/connection/ssh.py
 [local plugin]: https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/connection/local.py
