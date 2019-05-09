@@ -7,6 +7,10 @@ tags:
 - "pull-request"
 ---
 
+**Update 2019-05-09** Pull request {{< pull-request "ansible/ansible/55816" >}} has merged, so you can now use `sudo` with the `docker` connection driver even when `sudo` is configured to require a password.
+
+---
+
 I often use Docker to test out Ansible playbooks.  While normally that works great, I recently ran into an unexpected problem with privilege escalation.  Given a simple playbook like this:
 
     ---
