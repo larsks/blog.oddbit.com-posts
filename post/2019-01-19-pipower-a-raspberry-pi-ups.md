@@ -26,6 +26,7 @@ While looking at various solutions, I found the Adafruit [PowerBoost 1000c][]. W
 
 {{< figure
 src="/assets/2019/01/20/powerboost1000c.png"
+link="/assets/2019/01/20/powerboost1000c.png"
 width="300"
 >}}
 
@@ -150,11 +151,13 @@ With a few more pins available -- maybe an [attiny84][] -- it might be fun to pr
 
 {{< figure
 src="/assets/2019/01/20/pipower-eth-left.jpg"
+link="/assets/2019/01/20/pipower-eth-left.jpg"
 width="400"
 >}}
 
 {{< figure
 src="/assets/2019/01/20/pipower-eth-right.jpg"
+link="/assets/2019/01/20/pipower-eth-right.jpg"
 width="400"
 >}}
 
