@@ -1,7 +1,6 @@
 ---
 title: "Unpacking a Python regular expression"
-date: "2019-05-07"
-weight: 1
+date: "2019-05-07T10:00:00Z"
 tags:
 - "python"
 - "stackexchange"
