@@ -352,6 +352,6 @@ $ openstack user list
 
 ## Project sources
 
-You can find everything reference in this article in my [docker-compose-keystone][] repository.
+You can find everything reference in this article in the [flocx-keystone-dev][] repository.
 
-[docker-compose-keystone]: https://github.com/larsks/docker-compose-keystone
+[flocx-keystone-dev]: https://github.com/cci-moc/flocx-keystone-dev
