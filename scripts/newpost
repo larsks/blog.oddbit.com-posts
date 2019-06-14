@@ -41,6 +41,7 @@ def new_post(tag, max_length, date, stub, git, stdout, draft, weight,
     stub = ''.join(c for c in title
                    if c in string.ascii_letters + string.digits + '-_ '
                    ).replace(' ', '-').lower()[:max_length]
+    stub = stub.rstrip('-')
 
     filename = '{}-{}.md'.format(metadata['date'], stub)
     branch = 'draft/{}'.format(stub)
