@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/11/08/popfile-document-classification/"]
 title: Document classification with POPFile
 date: "2012-11-08"

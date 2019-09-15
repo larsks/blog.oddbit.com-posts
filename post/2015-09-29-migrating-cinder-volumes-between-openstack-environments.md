@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/09/29/migrating-cinder-volumes-between-openstack-environments/"]
 title: "Migrating Cinder volumes between OpenStack environments using shared NFS storage"
 date: "2015-09-29"

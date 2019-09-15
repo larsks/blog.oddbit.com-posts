@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2018/10/19/systemd-unit-for-managing-usb-/"]
 title: Systemd unit for managing USB gadgets
 date: "2018-10-19"

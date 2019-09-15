@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/08/13/provider-external-networks-details/"]
 title: Provider external networks (in an appropriate amount of detail)
 date: "2015-08-13"

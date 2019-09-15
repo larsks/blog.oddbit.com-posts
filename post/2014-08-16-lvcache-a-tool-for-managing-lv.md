@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/08/16/lvcache-a-tool-for-managing-lv/"]
 title: "lvcache: a tool for managing LVM caches"
 date: "2014-08-16"

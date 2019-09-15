@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 date: '2019-06-17'
 filename: 2019-06-17-avoid-rebase-hell-squashing-wi.md
 tags:

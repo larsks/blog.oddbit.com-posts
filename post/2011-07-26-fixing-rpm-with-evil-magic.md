@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2011/07/26/fixing-rpm-with-evil-magic/"]
 title: Fixing RPM with evil magic
 date: "2011-07-26"

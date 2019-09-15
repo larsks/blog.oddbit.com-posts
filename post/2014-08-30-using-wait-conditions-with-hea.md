@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/08/30/using-wait-conditions-with-hea/"]
 title: Using wait conditions with Heat
 date: "2014-08-30"

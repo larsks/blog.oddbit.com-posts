@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/05/20/fedora-and-ovs-bridge-interfac/"]
 title: Fedora and OVS Bridge Interfaces
 date: "2014-05-20"

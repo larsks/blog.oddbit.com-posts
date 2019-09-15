@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2017/09/26/some-notes-on-pwm-on-the-raspberry-pi/"]
 title: "Some notes on PWM on the Raspberry Pi"
 date: "2017-09-26"

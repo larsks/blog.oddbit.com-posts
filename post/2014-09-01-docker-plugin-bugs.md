@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/09/01/docker-plugin-bugs/"]
 title: Docker plugin bugs
 date: "2014-09-01"

@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/12/21/parsing-libvirt-xml/"]
 title: Parsing Libvirt XML with xmllint
 date: "2012-12-21"

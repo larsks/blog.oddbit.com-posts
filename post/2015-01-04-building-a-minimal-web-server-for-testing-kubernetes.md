@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/01/04/building-a-minimal-web-server-for-testing-kubernetes/"]
 title: Building a minimal web server for testing Kubernetes
 date: "2015-01-04"

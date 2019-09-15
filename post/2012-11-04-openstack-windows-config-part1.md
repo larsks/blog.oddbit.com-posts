@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/11/04/openstack-windows-config-part1/"]
 title: Automatic configuration of Windows instances in OpenStack, part 1
 date: "2012-11-04"

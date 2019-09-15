@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2019/02/11/in-which-i-pebkac-so-you-dont-/"]
 title: "In which I PEBKAC so you don't have to"
 date: "2019-02-11"

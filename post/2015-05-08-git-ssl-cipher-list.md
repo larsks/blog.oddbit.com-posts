@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 title: "Teach git about GIT_SSL_CIPHER_LIST"
 date: "2015-05-08"
 tags:

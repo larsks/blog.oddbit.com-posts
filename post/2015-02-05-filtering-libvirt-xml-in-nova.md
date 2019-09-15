@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/02/05/filtering-libvirt-xml-in-nova/"]
 title: Filtering libvirt XML in Nova
 date: "2015-02-05"

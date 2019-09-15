@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2019/04/25/writing-ansible-filter-plugins/"]
 title: "Writing Ansible filter plugins"
 date: "2019-04-25"

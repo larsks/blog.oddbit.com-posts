@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/11/04/powershell-wait-for-networking/"]
 title: Waiting for networking using PowerShell
 date: "2012-11-04"

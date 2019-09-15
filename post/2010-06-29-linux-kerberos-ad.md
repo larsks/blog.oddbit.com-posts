@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2010/06/29/linux-kerberos-ad/"]
 title: Kerberos authenticated queries to Active Directory
 date: "2010-06-29"

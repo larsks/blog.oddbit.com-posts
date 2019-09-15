@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2010/02/02/nfs-and-16-group-limit/"]
 title: NFS and the 16-group limit
 date: "2010-02-02"

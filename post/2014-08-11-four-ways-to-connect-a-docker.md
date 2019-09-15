@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/08/11/four-ways-to-connect-a-docker/"]
 title: Four ways to connect a docker container to a local network
 date: "2014-08-11"

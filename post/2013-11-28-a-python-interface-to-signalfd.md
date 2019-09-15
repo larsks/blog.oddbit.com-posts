@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/11/28/a-python-interface-to-signalfd/"]
 title: A Python interface to signalfd() using FFI
 date: "2013-11-28"

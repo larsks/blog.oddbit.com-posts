@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/07/22/generating-a-membero/"]
 title: Generating a memberOf attribute for posixGroups
 date: "2013-07-22"

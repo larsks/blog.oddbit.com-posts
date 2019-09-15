@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/10/22/building-docker-images-with-pu/"]
 title: Building Docker images with Puppet
 date: "2014-10-22"

@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2016/02/07/folding-long-lines-in-ansible-inventory-/"]
 title: "Folding long lines in Ansible inventory files"
 date: "2016-02-07"

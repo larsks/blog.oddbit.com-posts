@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 title: "New comment system"
 date: "2019-05-07T09:00:00Z"
 weight: 0

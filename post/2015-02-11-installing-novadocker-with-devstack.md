@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/02/11/installing-novadocker-with-devstack/"]
 title: Installing nova-docker with devstack
 date: "2015-02-11"

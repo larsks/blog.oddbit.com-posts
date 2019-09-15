@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2011/05/09/signing-data-with-ssh-agent/"]
 title: Signing data with ssh-agent
 date: "2011-05-09"

@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 title: "A DIY CPAP Battery Box"
 date: "2019-05-14"
 tags:

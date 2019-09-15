@@ -11,6 +11,7 @@ import yaml
 
 @click.command()
 @click.option('-t', '--tag', multiple=True)
+@click.option('-c', '--category')
 @click.option('-M', '--max-length', default=30, type=int)
 @click.option('-d', '--date')
 @click.option('-s', '--stub')
@@ -20,12 +21,15 @@ import yaml
 @click.option('-w', '--weight', type=int)
 @click.option('-P', '--post-directory', default='post', type=pathlib.Path)
 @click.argument('title')
-def new_post(tag, max_length, date, stub, git, stdout, draft, weight,
+def new_post(tag, category, max_length, date, stub, git, stdout, draft, weight,
              post_directory, title):
     metadata = {'title': title}
 
     if tag:
         metadata['tags'] = tag
+
+    if category:
+        metadata['category'] = category
 
     if weight is not None:
         metadata['weight'] = weight

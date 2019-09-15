@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/10/28/why-does-the-neutron/"]
 title: Why does the Neutron documentation recommend three interfaces?
 date: "2013-10-28"

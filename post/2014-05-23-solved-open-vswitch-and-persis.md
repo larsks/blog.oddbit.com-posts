@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/05/23/solved-open-vswitch-and-persis/"]
 title: "Solved: Open vSwitch and persistent MAC addresses"
 date: "2014-05-23"

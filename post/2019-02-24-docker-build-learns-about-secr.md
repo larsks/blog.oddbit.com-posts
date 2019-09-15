@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2019/02/24/docker-build-learns-about-secr/"]
 title: "Docker build learns about secrets and ssh agent forwarding"
 date: "2019-02-24"

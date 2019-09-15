@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/10/04/automatic-dns-entrie/"]
 title: Automatic hostname entries for libvirt domains
 date: "2013-10-04"

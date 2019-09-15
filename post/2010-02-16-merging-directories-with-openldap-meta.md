@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2010/02/16/merging-directories-with-openldap-meta/"]
 title: Merging directories with OpenLDAP's Meta backend
 date: "2010-02-16"

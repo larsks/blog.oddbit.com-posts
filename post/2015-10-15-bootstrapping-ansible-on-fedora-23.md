@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/10/15/bootstrapping-ansible-on-fedora-23/"]
 title: "Bootstrapping Ansible on Fedora 23"
 date: "2015-10-15"

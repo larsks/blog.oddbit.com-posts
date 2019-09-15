@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2016/02/19/deploy-an-ha-openstack-development-envir/"]
 title: >
   Deploying an HA OpenStack development environment with tripleo-quickstart

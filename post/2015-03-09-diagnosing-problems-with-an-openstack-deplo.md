@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/03/09/diagnosing-problems-with-an-openstack-deplo/"]
 title: "Diagnosing problems with an OpenStack deployment"
 date: "2015-03-09"

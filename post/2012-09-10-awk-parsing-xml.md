@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/09/10/awk-parsing-xml/"]
 title: Parsing XML with Awk
 date: "2012-09-10"

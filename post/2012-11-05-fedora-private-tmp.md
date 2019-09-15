@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/11/05/fedora-private-tmp/"]
 title: Private /tmp directories in Fedora
 date: "2012-11-05"

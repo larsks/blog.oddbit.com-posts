@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/09/27/integrating-custom-code-with-n/"]
 title: Integrating custom code with Nova using hooks
 date: "2014-09-27"

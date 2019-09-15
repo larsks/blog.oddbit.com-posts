@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 date: '2019-06-07'
 filename: 2019-06-07-running-keystone-with-docker-c.md
 tags:

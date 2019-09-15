@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/01/28/net-with-no-net/"]
 title: Systemd and the case of the missing network
 date: "2013-01-28"

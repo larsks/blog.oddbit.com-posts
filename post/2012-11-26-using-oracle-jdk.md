@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/11/26/using-oracle-jdk/"]
 title: Using Oracle JDK under CentOS
 date: "2012-11-26"

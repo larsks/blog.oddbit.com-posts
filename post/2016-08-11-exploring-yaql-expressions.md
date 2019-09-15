@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2016/08/11/exploring-yaql-expressions/"]
 title: "Exploring YAQL Expressions"
 date: "2016-08-11"

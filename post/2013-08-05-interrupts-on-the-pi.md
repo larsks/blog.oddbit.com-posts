@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/08/05/interrupts-on-the-pi/"]
 title: Interrupts on the PiFace
 date: "2013-08-05"

@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2010/01/29/cleaning-up-subversion-with-git/"]
 title: Cleaning up Subversion with Git
 date: "2010-01-29"

@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/01/16/stupid-openstack-tricks/"]
 title: Stupid OpenStack Tricks
 date: "2014-01-16"

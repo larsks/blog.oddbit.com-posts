@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/02/27/multinode/"]
 title: Multinode OpenStack with Packstack
 date: "2014-02-27"

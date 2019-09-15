@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/02/10/external-networking-for-kubernetes-services/"]
 title: External networking for Kubernetes services
 date: "2015-02-10"

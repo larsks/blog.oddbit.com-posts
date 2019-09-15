@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/11/17/installing-pyspatialite-on-fedora/"]
 title: "Installing pyspatialite on Fedora"
 date: "2015-11-17"

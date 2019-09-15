@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/11/06/convert-html-to-markdown/"]
 title: Converting HTML to Markdown
 date: "2012-11-06"

@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2010/08/06/importing-vcard-contacts-into-lg-420g/"]
 title: Importing vCard contacts into an LG 420G
 date: "2010-08-06"

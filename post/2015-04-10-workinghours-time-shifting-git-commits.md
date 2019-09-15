@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/04/10/workinghours-time-shifting-git-commits/"]
 title: >
   Using tools badly: time shifting git commits with Workinghours

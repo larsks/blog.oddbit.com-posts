@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/02/22/capturing-envoy-data/"]
 title: Capturing Envoy Data
 date: "2012-02-22"

@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/11/06/moving-from-blogger/"]
 title: Relocating from Blogger
 date: "2012-11-06"

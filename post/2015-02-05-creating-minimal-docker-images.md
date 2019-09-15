@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/02/05/creating-minimal-docker-images/"]
 title: Creating minimal Docker images from dynamically linked ELF binaries
 date: "2015-02-05"

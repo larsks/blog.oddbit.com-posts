@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/11/22/a-unified-cli-for-op/"]
 title: A unified CLI for OpenStack
 date: "2013-11-22"

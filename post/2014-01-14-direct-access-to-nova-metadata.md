@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/01/14/direct-access-to-nova-metadata/"]
 title: Direct access to Nova metadata
 date: "2014-01-14"

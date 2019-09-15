@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2010/02/24/ldap-redundancy-through-proxy-servers/"]
 title: LDAP redundancy through proxy servers
 date: "2010-02-24"

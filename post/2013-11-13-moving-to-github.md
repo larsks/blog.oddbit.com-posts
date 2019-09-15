@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/11/13/moving-to-github/"]
 title: Moving to GitHub
 date: "2013-11-13"

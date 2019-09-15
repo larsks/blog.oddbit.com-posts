@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 title: "New static site generator"
 date: "2019-05-06"
 tags:

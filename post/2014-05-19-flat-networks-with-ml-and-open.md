@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/05/19/flat-networks-with-ml-and-open/"]
 title: Flat networks with ML2 and OpenVSwitch
 date: "2014-05-19"

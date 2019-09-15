@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2016/02/08/a-systemd-nspawn-connection-driver-for-a/"]
 title: "A systemd-nspawn connection driver for Ansible"
 date: "2016-02-08"

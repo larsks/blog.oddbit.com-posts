@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/10/19/automatic-git-cache/"]
 title: "Automatic git cache"
 date: "2015-10-19"

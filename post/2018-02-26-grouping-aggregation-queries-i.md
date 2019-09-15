@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2018/02/26/grouping-aggregation-queries-i/"]
 title: Grouping aggregation queries in Gnocchi 4.0.x
 date: "2018-02-26"

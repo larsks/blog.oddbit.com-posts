@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/08/28/novadocker-and-environment-var/"]
 title: nova-docker and environment variables
 date: "2014-08-28"

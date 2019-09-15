@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2016/02/16/gruf-a-gerrit-command-line-utility/"]
 title: "Gruf, a Gerrit command line utility"
 date: "2016-02-16"

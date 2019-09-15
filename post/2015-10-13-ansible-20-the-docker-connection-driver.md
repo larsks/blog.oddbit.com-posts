@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/10/13/ansible-20-the-docker-connection-driver/"]
 title: "Ansible 2.0: The Docker connection driver"
 date: "2015-10-13"

@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2017/07/07/better-bulk-filtering-for-gmail/"]
 title: "Better bulk filtering for Gmail"
 date: "2017-07-07"

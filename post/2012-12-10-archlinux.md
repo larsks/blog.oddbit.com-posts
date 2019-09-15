@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/12/10/archlinux/"]
 title: A first look at Arch Linux
 date: "2012-12-10"

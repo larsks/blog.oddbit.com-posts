@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/07/16/mapping-local-users-to-kerberos-principals-with-sssd/"]
 title: "Mapping local users to Kerberos principals with SSSD"
 date: "2015-07-16"

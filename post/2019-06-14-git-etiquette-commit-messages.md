@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 date: '2019-06-14'
 filename: 2019-06-14-git-etiquette-commit-messages.md
 tags:

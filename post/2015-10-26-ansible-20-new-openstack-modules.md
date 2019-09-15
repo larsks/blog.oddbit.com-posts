@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/10/26/ansible-20-new-openstack-modules/"]
 title: "Ansible 2.0: New OpenStack modules"
 date: "2015-10-26"

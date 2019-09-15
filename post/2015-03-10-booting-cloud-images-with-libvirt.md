@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/03/10/booting-cloud-images-with-libvirt/"]
 title: "Booting cloud images with libvirt"
 date: "2015-03-10"

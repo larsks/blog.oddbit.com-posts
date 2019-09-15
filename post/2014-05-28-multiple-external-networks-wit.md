@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/05/28/multiple-external-networks-wit/"]
 title: Multiple external networks with a single L3 agent
 date: "2014-05-28"

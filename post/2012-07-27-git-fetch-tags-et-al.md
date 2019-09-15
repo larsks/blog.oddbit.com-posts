@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/07/27/git-fetch-tags-et-al/"]
 title: Git fetch, tags, remotes, and more
 date: "2012-07-27"

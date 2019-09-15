@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2018/01/26/administrivia/"]
 title: "Pelican and theme update"
 date: "2018-01-26"

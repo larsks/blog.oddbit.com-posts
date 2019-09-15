@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/02/13/unpacking-docker-images/"]
 title: Unpacking Docker images with Undocker
 date: "2015-02-13"

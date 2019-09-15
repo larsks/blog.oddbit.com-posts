@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/03/08/converting-hexadecimal-ip-addresses-to-dotted-quads-with-bas/"]
 title: Converting hexadecimal ip addresses to dotted quads with Bash
 date: "2015-03-08"

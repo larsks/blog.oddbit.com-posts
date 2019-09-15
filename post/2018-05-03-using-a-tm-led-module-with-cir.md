@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2018/05/03/using-a-tm-led-module-with-cir/"]
 title: Using a TM1637 LED module with CircuitPython
 date: "2018-05-03"

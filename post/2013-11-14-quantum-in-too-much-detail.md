@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/11/14/quantum-in-too-much-detail/"]
 title: Quantum in Too Much Detail
 date: "2013-11-14"

@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/01/28/how-do-i-lxc-console/"]
 title: How do I LXC console?
 date: "2013-01-28"

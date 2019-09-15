@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2015/06/19/heatkubernetes-demo-with-autoscaling/"]
 title: "Heat-kubernetes Demo with Autoscaling"
 date: "2015-06-19"

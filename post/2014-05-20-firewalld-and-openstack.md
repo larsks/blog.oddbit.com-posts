@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/05/20/firewalld-and-openstack/"]
 title: Firewalld, NetworkManager, and OpenStack
 date: "2014-05-20"

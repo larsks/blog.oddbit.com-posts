@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2010/02/10/filtering-blogger-feeds/"]
 title: Filtering Blogger feeds
 date: "2010-02-10"

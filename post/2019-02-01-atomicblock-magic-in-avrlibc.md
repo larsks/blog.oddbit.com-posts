@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2019/02/01/atomicblock-magic-in-avrlibc/"]
 title: "ATOMIC_BLOCK magic in avr-libc"
 date: "2019-02-01"

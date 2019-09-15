@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/11/04/powershell-random-passwords/"]
 title: Generating random passwords in PowerShell
 date: "2012-11-04"

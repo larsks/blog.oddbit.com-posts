@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2012/08/09/markdown-email/"]
 title: Markdown in your Email
 date: "2012-08-09"

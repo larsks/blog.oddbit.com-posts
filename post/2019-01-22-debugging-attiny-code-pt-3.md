@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2019/01/22/debugging-attiny-code-pt-3/"]
 title: "Debugging attiny85 code, part 3: Tracing with simavr"
 date: "2019-01-22"

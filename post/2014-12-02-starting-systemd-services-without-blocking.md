@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/12/02/starting-systemd-services-without-blocking/"]
 title: Starting systemd services without blocking
 date: "2014-12-02"

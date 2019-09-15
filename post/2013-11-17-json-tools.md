@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2013/11/17/json-tools/"]
 title: "json-tools: cli for generating and filtering json"
 date: "2013-11-17"

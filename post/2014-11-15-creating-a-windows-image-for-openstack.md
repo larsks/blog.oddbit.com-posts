@@ -1,4 +1,5 @@
 ---
+categories: [tech]
 aliases: ["/2014/11/15/creating-a-windows-image-for-openstack/"]
 title: Creating a Windows image for OpenStack
 date: "2014-11-15"
