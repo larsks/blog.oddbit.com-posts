@@ -60,8 +60,7 @@ def new_post(tag, category, max_length, date, stub, git, stdout, draft, weight,
     if not stdout:
         if git:
             pipeline = [
-                ['git', 'checkout', 'master'],
-                ['git', 'checkout', '-B', branch],
+                ['git', 'checkout', '-B', branch, 'master'],
                 ['git', 'add', path],
                 ['git', 'commit', '-m' 'added {}'.format(path)],
             ]
