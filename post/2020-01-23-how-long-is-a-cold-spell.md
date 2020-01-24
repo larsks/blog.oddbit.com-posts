@@ -1,12 +1,12 @@
 ---
 date: '2020-01-23'
-filename: 2020-01-23-computing-longest-consecutive.md
+filename: 2020-01-23-how-long-is-a-cold-spell.md
 tags:
 - datascience
 - pandas
 - python
 - climate
-title: Computing longest consecutive sequence of values matching a condition
+title: How long is a cold spell in Boston?
 
 ---
 
