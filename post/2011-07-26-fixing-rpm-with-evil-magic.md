@@ -5,6 +5,7 @@ title: Fixing RPM with evil magic
 date: "2011-07-26"
 tags:
   - rpm
+  - bad_ideas
 ---
 
 # Fixing rpmsign with evil magic

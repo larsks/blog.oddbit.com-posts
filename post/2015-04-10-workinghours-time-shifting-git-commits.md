@@ -7,6 +7,7 @@ date: "2015-04-10"
 tags:
   - git
   - hack
+  - bad_ideas
 ---
 
 This is a terrible hack.  If you are easily offended by bad ideas
