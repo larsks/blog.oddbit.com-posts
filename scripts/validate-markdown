@@ -10,7 +10,7 @@ set -e
 
 git checkout-index -a --prefix=$tmpdir/
 
-git diff-index --cached --name-only HEAD --diff-filter=ACMR |
+git diff-index --cached --name-only HEAD --diff-filter=ACMR '*.md' |
 while read file; do
 	if ! remark --frail --no-stdout "$file"; then
 		rc=1
