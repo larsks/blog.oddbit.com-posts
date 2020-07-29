@@ -2,13 +2,13 @@
 date: '2020-07-28'
 filename: 2020-07-28-you-cant-get-an-n95-mask-now-w.md
 tags:
-- covid19
-- masks
-- medical
-- coronavirus
-title: 'You can''t get an N95 mask: Now what?'
-authors:
-  - Alexandra van Geel
+  - covid19
+  - masks
+  - medical
+  - coronavirus
+title: "You can't get an N95 mask: Now what?"
+author: "Alexandra van Geel"
+profile: "https://indecon.com/staff/alexandra-e-van-geel/"
 ---
 
 [This is a guest post by my partner Alexandra van Geel.]
