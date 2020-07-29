@@ -361,7 +361,7 @@ excellent options, please let me know!)
 
 - **Filter material**
 
-  (Technostat® 150 by Superior Felt & Filtration)
+  Technostat® 150 by Superior Felt & Filtration
 
 - **Bacterial partical efficiency**
 
