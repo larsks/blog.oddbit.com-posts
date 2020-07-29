@@ -20,7 +20,7 @@ information. Please correct me if I've gotten something wrong.
 
 ## TL;DR
 
-- I suggest: (a) the [Vog valveless mask][] or (b) the [O2 Canada Curve
+- I suggest: (a) the [Vogmask valveless mask][] or (b) the [O2 Canada Curve
   Respirator][]. If (b), make sure you cut some an extra filter into two small
   circles and put the material in the respirator to cover the exhale valves.
 
@@ -31,7 +31,7 @@ information. Please correct me if I've gotten something wrong.
 - If you use a disposable surgical-style mask, alter it to get at tighter fit,
   like [this][].
 
-[vog valveless mask]: https://www.vogmask.com/collections/all
+[vogmask valveless mask]: https://www.vogmask.com/collections/all
 [o2 canada curve respirator]: https://o2canada.com/products/o2-curve-1-2
 [this]: HTTPS://www.tiktok.com/@oliviacuidmd/video/6841373365500955909
 
@@ -220,7 +220,7 @@ Health ([NIOSH][]) and indicates a minimum filtration of 95% for particle sizes
 0.022−0.259 μm (count median diameter of 0.075 ± 0.02 μm), according to 42 Code
 of Federal Regulations (CFR) [Part 84.10][cfr 42.84.10]. As the [COVID-19] viral aerosols are
 larger than the ~0.120 μm virus itself, N95 respirators are expected to provide
-suitable protection" (Zhao et al. 2020).[^standards]
+suitable protection" ([Zhao et al. 2020][zhao2020]).[^standards]
 
 [cfr 42.84.10]: https://www.ecfr.gov/cgi-bin/text-idx?SID=fdd4020598032b884cbca81cf64c8986&mc=true&node=pt42.1.84&rgn=div5#se42.1.84_110
 [niosh]: https://www.cdc.gov/niosh/index.htm
@@ -314,31 +314,33 @@ identical to those required under [42 CFR §84.10][cfr 42.84.10].
 
 </table>
 
-It is notable that the results from these three studies do not all align: Konda
-et al. (2020) found common materials to have a notably greater filter
-efficiency (up to 97%!) than did the other two studies. Zangmeister et al.
-(2020) points this out directly: "Combinations of cotton and synthetic fabrics
-identical, or nearly identical, to those outlined in Konda et al. were tested
-here, and the present results were not consistent with the prior findings."
-Particularly given N95 masks are made from specialized (as opposed to common)
-materials, I have a low level of confidence in the high filtration efficiency
-of common materials reported in Konda et al. (2020).
+It is notable that the results from these three studies do not all align: [Konda
+et al. (2020)][konda2020] found common materials to have a notably greater filter
+efficiency (up to 97%!) than did the other two studies. [Zangmeister et al.
+(2020)][zangmeister2020] points this out directly: "Combinations of cotton and
+synthetic fabrics identical, or nearly identical, to those outlined in Konda et
+al. were tested here, and the present results were not consistent with the
+prior findings." Particularly given N95 masks are made from specialized (as
+opposed to common) materials, I have a low level of confidence in the high
+filtration efficiency of common materials reported in [Konda et al.
+(2020)][konda2020].
 
-In contrast to the results of Konda et al. (2020), the other two publications
-suggest that the tested fabrics alone or in combination generally have a
-filtration efficiency of below 50%, possibly substantially below. The
+In contrast to the results of [Konda et al. (2020)][konda2020], the other two
+publications suggest that the tested fabrics alone or in combination generally
+have a filtration efficiency of below 50%, possibly substantially below. The
 filtration efficiency of surgical mask material was similar to the upper end of
 the range of that measured in more common materials. Certain polypropylene
 materials (a multi-layer HEPA filter and medical-grade wrap) fared better, with
-filtration efficiencies of approximately 75% and higher (Zangmeister et al.
-2000).
+filtration efficiencies of approximately 75% and higher ([Zangmeister et al.
+2020][zangmeister2020]).
 
 The breathability of the common materials varied. Overall, multiple layers
 provided more filtration efficiency but also reduced breathability. For
-instance, Zangmeister et al. (2000) found that increasing the number of layers
-of a cotton poplin weave monotonically increased the filtration efficiency;
-however, more than four layers "exceeded the NIOSH recommended ΔP [pressure
-differential] during exhalation through a fitted mask (245.2 Pa, 25 mm H2O)".
+instance, [Zangmeister et al. (2020)][zangmeister2020] found that increasing
+the number of layers of a cotton poplin weave monotonically increased the
+filtration efficiency; however, more than four layers "exceeded the NIOSH
+recommended ΔP [pressure differential] during exhalation through a fitted mask
+(245.2 Pa, 25 mm H2O)".
 
 In short, as others have observed, a mask made from common fabrics is better
 than no mask at all, but in protectiveness are still substantially inferior to
@@ -355,7 +357,7 @@ documented results of laboratory testing of filtration and breathability. The
 two best candidates I found are described below. (If anyone finds other
 excellent options, please let me know!)
 
-### The [O2 Canada Curve Respirator][]
+### The O2 Canada Curve Respirator
 
 #### Specs
 
@@ -405,18 +407,18 @@ excellent options, please let me know!)
 
 #### Review
 
-This product consists of a two-layer hard shell with a replaceable filter
-inserted between the inner and outer layers, and with silicone around the edges
-to achieve a better seal to the face. The advantage of a hard shell is that the
-respirator will not collapse against your face when breathing hard. A potential
-disadvantage is that, given its generally rigid structure, the shape may not
-match your facial structure well enough to seal properly. Unfortunately, the
-only way to know if it fits and is comfortable is to buy one and try it out. My
-parents did this, and my mother found it to fit well, but my father did not.
-Because this mask is both expensive and not returnable, acquiring one
-represents something of a financial risk. As a final note about fit, I will
-mention that this respirator is available in only one size but in two shapes,
-intended for different nose bridges.
+The [O2 Canada Curve Respirator][] consists of a two-layer hard shell with a
+replaceable filter inserted between the inner and outer layers, and with
+silicone around the edges to achieve a better seal to the face. The advantage
+of a hard shell is that the respirator will not collapse against your face when
+breathing hard. A potential disadvantage is that, given its generally rigid
+structure, the shape may not match your facial structure well enough to seal
+properly. Unfortunately, the only way to know if it fits and is comfortable is
+to buy one and try it out. My parents did this, and my mother found it to fit
+well, but my father did not.  Because this mask is both expensive and not
+returnable, acquiring one represents something of a financial risk. As a final
+note about fit, I will mention that this respirator is available in only one
+size but in two shapes, intended for different nose bridges.
 
 The key advantage of this product -- originally developed for the Asian market
 as a respirator for use in polluted areas -- is its filter. This filter
@@ -444,7 +446,7 @@ not been evaluated by any lab test. In the future, the company may make filter
 inserts that cover the valves, but such pre-cut filters are not presently
 available.
 
-### The [Vog valveless mask][]
+### The Vogmask valveless mask
 
 #### Specs
 
@@ -490,10 +492,10 @@ available.
 
 #### Review
 
-This company also originally developed masks for people wishing to reduce
+Vogmask also originally developed masks for people wishing to reduce
 exposure to pollutants. Consistent with that purpose, some Vogmasks do have
 valves; however, the company has now introduced a line of masks that lacks
-valves. The Vogmask is fabric-based and, while stiffer than the typical
+valves. The [Vogmask valveless mask][] is fabric-based and, while stiffer than the typical
 homemade mask, still has the potential to collapse inward against one's
 mouth/nose under conditions of heavy breathing. Fit is, however, not likely to
 be a problem: not only does the mask have a nosepiece to allow for a customized
@@ -550,12 +552,16 @@ That's all, folks, and I hope it's been useful!  Stay safe.
 ## References
 
 - Konda, A. Prakash, A. Moss, G. A., Schmoldt, M. Grant, G. D.,  and Guha, S.
-  2000. Aerosol Filtration Efficiency of Common Fabrics Used in Respiratory
-  Cloth Masks. ACS Nano 14: 6339−6347.
+  2020. [Aerosol Filtration Efficiency of Common Fabrics Used in Respiratory
+  Cloth Masks][konda2020]. ACS Nano 14: 6339−6347.
 - Zangmeister, C. D., Radney, J. G., Vicenzi, E. P., and Weaver, J. L. 2020.
-  Filtration Efficiencies of Nanoscale Aerosol by Cloth Mask Materials Used to
-  Slow the Spread of SARS-CoV‑2.
+  [Filtration Efficiencies of Nanoscale Aerosol by Cloth Mask Materials Used to
+  Slow the Spread of SARS-CoV‑2][zangmeister2020].
 - Zhao, M. Liao, L., Xiao, W., Yu, X., Wang, H. Wang, Q. Lin, Y. L.,
   Kilinc-Balci, F. S., Price, A., Chu, L., Chu, M. C., Chu, S., and Cui Y.
-  2020. Household Materials Selection for Homemade Cloth Face Coverings and
-  Their Filtration Efficiency Enhancement
+  2020. [Household Materials Selection for Homemade Cloth Face Coverings and
+  Their Filtration Efficiency Enhancement][zhao2020].
+
+[konda2020]: https://pubs.acs.org/doi/abs/10.1021/acsnano.0c03252
+[zangmeister2020]: https://pubs.acs.org/doi/10.1021/acsnano.0c05025
+[zhao2020]: https://pubs.acs.org/doi/10.1021/acs.nanolett.0c02211
