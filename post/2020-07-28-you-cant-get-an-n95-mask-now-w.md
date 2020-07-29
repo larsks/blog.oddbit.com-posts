@@ -359,6 +359,8 @@ excellent options, please let me know!)
 
 ### The O2 Canada Curve Respirator
 
+{{< figure src="/assets/2020/07/28/curve-sideview.png" width="400" >}}
+
 #### Specs
 
 - **Filter material**
@@ -447,6 +449,8 @@ inserts that cover the valves, but such pre-cut filters are not presently
 available.
 
 ### The Vogmask valveless mask
+
+{{< figure src="/assets/2020/07/28/vogmask.jpg" width="200" >}}
 
 #### Specs
 
