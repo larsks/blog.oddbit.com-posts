@@ -13,6 +13,8 @@ profile: "https://indecon.com/staff/alexandra-e-van-geel/"
 
 [This is a guest post by my partner Alexandra van Geel.]
 
+{{< toc >}}
+
 Disclaimer: I am not an expert, just a private individual summarizing available
 information. Please correct me if I've gotten something wrong.
 
