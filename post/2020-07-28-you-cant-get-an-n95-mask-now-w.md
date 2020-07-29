@@ -48,9 +48,12 @@ of writing. This document is the result. Let's get started.
 
 To begin, I wanted to understand some of the terms that have been thrown around
 from "face coverings" to "surgical" or "medical" masks and of course
-respirators including the gold standard (in this country), the N95. Most of
-these labels are common English terms yet have specific technical meanings,
-which I've summarized below.
+respirators including the gold standard (in this country), the [N95][] (so
+called because it filters out at least 95% of airborn particles). Most of these
+labels are common English terms yet have specific technical meanings, which
+I've summarized below.
+
+[n95]: https://en.wikipedia.org/wiki/N95_mask
 
 <table>
 <tr>
