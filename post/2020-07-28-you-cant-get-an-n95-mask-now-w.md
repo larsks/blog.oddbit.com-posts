@@ -528,9 +528,12 @@ might be!) So here are some possible solutions to two common problems.
 **Fabric collapse**. I've found one tool that may help some people with
 fabric-based masks by keeping the fabric away from directly touching the nose
 and mouth: the 3D mask bracket. This forms a kind of frame on your face that
-your mask sits on top of and holds in place. I can't provide specific
-recommendations about particular products, but there are a lot of options. With
-a little luck, you'll find something that fits your face reasonably well.
+your mask sits on top of and holds in place. I can't provide
+specific recommendations about particular products, but there are a lot of
+options ([for example][]). With a little luck, you'll find something that fits
+your face reasonably well.
+
+[for example]: https://www.amazon.com/gp/product/B08CR4NPP7/
 
 **Ear fatigue**. Both of the masks I've suggested use ear loops. Ear loops may or
 may not be comfortable for you, and if you use hearing aids, they are a
