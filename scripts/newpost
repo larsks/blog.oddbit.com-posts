@@ -17,12 +17,13 @@ import yaml
 @click.option('-s', '--stub')
 @click.option('-D', '--draft', is_flag=True)
 @click.option('-g', '--git', is_flag=True)
+@click.option('-G', '--git-add-only', is_flag=True)
 @click.option('-S', '--stdout', is_flag=True)
 @click.option('-w', '--weight', type=int)
 @click.option('-P', '--post-directory', default='post', type=pathlib.Path)
 @click.argument('title')
 def new_post(tag, category, max_length, date, stub, git, stdout, draft, weight,
-             post_directory, title):
+             post_directory, git_add_only, title):
     metadata = {'title': title}
 
     if tag:
@@ -60,14 +61,19 @@ def new_post(tag, category, max_length, date, stub, git, stdout, draft, weight,
                             '---', '', '']))
 
     if not stdout:
-        if git:
-            pipeline = [
-                ['git', 'checkout', '-B', branch, 'master'],
-                ['git', 'add', path],
-                ['git', 'commit', '-m' 'added {}'.format(path)],
-            ]
+        commands = []
 
-            for command in pipeline:
+        if git:
+            commands.append(['git', 'checkout', '-B', branch, 'master'])
+
+        if git or git_add_only:
+            commands.append(['git', 'add', path])
+
+        if git:
+            commands.append(['git', 'commit', '-m' 'added {}'.format(path)])
+
+        if commands:
+            for command in commands:
                 subprocess.run(command, stdout=subprocess.DEVNULL)
 
         print(path)
