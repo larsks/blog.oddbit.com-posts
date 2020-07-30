@@ -11,7 +11,7 @@ import yaml
 
 @click.command()
 @click.option('-t', '--tag', multiple=True)
-@click.option('-c', '--category')
+@click.option('-c', '--category', multiple=True)
 @click.option('-M', '--max-length', default=30, type=int)
 @click.option('-d', '--date')
 @click.option('-s', '--stub')
@@ -29,7 +29,9 @@ def new_post(tag, category, max_length, date, stub, git, stdout, draft, weight,
         metadata['tags'] = tag
 
     if category:
-        metadata['category'] = category
+        metadata['categories'] = category
+    else:
+        metadata['categories'] = ['tech']
 
     if weight is not None:
         metadata['weight'] = weight
