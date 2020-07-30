@@ -6,6 +6,8 @@ tags:
   - masks
   - medical
   - coronavirus
+categories:
+  - health
 title: "You can't get an N95 mask: Now what?"
 author: "Alexandra van Geel"
 profile: "https://indecon.com/staff/alexandra-e-van-geel/"
