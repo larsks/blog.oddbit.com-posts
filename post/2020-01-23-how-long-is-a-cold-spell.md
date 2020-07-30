@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: '2020-01-23'
 filename: 2020-01-23-how-long-is-a-cold-spell.md
 tags:
@@ -7,7 +9,6 @@ tags:
 - python
 - climate
 title: How long is a cold spell in Boston?
-
 ---
 
 We've had some wacky weather recently. In the space of a week, the temperature went from a high of about 75°F to a low around 15°F. This got me to thinking about what constitutes "normal" weather here in the Boston area, and in particular, how common it is to have a string of consecutive days in which the high temperature stays below freezing. While this was an interesting question in itself, it also seemed like a great opportunity to learn a little about [Pandas][], the Python data analysis framework.

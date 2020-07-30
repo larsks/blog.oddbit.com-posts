@@ -1,11 +1,12 @@
 ---
+categories:
+- tech
 date: '2020-02-24'
 filename: 2020-02-24-a-passwordless-serial-console.md
 tags:
 - raspiberrypi
 - serial
 title: A passwordless serial console for your Raspberry Pi
-
 ---
 
 `legendre` on `#raspbian` asked:

@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: '2020-01-15'
 filename: 2020-01-15-snarl-a-tool-for-literate-blog.md
 tags:

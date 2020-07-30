@@ -1,11 +1,12 @@
 ---
+categories:
+- tech
 date: '2020-06-07'
 filename: 2020-06-07-first-look-seeed-grove-beginner.md
 tags:
 - arduino
 - review
 title: 'Grove Beginner Kit for Arduino (part 2): First look'
-
 ---
 
 The folks at [Seeed Studio][] were kind enough to send me a [Grove

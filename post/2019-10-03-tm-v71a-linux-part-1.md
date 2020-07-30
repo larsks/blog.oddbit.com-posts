@@ -1,11 +1,12 @@
 ---
+categories:
+- tech
 date: '2019-10-03'
 filename: 2019-10-03-tm-v71a-linux-part-1.md
 tags:
 - hamradio
 - linux
-title: "TM-V71A and Linux, part 1: Programming mode"
-
+title: 'TM-V71A and Linux, part 1: Programming mode'
 ---
 
 I recently acquired my Technician amateur radio license, and like many folks my first radio purchase was a [Baofeng UV-5R][]. Due to its low cost, this is a very popular radio, and there is excellent open source software available for programming it in the form of the [CHIRP][] project. After futzing around with the UV-5R for a while, I wanted to get something a little nicer for use at home, so I purchased a [Kenwood TM-V71A][]. CHIRP claims to have support for this radio as well, but it turns out it's not very good: it uses a "live" connection so every time you edit a channel it tries to update the radio. This result in a slow and flaky UI, especially when trying to make bulk changes (like relocating a block of channels). I ended up using Kenwood's official [MCP-2A][] software running on a Windows guest on my system, which works but isn't ideal. I decided to learn more about how the radio interacts with the computer to see if I could improve the situation.

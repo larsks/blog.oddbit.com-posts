@@ -1,10 +1,11 @@
 ---
+categories:
+- tech
 date: '2020-04-15'
 filename: 2020-04-15-some-thoughts-on-mechanical-ke.md
 tags:
 - keyboards
 title: Some thoughts on Mechanical Keyboards
-
 ---
 
 Since we're all stuck in the house and working from home these days, I've had to make some changes to my home office. One change in particular was requested by my wife, who now shares our rather small home office space with me: after a week or so of calls with me clattering away on my old Das Keyboard 3 Professional in the background, she asked if I could get something that was maybe a little bit quieter.

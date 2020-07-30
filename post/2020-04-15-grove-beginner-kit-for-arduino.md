@@ -1,11 +1,12 @@
 ---
+categories:
+- tech
 date: '2020-04-15'
 filename: 2020-04-15-grove-beginner-kit-for-arduino.md
 tags:
 - arduino
 - sponsored
 title: Grove Beginner Kit for Arduino (part 1)
-
 ---
 
 The folks at [Seeed Studio][] have just released the [Grove Beginner Kit for

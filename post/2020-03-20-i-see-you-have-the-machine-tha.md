@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: '2020-03-20'
 filename: 2020-03-20-i-see-you-have-the-machine-tha.md
 tags:
@@ -8,7 +10,6 @@ tags:
 - python
 - wifi
 title: I see you have the machine that goes ping...
-
 ---
 
 We're all looking for ways to keep ourselves occupied these days, and

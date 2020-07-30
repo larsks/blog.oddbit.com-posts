@@ -1,12 +1,14 @@
 ---
+categories:
+- tech
 date: '2019-12-19'
 filename: 2019-12-19-ovn-and-dhcp.md
 tags:
-  - openstack
-  - ovn
-  - openvswitch
-  - networking
-title: "OVN and DHCP: A minimal example"
+- openstack
+- ovn
+- openvswitch
+- networking
+title: 'OVN and DHCP: A minimal example'
 toc: true
 ---
 

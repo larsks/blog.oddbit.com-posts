@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: '2020-02-15'
 filename: 2020-02-15-configuring-open-vswitch-with.md
 tags:
@@ -7,7 +9,6 @@ tags:
 - nmcli
 - openvswitch
 title: Configuring Open vSwitch with nmcli
-
 ---
 
 I recently acquired a managed switch for my home office in order to segment a few devices off onto their own isolated vlan. As part of this, I want to expose these vlans on my desktop using Open vSwitch (OVS), and I wanted to implement the configuration using NetworkManager rather than either relying on the legacy `/etc/sysconfig/network-scripts` scripts or rolling my own set of services.  These are my notes in case I ever have to do this again.
