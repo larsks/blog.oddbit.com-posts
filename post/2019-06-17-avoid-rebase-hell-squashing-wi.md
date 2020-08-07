@@ -58,7 +58,7 @@ In this method, you will create a temporary branch and use `git merge --squash` 
     git commit
     ```
 
-    At this point, you `work` branch should be identical to the original `my_feature` branch (running `git diff master` should not show any changes), but it will have only a single commit after `master`.
+    At this point, your `work` branch should be identical to the original `my_feature` branch (running `git diff my_feature_branch` should not show any changes), but it will have only a single commit after `master`.
 
 4. Return to your feature branch and `reset` it to the squashed version:
 
