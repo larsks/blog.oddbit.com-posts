@@ -20,7 +20,7 @@ machines that are attached directly to local layer 2 networks
 [openshift]: https://www.openshift.com/
 [cnv]: https://www.redhat.com/en/topics/containers/what-is-container-native-virtualization
 
-In [an earlier post][part 2] of this series, I discussed some issues around the
+In [an earlier post][part 2], I discussed some issues around the
 management of virtual machine MAC addresses in CNV 2.3: in particular,
 that virtual machines are assigned a random MAC address not just at
 creation time but every time they boot. CNV 2.4 (re-)introduces [MAC
@@ -47,5 +47,5 @@ To enable MAC address pools for a given namespace, set the
 oc label namespace <namespace> mutatevirtualmachines.kubemacpool.io=allocate
 ```
 
-[mac address pool]: https://docs.openshift.com/container-platform/4.5/virt/virtual_machines/vm_networking/virt-using-mac-address-pool-for-vms.html
-[part2]: {{< ref "2020-07-30-openshift-and-cnv-part-2-expos" >}}
+[mac address pools]: https://docs.openshift.com/container-platform/4.5/virt/virtual_machines/vm_networking/virt-using-mac-address-pool-for-vms.html
+[part 2]: {{< ref "2020-07-30-openshift-and-cnv-part-2-expos" >}}

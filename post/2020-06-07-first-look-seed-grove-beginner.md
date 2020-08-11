@@ -135,7 +135,7 @@ scroll something across the LCD screen. I slapped the following code
 together after reading the [u8g2 docs][] for a couple of minutes, so I
 can guarantee that it's not optimal, but it's a start:
 
-[u2g2 docs]: https://github.com/olikraus/u8g2/wiki/u8g2reference
+[u8g2 docs]: https://github.com/olikraus/u8g2/wiki/u8g2reference
 
 
 ```c

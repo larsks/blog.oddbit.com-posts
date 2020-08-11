@@ -263,8 +263,6 @@ otherwise arrange for traffic to that address to reach your host),
 these rules take care of directing the connection to your virtual
 machine.
 
-[ovnkubernetes]: https://docs.openshift.com/container-platform/4.4/networking/ovn_kubernetes_network_provider/about-ovn-kubernetes.html
-
 ### Exposing services using a LoadBalancer
 
 Historically, OpenShift was designed to run in cloud environments such

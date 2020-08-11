@@ -35,6 +35,8 @@ and the `gmf manage-filters` command, which can translate between a
 simpler YAML syntax and the XML syntax used by Gmail's filter
 import/export.  I may write about that in a future post.
 
+[gmailfilters]: https://github.com/larsks/gmailfilters
+
 ## Installing gmf
 
 The `gmailfilters` project is a standard Python package.  You can
