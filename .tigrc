@@ -1,0 +1,3 @@
+bind refs       M       ?sh -c 'git checkout master && git merge %(branch) && git branch -D %(branch)'
+bind refs       !       !git branch -D %(branch)
+bind refs	x	!sh -c 'git push --delete origin %(branch) && git remote update --prune'
