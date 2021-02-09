@@ -142,3 +142,23 @@ index = http://localhost:3141/root/pypi/
 
 Now both `pip install` and `pip search` hit the local cache instead of
 the upstream PyPi server, and things are generally much, much faster.
+
+## For Poetry Users
+
+[Poetry][] respects the `pip` configuration and will Just Work.
+
+[poetry]: https://python-poetry.org/
+
+## For Pipenv Users
+
+[Pipenv][] does not respect the pip configuration [[1][nopip1],
+[2][nopip2]], so you will
+need to set the `PIPENV_PYPI_MIRROR` environment variable. E.g:
+
+```
+export PIPENV_PYPI_MIRROR=http://localhost:3141/root/pypi/+simple/
+```
+
+[pipenv]: https://github.com/pypa/pipenv
+[nopip1]: https://github.com/pypa/pipenv/issues/1451
+[nopip2]: https://github.com/pypa/pipenv/issues/2075
