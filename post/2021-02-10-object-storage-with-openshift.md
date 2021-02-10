@@ -1,8 +1,8 @@
 ---
 categories:
 - tech
-date: '2021-02-09'
-filename: 2021-02-09-object-storage-with-openshift.md
+date: '2021-02-10'
+filename: 2021-02-10-object-storage-with-openshift.md
 stub: object-storage-with-openshift
 tags:
 - openshift
