@@ -56,9 +56,10 @@ provide S3-compatible APIs.
 
 The fundamental unit of object storage is called a "bucket".
 
-Creating a bucket works a bit like creating a [persistent volume][], although
-instead of starting with a `PersistentVolumeClaim` you instead start with
-an `ObjectBucketClaim` ("`OBC`"). An `OBC` looks something like this:
+Creating a bucket with OCS works a bit like creating a [persistent
+volume][], although instead of starting with a `PersistentVolumeClaim`
+you instead start with an `ObjectBucketClaim` ("`OBC`"). An `OBC`
+looks something like this:
 
 [persistent volume]: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 
@@ -126,6 +127,38 @@ bit.
 
 ## Accessing a bucket from a pod
 
+The easiest way to expose the credentials in a pod is to map the keys
+from both the `ConfigMap` and `Secret` as environment variables using
+the `envFrom` directive, like this:
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bucket-example
+spec:
+  containers:
+    - image: myimage
+      env:
+        - name: AWS_CA_BUNDLE
+          value: /run/secrets/kubernetes.io/serviceaccount/service-ca.crt
+      envFrom:
+        - configMapRef:
+            name: example-rgw
+        - secretRef:
+            name: example-rgw
+```
+
+Note that we're also setting `AWS_CA_BUNDLE` here, which you'll need
+if the internal endpoint referenced by `$BUCKET_HOST` is using SSL.
+
+Inside the pod, we can run, for example, `aws` commands as long as we
+provide an appropriate s3 endpoint:
+
+```
+$ aws s3 ls --endpoint http://$BUCKET_HOST ls
+2021-02-10 04:30:31 example-rgw-8710aa46-a47a-4a8b-8edd-7dabb7d55469
+```
 ## External connections to S3 endpoints
 
 External access to services in OpenShift is often managed via
