@@ -95,6 +95,6 @@ The short output looks something like this:
 [<span style="color:#f0f000;">COMMENT</span>   ] 282331,1 openstack/fuel-qa apanchenko <span style="color:#0000f0;">https://review.openstack.org/282331</span>
 </pre>
 
-[last]: {{< ref "2016-02-16-gruf-a-gerrit-command-line-utility.md" >}}
+[last]: {{< ref "2016-02-16-gruf-a-gerrit-command-line-uti" >}}
 [gerrit]: https://www.gerritcodereview.com/
 [stream-events]: https://gerrit.googlecode.com/svn/documentation/2.1.2/cmd-stream-events.html
