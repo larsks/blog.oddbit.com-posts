@@ -170,12 +170,12 @@ into an old shoe box. On the outside, you can see the three LEDs (for
 the ACTIVE, SILENT, and ALARM signals), the SILENT switch, and the
 doorbell itself:
 
-{{< figure src="/assets/2020/03/20/detector-outside-labelled.png" >}}
+{{< figure src="detector-outside-labelled.png" >}}
 
 On the inside, you'll find the Arduino Uno, the Wemos D1 mini, the
 relay, and a step-down converter:
 
-{{< figure src="/assets/2020/03/20/detector-inside-labelled.png" >}}
+{{< figure src="detector-inside-labelled.png" >}}
 
 The step-down converter isn't actually necessary: when I put things
 together, I didn't realize that the Uno would accept up to 12V into

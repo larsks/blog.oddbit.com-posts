@@ -18,7 +18,7 @@ these days means it's probably a month away at least.
 
 [seeed studio]: https://www.seeedstudio.com/
 
-{{<figure src="/assets/2020/04/15/grove-beginner-kit.png">}}
+{{<figure src="grove-beginner-kit.png">}}
 
 An interesting feature of the kit is that while everything is hardwired
 together (so you can use it "out of the box" without any jumper wires, etc),

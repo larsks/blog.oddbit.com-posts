@@ -126,7 +126,7 @@ to something smaller; I chose New York and New England.
 We start by adding the `cb_2018_us_state_5m` map to QGIS. This gives
 us all 50 states (and a few territories):
 
-{{< figure src="/assets/2020/12/13/states-unfiltered.png" width="800" >}}
+{{< figure src="states-unfiltered.png" width="800" >}}
 
 To limit this to our target geography, we can select "Filter..." from
 the layer context menu and apply the following filter:
@@ -146,13 +146,13 @@ the layer context menu and apply the following filter:
 
 This gives us:
 
-{{< figure src="/assets/2020/12/13/states-filtered.png" width="800" >}}
+{{< figure src="states-filtered.png" width="800" >}}
 
 Next, we need to load in the county outlines that cover the same
 geographic area. We start by adding the `cb_2018_us_county_5m`
 dataset to QGIS, which gets us:
 
-{{< figure src="/assets/2020/12/13/counties-unfiltered.png" width="800" >}}
+{{< figure src="counties-unfiltered.png" width="800" >}}
 
 There are several ways we could limit the counties to just those in
 our target geography. One method is to use the "Clip..." feature in
@@ -170,7 +170,7 @@ Now select the "Run" button. You should end up with a new layer named
 `Clipped`. Hide the original `cb_2018_us_county_5m` layer, and rename
 `Clipped` to `cb_2018_us_county_5m_clipped`. This gives us:
 
-{{< figure src="/assets/2020/12/13/counties-clipped.png" width="800" >}}
+{{< figure src="counties-clipped.png" width="800" >}}
 
 Instead of using the "Clip..." algorithm, we could have created a
 [virtual layer][] and performed a [spatial join][] between the state
@@ -213,7 +213,7 @@ the field name, select the "Create virtual field" checkbox, and select
 lpad(to_string("STATE"), 2, '0') || lpad(to_string("COUNTY"), 3, '0')
 ```
 
-{{< figure src="/assets/2020/12/13/create-virtual-field.png" width="400" >}}
+{{< figure src="create-virtual-field.png" width="400" >}}
 
 When you return the to attribute table, you will see a new `geoid`
 field that contains our desired value. We can now perform the table
@@ -226,7 +226,7 @@ For "Join layer", select `co-est2019-alldata`. Select `geoid` for
 field name prefix" checkbox and enter `pop_` in the field, then click
 "OK".
 
-{{< figure src="/assets/2020/12/13/county-join-population.png" width="400" >}}
+{{< figure src="county-join-population.png" width="400" >}}
 
 If you examine the attribute table for the layer, you will see the
 each county feature is now linked to the appropriate population
@@ -261,7 +261,7 @@ in the "Joined field prefix [optional]" field (this will cause the
 fields in the resulting layer to have names like `covid_date`,
 `covid_cases`, etc). Click the "Run" button to create the new layer.
 
-{{< figure src="/assets/2020/12/13/county-join-covid.png" width="400" >}}
+{{< figure src="county-join-covid.png" width="400" >}}
 
 You will end up with a new layer named "Joined layer". I suggest
 renaming this to `cb_2018_us_county_5m_covid`. If you enable the "show
@@ -271,7 +271,7 @@ feature count" checkbox for your layers, you will see that while the
 for each county, there are around 320 data points tracking Covid cases
 (etc) over time.
 
-{{< figure src="/assets/2020/12/13/layers-feature-count.png" width="400" >}}
+{{< figure src="layers-feature-count.png" width="400" >}}
 
 ## Styling
 
@@ -311,7 +311,7 @@ Now do the same thing (except don't enable labels) with the
 If you hide the the Covid layer, your map should look like this (don't
 forget to unhide the Covid layer for the next step):
 
-{{< figure src="/assets/2020/12/13/map-outlines.png" width="400" >}}
+{{< figure src="map-outlines.png" width="400" >}}
 
 ### Creating graduated colors
 
@@ -332,11 +332,11 @@ Ensure the "Mode" menu is set to "Equal count (Quantile)", and then
 set "Classes" to 15. This will give a set of graduated categories that
 looks like this:
 
-{{< figure src="/assets/2020/12/13/graduated-categories.png" width="400" >}}
+{{< figure src="graduated-categories.png" width="400" >}}
 
 Close the properties window. Your map should look something like this:
 
-{{< figure src="/assets/2020/12/13/map-graduated-1.png" width="400" >}}
+{{< figure src="map-graduated-1.png" width="400" >}}
 
 That's not very exciting yet, is it? Let's move on to the final
 section of this article.
@@ -355,7 +355,7 @@ Return to the project and open the TimeManger panel: select
 "Plugins-&gt;TimeManager-&gt;Toggle visbility". This will display the
 following panel below the map:
 
-{{< figure src="/assets/2020/12/13/timemanager-panel-initial.png" width="600" >}}
+{{< figure src="timemanager-panel-initial.png" width="600" >}}
 
 Make sure that the "Time frame size" is set to "1 days".
 
@@ -366,14 +366,14 @@ the `covid_date` column in the "Start time" menu. Leave all other
 values at their defaults and click "OK" to return to the TimeManager
 settings.
 
-{{< figure src="/assets/2020/12/13/timemanager-add-layer.png" width="600" >}}
+{{< figure src="timemanager-add-layer.png" width="600" >}}
 
 You will see the layer we just added listed in the "Layers" list. Look
 for the "Time Format" column in this list, which will say "TO BE
 INFERRED". Click in this column and change the value to `%Y-%m-%d` to
 match the format of the dates in the `covid_date` field.
 
-{{< figure src="/assets/2020/12/13/timemanager-settings-final.png" width="600" >}}
+{{< figure src="timemanager-settings-final.png" width="600" >}}
 
 You may want to change "Show frame for" setting from the default to
 something like 50 milliseconds. Leave everything else at the defaults
@@ -385,21 +385,21 @@ power button is green.
 
 Disabled:
 
-{{< figure src="/assets/2020/12/13/timemanager-disabled.png" >}}
+{{< figure src="timemanager-disabled.png" >}}
 
 Enabled:
 
-{{< figure src="/assets/2020/12/13/timemanager-enabled.png" >}}
+{{< figure src="timemanager-enabled.png" >}}
 
 Once TimeManager is enabled, you should be able to use the slider to
 view the map at different times. For example, here's the map in early
 May:
 
-{{< figure src="/assets/2020/12/13/timemanager-early-may.png" >}}
+{{< figure src="timemanager-early-may.png" >}}
 
 And here it is in early November:
 
-{{< figure src="/assets/2020/12/13/timemanager-early-november.png" >}}
+{{< figure src="timemanager-early-november.png" >}}
 
 To animate the map, click the play button in the bottom left of the
 TimeManager panel.

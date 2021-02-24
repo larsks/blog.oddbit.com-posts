@@ -16,7 +16,7 @@ The Vortex Core is a 40% keyboard, which means it consists primarily of letter
 keys, a few lonely bits of punctuation, and several modifier keys to activate
 different layers on the keyboard.
 
-{{< figure src="/assets/2020/09/26/vortex-core.jpg" >}}
+{{< figure src="vortex-core.jpg" >}}
 
 ## Physical impressions
 
@@ -32,7 +32,7 @@ felt a little more stable.
 
 Here's a picture of my Core next to my Durgod [K320][]:
 
-{{< figure src="/assets/2020/09/26/core-vs-k320.jpg" >}}
+{{< figure src="core-vs-k320.jpg" >}}
 
 [k320]: https://www.amazon.com/DURGOD-Mechanical-Interface-Tenkeyless-Anti-Ghosting/dp/B078H3WPHM
 
