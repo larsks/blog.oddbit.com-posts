@@ -67,9 +67,9 @@ I've summarized below.
 
 <tr>
 <td><strong>Example</strong></td>
-<td><a href="/assets/2020/07/28/n95-mask.jpg"><img src="/assets/2020/07/28/n95-mask-small.jpg" width="200"></a></td>
-<td><a href="/assets/2020/07/28/surgical-mask.jpg"><img src="/assets/2020/07/28/surgical-mask-small.jpg" width="200"></a></td>
-<td><a href="/assets/2020/07/28/other-mask.jpg"><img src="/assets/2020/07/28/other-mask-small.jpg" width="200"></a></td>
+<td><a href="n95-mask.jpg"><img src="/assets/2020/07/28/n95-mask-small.jpg" width="200"></a></td>
+<td><a href="surgical-mask.jpg"><img src="/assets/2020/07/28/surgical-mask-small.jpg" width="200"></a></td>
+<td><a href="other-mask.jpg"><img src="/assets/2020/07/28/other-mask-small.jpg" width="200"></a></td>
 </tr>
 
 <tr>
@@ -364,7 +364,7 @@ excellent options, please let me know!)
 
 ### The O2 Canada Curve Respirator
 
-{{< figure src="/assets/2020/07/28/curve-sideview.png" width="400" >}}
+{{< figure src="curve-sideview.png" width="400" >}}
 
 #### Specs
 
@@ -455,7 +455,7 @@ available.
 
 ### The Vogmask valveless mask
 
-{{< figure src="/assets/2020/07/28/vogmask.jpg" width="200" >}}
+{{< figure src="vogmask.jpg" width="200" >}}
 
 #### Specs
 

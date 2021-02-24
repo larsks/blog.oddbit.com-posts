@@ -22,8 +22,8 @@ article) is about 8.5 x 5 x 1 inches. Closed, you could fit two of
 them on a piece of 8.5x11 paper with a little room leftover.
 
 {{<figure
-  src="/assets/2020/06/07/grove-closed.jpg"
-  link="/assets/2020/06/07/grove-closed.jpg"
+  src="grove-closed.jpg"
+  link="grove-closed.jpg"
   width="400"
 >}}
 
@@ -32,8 +32,8 @@ straight at the STEM market, and as we'll in the following paragraphs there are
 a number of features that make it particularly appropriate for this niche.
 
 {{<figure
-  src="/assets/2020/06/07/grove-open.jpg"
-  link="/assets/2020/06/07/grove-open.jpg"
+  src="grove-open.jpg"
+  link="grove-open.jpg"
   width="400"
 >}}
 
@@ -60,8 +60,8 @@ modules available][seeed:sensors] in the Seeed Studio store).
 [seeed:sensors]: https://www.seeedstudio.com/category/Sensor-for-Grove-c-24.html.
 
 {{<figure
-  src="/assets/2020/06/07/grove-lh.jpg"
-  link="/assets/2020/06/07/grove-lh.jpg"
+  src="grove-lh.jpg"
+  link="grove-lh.jpg"
   width="400"
 >}}
 
@@ -70,15 +70,15 @@ and for connecting the kit to your computer for programming using the
 Arduino IDE.
 
 {{<figure
-  src="/assets/2020/06/07/grove-rh.jpg"
-  link="/assets/2020/06/07/grove-rh.jpg"
+  src="grove-rh.jpg"
+  link="grove-rh.jpg"
   width="400"
 >}}
 
 <!--
 {{<figure
-  src="/assets/2020/06/07/grove-closeup.jpg"
-  link="/assets/2020/06/07/grove-closeup.jpg"
+  src="grove-closeup.jpg"
+  link="grove-closeup.jpg"
   width="400"
 >}}
 -->
@@ -176,7 +176,7 @@ void loop(void) {
 {{< youtube nKpmQ2GZ98M >}}
 </a>
 
-[DHT11]: /assets/2020/06/07/DHT11-Technical-Data-Sheet.pdf
-[BMP280]: /assets/2020/06/07/Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf
-[LIS3DHTR]: /assets/2020/06/07/LIS3DHTR_datasheet.pdf
-[OLED display module]: /assets/2020/06/07/OLED_Display_Module.pdf
+[DHT11]: DHT11-Technical-Data-Sheet.pdf
+[BMP280]: Grove-Barometer_Sensor-BMP280-BMP280-DS001-12_Datasheet.pdf
+[LIS3DHTR]: LIS3DHTR_datasheet.pdf
+[OLED display module]: OLED_Display_Module.pdf
