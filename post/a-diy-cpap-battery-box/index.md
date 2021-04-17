@@ -19,21 +19,21 @@ A year or so ago I was diagnosed with [sleep apnea][], and since them I've been 
 This is what I ended up with:
 
 {{< figure
-src="/assets/2019/05/14/batterybox-003.jpg"
-link="/assets/2019/05/14/batterybox-003.jpg"
+src="batterybox-003.jpg"
+link="batterybox-003.jpg"
 width="400"
 >}}
 
 {{< figure
-src="/assets/2019/05/14/batterybox-005.jpg"
-link="/assets/2019/05/14/batterybox-005.jpg"
+src="batterybox-005.jpg"
+link="batterybox-005.jpg"
 width="400"
 >}}
 
 
 {{< figure
-src="/assets/2019/05/14/batterybox-001.jpg"
-link="/assets/2019/05/14/batterybox-001.jpg"
+src="batterybox-001.jpg"
+link="batterybox-001.jpg"
 width="400"
 >}}
 
@@ -42,7 +42,7 @@ It has a pair of 10Ah SLA batteries, two 12V ports, two USB charging ports, and 
 ## Batteries
 
 {{< figure
-src="/assets/2019/05/14/12v-10ah-batteries.jpg"
+src="12v-10ah-batteries.jpg"
 link="https://www.amazon.com/gp/product/B079LYZX9K"
 width="200"
 class="floatright"
@@ -60,8 +60,8 @@ I looked at some [LiFePO4][] batteries, but they were typically two- to three- t
 The batteries are held in place by a roughly U-shaped piece of wood on the bottom of the case. The charger and the foam bad hold the batteries in when the top is closed.
 
 {{< figure
-src="/assets/2019/05/14/resmed-battery-excerpt.png"
-link="/assets/2019/05/14/resmed-battery-excerpt.png"
+src="resmed-battery-excerpt.png"
+link="resmed-battery-excerpt.png"
 width="200"
 caption="ResMed battery data"
 class="floatright"
@@ -81,8 +81,8 @@ class="floatright"
 I used [qcad][] to design the panel layout. The cross-hairs are for identifying the center point:
 
 {{< figure
-src="/assets/2019/05/14/panel-layout.png"
-link="/assets/2019/05/14/panel-layout.pdf"
+src="panel-layout.png"
+link="panel-layout.pdf"
 width="400"
 >}}
 
@@ -93,13 +93,13 @@ I used a 1 1/8" hole saw to make the holes for the 12V and USB ports and a 2" ho
 ## A few extra pictures
 
 {{< figure
-src="/assets/2019/05/14/batterybox-002.jpg"
-link="/assets/2019/05/14/batterybox-002.jpg"
+src="batterybox-002.jpg"
+link="batterybox-002.jpg"
 width="400"
 >}}
 
 {{< figure
-src="/assets/2019/05/14/batterybox-004.jpg"
-link="/assets/2019/05/14/batterybox-004.jpg"
+src="batterybox-004.jpg"
+link="batterybox-004.jpg"
 width="400"
 >}}

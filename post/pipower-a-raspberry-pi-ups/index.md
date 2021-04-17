@@ -10,8 +10,8 @@ tags:
 ---
 
 {{< figure
-src="/assets/2019/01/20/pipower-top.jpg"
-link="/assets/2019/01/20/pipower-top.jpg"
+src="pipower-top.jpg"
+link="pipower-top.jpg"
 width="400"
 >}}
 
@@ -26,8 +26,8 @@ There are several Pi UPS solutions out there, but most of them are designed for 
 While looking at various solutions, I found the Adafruit [PowerBoost 1000c][]. When external power is available, this device will charge a LIPO battery and provide power to your Pi at the same time. When external power is removed, this device will power your Pi from the battery.  By itself it doesn't have any facilities for communicating with your Pi, but it does provide several control lines which suggested some interesting possibilities.
 
 {{< figure
-src="/assets/2019/01/20/powerboost1000c.png"
-link="/assets/2019/01/20/powerboost1000c.png"
+src="powerboost1000c.png"
+link="powerboost1000c.png"
 width="300"
 >}}
 
@@ -151,14 +151,14 @@ If you stop either of the systemd units, your Pi will either shutdown (if you `s
 With a few more pins available -- maybe an [attiny84][] -- it might be fun to provide battery voltage and current measurements to the Pi via an i2c interface. I would probably also add a status LED to show the current state of the controller code.
 
 {{< figure
-src="/assets/2019/01/20/pipower-eth-left.jpg"
-link="/assets/2019/01/20/pipower-eth-left.jpg"
+src="pipower-eth-left.jpg"
+link="pipower-eth-left.jpg"
 width="400"
 >}}
 
 {{< figure
-src="/assets/2019/01/20/pipower-eth-right.jpg"
-link="/assets/2019/01/20/pipower-eth-right.jpg"
+src="pipower-eth-right.jpg"
+link="pipower-eth-right.jpg"
 width="400"
 >}}
 
