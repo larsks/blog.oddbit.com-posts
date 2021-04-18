@@ -130,7 +130,7 @@ ovs-vsctl set open_vswitch .  \
 
 This points `ovn-remote` at the address of the controller, sets `ovn-encap-ip` to the address of `eth0` on the local host, sets `systemd-id` to the local hostname, and selects [geneve][] encapsulation for tunnels (see [this post][russelbryant-ovn-geneve-vs-vxlan] for information on why OVN prefers Geneve encapsulation).
 
-We can verify these settings by using the `ovn-vsctl list` command:
+We can verify these settings by using the `ovs-vsctl list` command:
 
 ```
 [root@ovn1 ~]# ovs-vsctl --columns external_ids list open_vswitch
