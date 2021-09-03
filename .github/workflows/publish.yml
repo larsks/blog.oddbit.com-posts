@@ -1,0 +1,57 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Generate content
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: "0.88.0"
+    steps:
+      - name: Configure Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '^3.9'
+
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          path: content
+
+      - name: Check out hugo config
+        uses: actions/checkout@v2
+        with:
+          repository: larsks/blog.oddbit.com-hugo
+          path: site
+          submodules: true
+
+      - name: Check out posts
+        uses: actions/checkout@v2
+        with:
+          repository: larsks/blog.oddbit.com
+          path: posts
+          ref: gh-pages
+          ssh-key: ${{ secrets.BLOG_DEPLOY_KEY }}
+
+      - name: Install Hugo
+        run: |
+          curl -sfL -o hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+          mkdir -p ~/.cache/bin
+          tar -C ~/.cache/bin -xf hugo.tar.gz hugo
+
+      - name: Build blog
+        run: |
+          export PATH=$HOME/.cache/bin:$PATH
+          cd site
+          hugo -v -e production -c ../content
+
+      - name: Publish to gh-pages
+        run: |
+          rsync -a --delete --exclude=.git/ site/public/ posts/
+          git -C posts config user.name 'Blog Deploy Workflow'
+          git -C posts config user.email 'lars@oddbit.com'
+          git -C posts add .
+          git -C posts commit -m "publish blog from ${{ github.sha }}"
+          git -C posts push
