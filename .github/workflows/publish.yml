@@ -35,17 +35,34 @@ jobs:
           ref: gh-pages
           ssh-key: ${{ secrets.BLOG_DEPLOY_KEY }}
 
+      - name: Configure caching
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: ~/hugo
+          key: hugo-${{ runner.os }}-${{ env.HUGO_VERSION }}
+
       - name: Install Hugo
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           curl -sfL -o hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-          mkdir -p ~/.cache/bin
-          tar -C ~/.cache/bin -xf hugo.tar.gz hugo
+          mkdir -p ~/hugo
+          tar -C ~/hugo -xf hugo.tar.gz hugo
 
       - name: Build blog
         run: |
-          export PATH=$HOME/.cache/bin:$PATH
           cd site
-          hugo -v -e production -c ../content
+          ~/hugo/hugo -v -e production -c ../content
+
+      - name: Generate metadata
+        run: |
+          cat <<EOF > site/public/metadata.json
+          {
+            "date": "$(TZ=UTC date '+%Y-%m-%dT%H:%M:%SZ')",
+            "content": "$(git -C content rev-parse HEAD)",
+            "config": "$(git -C site rev-parse HEAD)"
+          }
+          EOF
 
       - name: Publish to gh-pages
         run: |
