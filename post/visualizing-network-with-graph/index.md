@@ -52,15 +52,15 @@ the syntax looks something like this:
 
 Which would produce output like this:
 
-![Dot output example](/assets/2013/12/23/dot-example.svg)
+![Dot output example](dot-example.svg)
 
 When run on my laptop, with a simple all-in-one configuration and five
 instances across two networks, the result of running `mk-network-dot`
 looks like this:
 
 {{< figure
-src="/assets/2013/12/23/network.svg"
-link="/assets/2013/12/23/network.svg"
+src="network.svg"
+link="network.svg"
 width="400"
 >}}
 
