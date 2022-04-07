@@ -19,6 +19,8 @@ managed Ceph cluster.  While setting up Ceph as an OpenShift
 application is a relatively polished experienced, connecting to an
 external cluster still has some rough edges.
 
+[ocs]: https://www.redhat.com/en/technologies/cloud-computing/openshift-data-foundation
+
 **NB** I am not a Ceph expert. If you read this and think I've made a
 mistake with respect to permissions or anything else, please feel free
 to leave a comment and I will update the article as necessary. In
@@ -395,7 +397,7 @@ provide:
       # Fill in the fsid of your Ceph cluster.
       "fsid": "c9c32c73-dac4-4cc9-8baa-d73b96c135f4",
 
-      # Do **not** file in these values, they are unnecessary. OCS
+      # Do **not** fill in these values, they are unnecessary. OCS
       # does not require admin access to your Ceph cluster.
       "admin-secret": "admin-secret",
       "mon-secret": "mon-secret"
